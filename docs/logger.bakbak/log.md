@@ -9,7 +9,7 @@
 ## 示例代码
 ```js
 // 引入模块
-const logger = require('@neosjs/electron-logger')
+const logger = require('@neosjs/logger')
 
 // 写入日志
 logger.log({

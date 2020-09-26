@@ -2,20 +2,21 @@
 
 情况日志目录内所有的日志文件。
 
+:::danger
+该API运行在主进程里。
+:::
+
 ## API 
-### `logger.removeLog(days)`
+### `logger.removeLog()`
 ###
 
 ## 示例代码
 ```js
 // 引入模块
-const logger = require('@neosjs/electron-logger')
+const { logger } = require('@neosjs/electron-logger')
 
-// 删除一天前的日志
-logger.removeLog(1)
+// 写入日志
+logger.removeLog()
 ```
-## Params
 
-| 参数                        | 说明                       | 类型   | 可选值          | 默认值       | 必选  |
-| --------------------------- | -------------------------- | ------ | --------------- | ------------ |------------ |
-| days               | 保留日志的天数(删除之前的日志)           | Number | —               | —            | 是 |
+

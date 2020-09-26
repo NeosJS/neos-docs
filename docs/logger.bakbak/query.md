@@ -1,8 +1,6 @@
 # 查询日志 <BadgeTip text="异步" type="green"></BadgeTip><BadgeTip text="实验性" type="danger"></BadgeTip>
 :::danger
-仅对格式为`json`的日志有效。
-
-这是一个实验性的功能，并不保证功能正常，请谨慎使用。
+仅对格式为`json`的日志有效
 :::
 
 ## API

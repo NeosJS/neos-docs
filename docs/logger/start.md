@@ -2,13 +2,9 @@
 
 开启日志功能。
 
-:::info
-开启后，日志文件会存在指定目录下，并以当天的日志为文件名。例如：logs/2020-09-26.log
-:::
-
 ## API
 
-### `logger.start(logPath)`
+### `logger.start(<object>)`
 ### 
 ## 示例代码
 
@@ -17,12 +13,20 @@
 const logger = require('@neosjs/electron-logger')
 
 // 开启日志
-await logger.start('./Logs')
+await logger.start({
+  filePath: 'xxxxxxx',
+  maxSize: '10m',
+  maxFiles: '1d'
+})
 ```
 
 ## Params
 
 | 参数                        | 说明                       | 类型   | 可选值          | 默认值       | 必选  |
 | --------------------------- | -------------------------- | ------ | --------------- | ------------ |------------ |
-| logPath               | 要保存日志文件的目录名。           | String | —               | __dirname            | 否 |
+| filePath               | 要保存日志文件的目录名。           | String | —               | __dirname            | 否 |
+| filename          | 要保存日志文件的文件名  。                 | String | —           | YYYY-MM-DD.log           | 否 |
+| maxSize          | 单个日志文件最大值(k、m、g)。              | String | —           | 20m           | 否 |
+| maxFiles          | 要保存的最大日志数。如果没有设置，则不会删除任何日志(d)。                   | String | —           | 7d           | 否 |
+| debug | 开启控制台输出。| Boolean | true、false | false |否 |
 
