@@ -160,10 +160,10 @@ function getLoggerSiderBar(groupTitle) {
         "start",
         "info",
         "error",
-        "log",
-        "readLog",
-        "removeLog",
-        "query"
+        // "log",
+        // "readLog",
+        "removeLog"
+        // "query"
       ]
     }
   ];
