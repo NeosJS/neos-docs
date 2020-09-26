@@ -2,6 +2,10 @@
 
 开启日志功能。
 
+:::danger
+该API，必须运行在主进程模块，因为这是一个 `node` 服务。
+:::
+
 ## API
 
 ### `logger.start(<object>)`
@@ -10,13 +14,13 @@
 
 ```js
 // 引入模块
-const logger = require('@neosjs/electron-logger')
+const { logger } = require('@neosjs/electron-logger')
 
 // 开启日志
 await logger.start({
-  filePath: 'xxxxxxx',
-  maxSize: '10m',
-  maxFiles: '1d'
+  filePath: 'xxxxxxx', // 日志存储路径
+  maxSize: '10m', // 每个日志的最大10兆
+  maxFiles: '1d' // 日志保留1天
 })
 ```
 

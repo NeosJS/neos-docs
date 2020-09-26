@@ -10,10 +10,10 @@
 
 ```js
 // 引入模块
-const logger = require('@neosjs/electron-logger')
+const { logger } = require('@neosjs/electron-logger')
 
-// 写入日志
-const res  = await logger.readLog('2020-09-20')
+// 读取2020-09-26的日志
+const res  = await logger.readLog('2020-09-26')
 
 // output
 // {

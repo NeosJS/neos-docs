@@ -9,7 +9,7 @@
 
 ```js
 // 引入模块
-const logger = require('@neosjs/electron-logger')
+const { logger } = require('@neosjs/electron-logger')
 
 // 写入日志
 logger.error('message info',{userName:'听着情歌流泪'})

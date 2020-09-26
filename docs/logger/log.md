@@ -9,18 +9,18 @@
 ## 示例代码
 ```js
 // 引入模块
-const logger = require('@neosjs/electron-logger')
+const { logger } = require('@neosjs/electron-logger')
 
 // 写入日志
 logger.log({
   level: 'info',
-  label: 'worker',
+  label: 'main',
   message: 'message info',
   meta: {userName:'听着情歌流泪'}
 })
 
 // output
-// [2020-09-20 18:26:56.886] [WORKER] INFO: {"message":"message info","meta":[{"userName":"听着情歌流泪"}]}
+// [2020-09-20 18:26:56.886] [MAIN] INFO: {"message":"message info","meta":[{"userName":"听着情歌流泪"}]}
 ```
 
 ## Params

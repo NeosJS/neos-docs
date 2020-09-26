@@ -12,9 +12,9 @@
 ## 示例代码
 ```js
 // 引入模块
-const logger = require('@neosjs/logger')
+const { logger } = require('@neosjs/logger')
 
-// 写入日志
+// 查询日志内容
 const logs = await logger.query({
   from: new Date() - (24 * 60 * 60 * 1000),
   until: new Date(),
