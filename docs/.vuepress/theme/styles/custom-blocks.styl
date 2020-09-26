@@ -1,0 +1,85 @@
+.sealui-customblock
+  position relative
+  .sealui-customblock__title
+    font-weight 600
+    margin-bottom -0.4rem
+  .sealui-customblock__icon
+    display: block;
+    font-size: 26px;
+    left: 1rem;
+    margin: 0;
+    padding: 0;
+    position: absolute
+    top: .8rem
+    i
+      vertical-align middle
+  &.is-tip,
+  &.is-info,
+  &.is-warning,
+  &.is-warn,
+  &.is-danger,
+  &.is-error,
+  &.is-success
+    padding .1rem 1.5rem
+    border-left-width .25rem
+    border-left-style solid
+    margin 1rem 0
+    border-radius .2rem
+    background #F5F7F9
+    color $textColor
+  &.is-tip
+    border-color $--color-info
+  &.is-info
+    border-color $--color-primary
+    i
+      color $--color-primary
+  &.is-warning,
+  &.is-warn
+    border-color $--color-warning
+    color $--color-warning
+    i
+      color $--color-warning
+    .sealui-customblock__title
+      color $--color-warning
+    a
+      color $--color-text-primary
+  &.is-danger
+  &.is-error
+    border-color $--color-danger
+    color lighten($--color-danger, 5%)
+    i
+      color $--color-danger
+    .sealui-customblock__title
+      color $--color-danger
+    a
+      color $--color-text-primary
+  &.is-success
+    border-color $--color-success
+    i
+      color $--color-success
+    .sealui-customblock__title
+      color $--color-success
+    a
+      color $--color-text-primary
+
+pre.vue-container
+  padding .1rem 1.5rem
+  border-left-width .25rem
+  border-left-style solid
+  margin 1rem 0
+  border-radius .2rem
+  color $textColor
+  border-color: #42b983;
+  border-radius: 0px;
+  & > code
+    font-size: inherit !important;
+    & > p
+      margin: -5px 0 -20px 0;
+    code
+      background-color: #42b983 !important;
+      padding: 3px 5px;
+      border-radius: 3px;
+      color #000
+    em
+      color #808080
+      font-weight light

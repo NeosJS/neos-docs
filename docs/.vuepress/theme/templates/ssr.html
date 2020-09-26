@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ title }}</title>
+    {{{ userHeadTags }}}
+    {{{ pageMeta }}}
+    {{{ renderResourceHints() }}}
+    {{{ renderStyles() }}}
+  </head>
+  <body>
+    <script src="https://cdn.bootcss.com/vue/2.6.12/vue.min.js"></script>
+    <!--vue-ssr-outlet-->
+    {{{ renderScripts() }}}
+
+  </body>
+</html>

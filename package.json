@@ -1,0 +1,63 @@
+{
+  "name": "thinkacademy-docs",
+  "productName": "thinkacademy-docs",
+  "version": "1.0.0",
+  "description": "ThinkAcademy Docs",
+  "private": true,
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "clean": "rimraf dist/* && rimraf *.log",
+    "cname": "echo thinkacademy-docs.neosjs.com>>./dist/CNAME",
+    "build": "npm run clean && npm run docs:build && npm run cname",
+    "deploy": "sh ./deploy.sh build",
+    "push": "sh ./deploy.sh push"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "NeosJS",
+    "Neos"
+  ],
+  "author": "听着情歌流泪 <develop@lingtal.com> (http://thinkacademy-docs.neosjs.com)",
+  "homepage": "http://thinkacademy-docs.neosjs.com",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 5.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "yarn lint --fix",
+      "yarn prettier"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "//commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.5.4",
+    "@vuepress/plugin-nprogress": "^1.5.4",
+    "@vuepress/plugin-pwa": "^1.5.4",
+    "@vuepress/plugin-register-components": "^1.5.4",
+    "cheerio": "^1.0.0-rc.3",
+    "markdown-it": "^11.0.1",
+    "markdown-it-container": "^3.0.0",
+    "moment": "^2.28.0",
+    "node-sass": "^4.14.1",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^10.0.2",
+    "transliteration": "^2.1.11",
+    "vuepress": "^1.5.4"
+  }
+}
