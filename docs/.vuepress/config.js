@@ -134,6 +134,8 @@ function getNativeSiderBar(groupTitle) {
       sidebarDepth: 0,
       children: [
         "",
+        "jumpPage",
+        "openWindow",
         "changeWindowState",
         "maximize",
         "minimize",
@@ -144,7 +146,8 @@ function getNativeSiderBar(groupTitle) {
         "closeWindow",
         "reload",
         "relaunchApp",
-        "exitApp"
+        "exitApp",
+        "snapShot"
       ]
     }
   ];
