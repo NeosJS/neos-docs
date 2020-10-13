@@ -1,4 +1,4 @@
-# 全屏窗口 <BadgeTip text="renderer" type="green"></BadgeTip>
+# 全屏窗口
 
 将当前获得焦点的窗口全屏
 

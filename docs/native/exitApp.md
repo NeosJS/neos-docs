@@ -1,9 +1,9 @@
-# 退出应用 <BadgeTip text="renderer" type="green"></BadgeTip>
+# 退出应用
 
 从当前实例退出，重启应用。
 
 ## API
-### `nativeApi.relaunchApp(options)`
+### `nativeApi.exitApp()`
 ### 
 
 ## 示例代码

@@ -1,4 +1,4 @@
-# 重启应用 <BadgeTip text="renderer" type="green"></BadgeTip>
+# 重启应用
 
 从当前实例退出，重启应用。
 

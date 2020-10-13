@@ -1,4 +1,4 @@
-# 关闭窗口 <BadgeTip text="renderer" type="green"></BadgeTip>
+# 关闭窗口
 
 将当前获得焦点的窗口还原成初始尺寸。
 

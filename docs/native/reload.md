@@ -1,4 +1,4 @@
-# 刷新窗口 <BadgeTip text="renderer" type="green"></BadgeTip>
+# 刷新窗口
 
 刷新当前获得焦点的窗口。
 

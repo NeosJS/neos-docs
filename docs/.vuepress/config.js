@@ -132,22 +132,46 @@ function getNativeSiderBar(groupTitle) {
       title: groupTitle,
       collapsable: false,
       sidebarDepth: 0,
+      children: [""]
+    },
+    {
+      title: "APP",
+      collapsable: false,
+      sidebarDepth: 0,
       children: [
-        "",
+        "getAppVersion",
+        "getAppPath",
         "jumpPage",
-        "openWindow",
+        "relaunchApp",
+        "exitApp",
+        "snapShot",
+        "setAlwaysOnTop",
+        "openFileDialog",
+        "openDirDialog",
+        "openSaveDialog",
+        "openFileOrDirBySystem"
+      ]
+    },
+    {
+      title: "窗口",
+      collapsable: false,
+      sidebarDepth: 0,
+      children: [
         "changeWindowState",
         "maximize",
         "minimize",
         "normal",
         "setSize",
         "fullScreen",
-        "setAlwaysOnTop",
         "closeWindow",
         "reload",
-        "relaunchApp",
-        "exitApp",
-        "snapShot"
+        "openWindow",
+        "getWindowBounds",
+        "getWindowSize",
+        "getWindowPosition",
+        "setWindowAble",
+        "setWindowPosition",
+        "setWindowBounds"
       ]
     }
   ];

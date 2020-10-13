@@ -1,4 +1,4 @@
-# 设置窗口大小 <BadgeTip text="renderer" type="green"></BadgeTip>
+# 设置窗口大小
 
 设定当前获得焦点的窗口大小。
 
