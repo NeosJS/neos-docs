@@ -8,7 +8,7 @@
 
 ## 示例代码
 ```js
-import nativeApi from '@neosjs/electron-native'
+import { nativeApi } from '@neosjs/electron-ipc'
 
 nativeApi.setWindowBounds({width:200, height:100}) // 重置窗口大小
 ```

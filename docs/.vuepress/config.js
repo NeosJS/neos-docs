@@ -19,7 +19,9 @@ module.exports = {
       { text: "首页", link: "/" },
       { text: "IpcMessage", link: "/ipc/" },
       { text: "NativeApi", link: "/native/" },
+      { text: "DataBaseApi", link: "/db/" },
       { text: "Logger", link: "/logger/" }
+
       // { text: '大班(Live)', link: '/live/' },
       // { text: 'Native', link: '/native/' },
       // { text: 'UC', link: '/uc/' }
@@ -28,7 +30,8 @@ module.exports = {
     sidebar: {
       "/ipc/": getIpcSiderBar("IpcMessage"),
       "/native/": getNativeSiderBar("Native"),
-      "/logger/": getLoggerSiderBar("日志系统")
+      "/logger/": getLoggerSiderBar("日志系统"),
+      "/db/": getDBSiderBar("数据库")
     },
     lastUpdated: "上次更新",
     smoothScroll: true
@@ -173,7 +176,9 @@ function getNativeSiderBar(groupTitle) {
         "getWindowPosition",
         "setWindowAble",
         "setWindowPosition",
-        "setWindowBounds"
+        "setWindowBounds",
+        "addElementDrag",
+        "removeElementDrag"
       ]
     }
   ];
@@ -194,6 +199,16 @@ function getLoggerSiderBar(groupTitle) {
         "removeLog",
         "query"
       ]
+    }
+  ];
+}
+function getDBSiderBar(groupTitle) {
+  return [
+    {
+      title: groupTitle,
+      collapsable: false,
+      sidebarDepth: 0,
+      children: ["", "insert", "find", "update", "remove"]
     }
   ];
 }

@@ -11,7 +11,7 @@
 
 ## 示例代码
 ```js
-import nativeApi from '@neosjs/electron-native'
+import { nativeApi } from '@neosjs/electron-ipc'
 
 const res = await nativeApi.openFileDialog()
 ```

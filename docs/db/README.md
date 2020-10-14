@@ -1,10 +1,12 @@
 # 快速上手
 
-该模块提供一些 `electron` 的能力。
+该模块提供一些 数据库 的能力。
 
 
-:::danger
-该模块运行在 <b>渲染进程</b> 上。
+:::info
+所有接口均为 `异步接口`
+
+数据库文件会自动初始化在系统的用户目录下
 :::
 
 
@@ -18,3 +20,4 @@ npm i @neosjs/electron-ipc -S
 ```sh
 yarn add @neosjs/electron-ipc
 ```
+

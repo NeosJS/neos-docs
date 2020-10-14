@@ -9,7 +9,7 @@
 ### 
 ## 示例代码
 ```js
-import nativeApi from '@neosjs/electron-native'
+import { nativeApi } from '@neosjs/electron-ipc'
 
 nativeApi.changeWindowState(1) // 最小化
 ```

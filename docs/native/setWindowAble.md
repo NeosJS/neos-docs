@@ -8,7 +8,7 @@
 
 ## 示例代码
 ```js
-import nativeApi from '@neosjs/electron-native'
+import { nativeApi } from '@neosjs/electron-ipc'
 
 nativeApi.setWindowAble('maximize', true) // 设置最大化窗口的能力
 ```
