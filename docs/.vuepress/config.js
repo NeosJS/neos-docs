@@ -175,6 +175,7 @@ function getNativeSiderBar(groupTitle) {
         "closeWindow",
         "reload",
         "openWindow",
+        "getWindowState",
         "getWindowBounds",
         "getWindowSize",
         "getWindowPosition",
