@@ -11,7 +11,7 @@
 ```js
 import { nativeApi } from '@neosjs/electron-ipc'
 
-nativeApi.setWindowLimitSize(500, 500)
+nativeApi.setWindowMinSize(500, 500)
 ```
 
 ## 参数
