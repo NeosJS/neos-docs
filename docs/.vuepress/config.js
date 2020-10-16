@@ -208,7 +208,16 @@ function getDBSiderBar(groupTitle) {
       title: groupTitle,
       collapsable: false,
       sidebarDepth: 0,
-      children: ["", "insert", "find", "update", "remove"]
+      children: [
+        "",
+        "createCol",
+        "insert",
+        "find",
+        "update",
+        "remove",
+        "getState",
+        "drop"
+      ]
     }
   ];
 }
