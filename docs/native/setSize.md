@@ -1,6 +1,6 @@
-# 设置窗口大小
+# 设置窗口尺寸
 
-设定当前获得焦点的窗口大小。
+设定当前获得焦点的窗口尺寸。
 
 ## API
 ### `nativeApi.setWindowSize(width, height)`

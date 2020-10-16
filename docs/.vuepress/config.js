@@ -138,8 +138,8 @@ function getNativeSiderBar(groupTitle) {
       children: [""]
     },
     {
-      title: "APP",
-      collapsable: false,
+      title: "系统通用",
+      collapsable: true,
       sidebarDepth: 0,
       children: [
         "getAppVersion",
@@ -158,8 +158,8 @@ function getNativeSiderBar(groupTitle) {
       ]
     },
     {
-      title: "窗口",
-      collapsable: false,
+      title: "窗口控制",
+      collapsable: true,
       sidebarDepth: 0,
       children: [
         "changeWindowState",
@@ -167,6 +167,9 @@ function getNativeSiderBar(groupTitle) {
         "minimize",
         "normal",
         "setSize",
+        "setWindowMinSize",
+        "setWindowMaxSize",
+        "setWindowLimitSize",
         "fullScreen",
         "closeWindow",
         "reload",
