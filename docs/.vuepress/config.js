@@ -144,6 +144,7 @@ function getNativeSiderBar(groupTitle) {
       children: [
         "getAppVersion",
         "getAppPath",
+        "getClientInfo",
         "jumpPage",
         "relaunchApp",
         "exitApp",
