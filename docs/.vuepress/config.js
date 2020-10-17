@@ -138,52 +138,98 @@ function getNativeSiderBar(groupTitle) {
       children: [""]
     },
     {
-      title: "系统通用",
+      title: "系统功能",
       collapsable: true,
       sidebarDepth: 0,
       children: [
-        "getAppVersion",
-        "getAppPath",
-        "getClientInfo",
-        "jumpPage",
-        "relaunchApp",
-        "exitApp",
-        "snapShot",
-        "setAlwaysOnTop",
-        "openFileDialog",
-        "openDirDialog",
-        "openSaveDialog",
-        "openFileOrDirBySystem",
-        "cleanCache",
-        "cleanStorage"
+        {
+          title: "通用",
+          collapsable: true,
+          sidebarDepth: 0,
+          children: [
+            "get/getAppVersion",
+            "get/getAppPath",
+            "get/getClientInfo",
+            "jumpPage",
+            "relaunchApp",
+            "exitApp",
+            "snapShot",
+            "set/setAlwaysOnTop",
+            "addElementDrag",
+            "removeElementDrag"
+          ]
+        },
+        {
+          title: "目录、文件",
+          collapsable: true,
+          sidebarDepth: 0,
+          children: [
+            "open/openFileDialog",
+            "open/openDirDialog",
+            "open/openSaveDialog",
+            "open/openDirBySystem",
+            "open/openFileBySystem",
+            "open/openFileOrDirBySystem"
+          ]
+        },
+        {
+          title: "缓存",
+          collapsable: true,
+          sidebarDepth: 0,
+          children: ["cleanCache", "cleanStorage"]
+        }
       ]
     },
     {
-      title: "窗口控制",
+      title: "窗口功能",
       collapsable: true,
       sidebarDepth: 0,
       children: [
-        "changeWindowState",
-        "maximize",
-        "minimize",
-        "normal",
-        "setSize",
-        "setWindowMinSize",
-        "setWindowMaxSize",
-        "setWindowLimitSize",
-        "fullScreen",
-        "closeWindow",
-        "reload",
-        "openWindow",
-        "getWindowState",
-        "getWindowBounds",
-        "getWindowSize",
-        "getWindowPosition",
-        "setWindowAble",
-        "setWindowPosition",
-        "setWindowBounds",
-        "addElementDrag",
-        "removeElementDrag"
+        {
+          title: "通用",
+          collapsable: true,
+          sidebarDepth: 0,
+          children: [
+            "loadUrl",
+            "loadFile",
+            "set/setWindowState",
+            "changeWindowState",
+            "maximize",
+            "minimize",
+            "normal",
+            "closeWindow",
+            "reload",
+            "open/openWindow"
+          ]
+        },
+        {
+          title: "获取",
+          collapsable: true,
+          sidebarDepth: 0,
+          children: [
+            "get/getWindowState",
+            "get/getWindowBounds",
+            "get/getWindowSize",
+            "get/getWindowPosition"
+          ]
+        },
+        {
+          title: "设置",
+          collapsable: true,
+          sidebarDepth: 0,
+          children: [
+            "set/setSize",
+            "set/setWindowMinSize",
+            "set/setWindowMaxSize",
+            "set/setWindowLimitSize",
+            "set/setWindowCenter",
+            "set/setFullscreen",
+            "fullScreen",
+            "set/setWindowAble",
+            "set/setWindowPosition",
+            "set/setWindowBounds"
+          ]
+        }
       ]
     }
   ];

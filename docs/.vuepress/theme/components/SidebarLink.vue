@@ -47,13 +47,51 @@ function renderLink(h, to, text, active) {
       },
       class: {
         active,
-        'sidebar-link': true
+        'sidebar-link': true,
+        'sidebar-link-deprecated': text.includes('Deprecated')
       }
     },
-    text
+    renderTitle(h,text)
   )
 }
+function renderTitle(h,text){
+  if(text.includes('Deprecated')){
+    return [
+      h(
+        'span',
+        {
+          class:['lineThrough']
+        },
+        text.replace(/\([^\)]*\)/g,"")
+      ),
+      h(
+        'badge-tip',
+        {
+          props: {
+            text:'弃用',
+            type:'danger'
+          }
+        }
+      )
+    ]
+  }
+  if(text.includes('Experimental')){
+    return [
+      text.replace(/\([^\)]*\)/g,""),
+      h(
+        'badge-tip',
+        {
+          props: {
+            text:'实验',
+            type:'blue'
+          }
+        }
+      )
+    ]
+  }
+  return text
 
+}
 function renderChildren(h, children, path, route, maxDepth, depth = 1) {
   if (!children || depth > maxDepth) return null
   return h(
@@ -95,10 +133,12 @@ a.sidebar-link
   display inline-block
   color #5e6d82
   position: relative;
-  padding 0.45rem 1rem 0.45rem 1.35rem
+  padding 0.35rem 1rem 0.35rem 1.35rem
   line-height 1.4
   width: 100%
   box-sizing: border-box
+  > .sealui-badge
+    margin-left 1rem
   &:after
     position: absolute;
     top 0
@@ -126,4 +166,9 @@ a.sidebar-link
     border-left none
     &.active
       font-weight 500
+.lineThrough
+  text-decoration line-through
+
+a.sidebar-link-deprecated
+  opacity 0.6
 </style>

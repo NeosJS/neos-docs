@@ -1,20 +1,16 @@
-# 全屏窗口(Deprecated) <BadgeTip text="弃用" type="danger"></BadgeTip>
+# 设置窗口全屏
 
 将当前获得焦点的窗口全屏
 
-:::danger
-该API即将弃用，请使用 [`setFullscreen`](setFullscreen.html) 代替！
-:::
-
 ## API
-###  ~~`nativeApi.fullScreen(flag)`~~
+### `nativeApi.setFullScreen(flag)`
 ### 
 
 ## 示例代码
 ```js
 import { nativeApi } from '@neosjs/electron-ipc'
 
-nativeApi.fullScreen(true) // 全屏
+nativeApi.setFullScreen(true) // 全屏
 ```
 
 ## Params

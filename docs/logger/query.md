@@ -1,4 +1,4 @@
-# 查询日志 <BadgeTip text="异步" type="green"></BadgeTip><BadgeTip text="实验性" type="danger"></BadgeTip>
+# 查询日志 (Experimental) <BadgeTip text="异步" type="green"></BadgeTip><BadgeTip text="实验性" type="blue"></BadgeTip>
 :::danger
 仅对格式为`json`的日志有效。
 

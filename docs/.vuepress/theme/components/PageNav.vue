@@ -3,11 +3,11 @@
     <p class="inner">
       <span v-if="prev" class="prev">
         <i class="sealui-icon-chevron-left"></i>
-        <router-link v-if="prev" class="prev" :to="prev.path">{{ prev.title || prev.path }}</router-link>
+        <router-link v-if="prev" class="prev" :to="prev.path">{{ prev.title .replace(/\([^\)]*\)/g,"")|| prev.path }}</router-link>
       </span>
 
       <span v-if="next" class="next">
-        <router-link v-if="next" :to="next.path">{{ next.title || next.path }}</router-link>
+        <router-link v-if="next" :to="next.path">{{ next.title.replace(/\([^\)]*\)/g,"") || next.path }}</router-link>
         <i class="sealui-icon-chevron-right"></i>
       </span>
     </p>

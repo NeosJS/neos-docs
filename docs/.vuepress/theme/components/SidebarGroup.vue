@@ -56,23 +56,25 @@ export default {
     padding-left 0.5em
   &:not(.collapsable)
     .sidebar-heading:not(.clickable)
-      cursor auto
-      color #999
+      // cursor auto
+      // color #999
   // refine styles of nested sidebar groups
   &.is-sub-group
     padding-left 0
     & > .sidebar-heading
       font-size 0.95em
-      line-height 1.4
+      line-height 2
       font-weight normal
       padding-left 2rem
+      cursor pointer
       &:not(.clickable)
-        opacity 0.5
+        opacity 0.8
     & > .sidebar-group-items
-      padding-left 1rem
+      padding-left 0rem
       & > li > .sidebar-link
         font-size: 0.95em;
         border-left none
+        padding-left 3rem
   &.depth-2
     & > .sidebar-heading
       border-left none
@@ -90,7 +92,7 @@ export default {
   margin 0
   border-left 0.25rem solid transparent
   &.open, &:hover
-    color inherit
+    // color inherit
   .arrow
     position relative
     top -0.12em
