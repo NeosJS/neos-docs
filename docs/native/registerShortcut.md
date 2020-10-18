@@ -35,7 +35,7 @@ nativeApi.registerShortcut(
 | shortcut | 快捷键 | String | —      | —      |
 | options| 注册的快捷键配置 | Object| —      | —      |
 | options['type']| 快捷键操作的类型。目前只支持 `window` | String| —      | —      |
-| options['event']| 按下快捷键执行的事件 | String| —      | —      |
+| options['event']| 按下快捷键执行的事件 | String| visible、fullscreen、maximize      | —      |
 
 
 ### 键盘对照表
