@@ -2,7 +2,7 @@
 获取APP版本号
 
 ## API
-### `nativeApi.getAppVersion()`
+### `nativeApi.getAppVersion(callback: <Function>)`
 ### 
 
 ## 示例代码
@@ -14,3 +14,9 @@ const version = await nativeApi.getAppVersion()
 :::tip
 返回 package.json 中定义的 version 的值
 :::
+
+## 参数
+
+| 参数 | 说明    | 类型   | 可选值 | 默认值 |
+| ---- | ------- | ------ | ------ | ------ |
+| callback | 回调函数（可选） | Function | —      | —      |

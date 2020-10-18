@@ -3,7 +3,7 @@
 获取当前主窗口状态
 
 ## API
-### `nativeApi.getWindowState(state)`
+### `nativeApi.getWindowState(callback: <Function>)`
 
 ### 
 
@@ -11,12 +11,16 @@
 ```js
 import { nativeApi } from '@neosjs/electron-ipc'
 
-const res = await nativeApi.getWindowState('maximize')
+const res = await nativeApi.getWindowState()
 ```
 
-## Params
+## 参数
 
-| 参数  | 说明     | 类型   | 可选值     | 默认值 |
-| ----- | -------- | ------ | ---------- | ------ |
-| state | 窗口状态 | String | maximize，minimize，normal，fullscreen |-     |
+| 参数 | 说明    | 类型   | 可选值 | 默认值 |
+| ---- | ------- | ------ | ------ | ------ |
+| callback | 回调函数（可选） | Function | —      | —      |
 
+:::info
+反回当前窗口的状态
+isMaximized、isMinimized、isFullScreen、isNormal 
+:::

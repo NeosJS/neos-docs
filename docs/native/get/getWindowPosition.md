@@ -2,7 +2,7 @@
 获取当前主窗口的坐标
 
 ## API
-### `nativeApi.getWindowPosition()`
+### `nativeApi.getWindowPosition(callback: <Function>)`
 ### 
 
 ## 示例代码
@@ -19,3 +19,9 @@ const res = await nativeApi.getWindowPosition()
   y: xxx
 }
 ```
+
+## 参数
+
+| 参数 | 说明    | 类型   | 可选值 | 默认值 |
+| ---- | ------- | ------ | ------ | ------ |
+| callback | 回调函数（可选） | Function | —      | —      |
