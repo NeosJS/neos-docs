@@ -156,7 +156,8 @@ function getNativeSiderBar(groupTitle) {
             "snapShot",
             "set/setAlwaysOnTop",
             "addElementDrag",
-            "removeElementDrag"
+            "removeElementDrag",
+            "registerShortcut"
           ]
         },
         {
