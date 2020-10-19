@@ -1,8 +1,8 @@
-# 打开保存文件弹框 <BadgeTip text="异步" type="green"></BadgeTip>
+# 打开保存文件弹框
 打开保存文件的文件框
 
 ## API
-### `nativeApi.openFileOrDirBySystem(options: <Object>)`
+### `nativeApi.openSaveDialog()`
 ### 
 
 ## 示例代码
