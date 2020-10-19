@@ -10,7 +10,7 @@
 ```js
 import { nativeApi } from '@neosjs/electron-ipc'
 
-nativeApi.openFileBySystem('index.js') // 全屏
+nativeApi.openFileBySystem('index.js')
 ```
 
 ## Params

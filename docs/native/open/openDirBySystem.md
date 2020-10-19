@@ -10,7 +10,7 @@
 ```js
 import { nativeApi } from '@neosjs/electron-ipc'
 
-nativeApi.openDirBySystem('/xxx/xxxx') // 全屏
+nativeApi.openDirBySystem('/xxx/xxxx')
 ```
 
 ## Params
