@@ -131,7 +131,7 @@ a.sidebar-link
   font-size .85rem
   font-weight 400
   display inline-block
-  color #5e6d82
+  color #333
   position: relative;
   padding 0.35rem 1rem 0.35rem 1.35rem
   line-height 1.4

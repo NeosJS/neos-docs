@@ -102,6 +102,7 @@ export default {
   a
     line-height 3.5rem
     color inherit
+    font-weight bold
     &:hover, &.router-link-active
       color $--color-primary
   .nav-item

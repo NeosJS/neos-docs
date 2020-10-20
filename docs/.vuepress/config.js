@@ -4,8 +4,8 @@ const tools = require("./theme/util/tools");
 // const isEnvProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  title: "海外产品部 客户端开发文档",
-  description: "海外产品部前端组文档",
+  title: "海外产研部 客户端开发文档",
+  description: "海外产研部前端组文档",
   dest: "./dist",
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
@@ -18,20 +18,16 @@ module.exports = {
     nav: [
       { text: "首页", link: "/" },
       { text: "IpcMessage", link: "/ipc/" },
-      { text: "NativeApi", link: "/native/" },
+      { text: "NativeApi", link: "/native/get/getAppVersion.html" },
       { text: "DataBaseApi", link: "/db/" },
       { text: "Logger", link: "/logger/" }
-
-      // { text: '大班(Live)', link: '/live/' },
-      // { text: 'Native', link: '/native/' },
-      // { text: 'UC', link: '/uc/' }
       // !isEnvProduction && { text: 'TEST', link: '/test/' }
     ],
     sidebar: {
       "/ipc/": getIpcSiderBar("IpcMessage"),
-      "/native/": getNativeSiderBar("Native"),
-      "/logger/": getLoggerSiderBar("日志系统"),
-      "/db/": getDBSiderBar("数据库")
+      "/native/": getNativeSiderBar("NativeApi"),
+      "/logger/": getLoggerSiderBar("LoggerApi"),
+      "/db/": getDBSiderBar("DataBaseApi")
     },
     lastUpdated: "上次更新",
     smoothScroll: true
@@ -133,104 +129,161 @@ function getNativeSiderBar(groupTitle) {
   return [
     {
       title: groupTitle,
-      collapsable: false,
+      collapsable: true,
       sidebarDepth: 0,
       children: [""]
     },
     {
-      title: "系统功能",
+      title: "系统能力",
       collapsable: true,
       sidebarDepth: 0,
       children: [
-        {
-          title: "通用",
-          collapsable: true,
-          sidebarDepth: 0,
-          children: [
-            "get/getAppVersion",
-            "get/getAppPath",
-            "get/getClientInfo",
-            "jumpPage",
-            "relaunchApp",
-            "exitApp",
-            "snapShot",
-            "set/setAlwaysOnTop",
-            "addElementDrag",
-            "removeElementDrag",
-            "registerShortcut"
-          ]
-        },
-        {
-          title: "目录、文件",
-          collapsable: true,
-          sidebarDepth: 0,
-          children: [
-            "open/openFileDialog",
-            "open/openDirDialog",
-            "open/openSaveDialog",
-            "open/openDirBySystem",
-            "open/openFileBySystem",
-            "open/openFileOrDirBySystem"
-          ]
-        },
-        {
-          title: "缓存",
-          collapsable: true,
-          sidebarDepth: 0,
-          children: ["cleanCache", "cleanStorage"]
-        }
+        "get/getAppVersion",
+        "get/getAppPath",
+        "get/getClientInfo",
+        "jumpPage",
+        "relaunchApp",
+        "exitApp",
+        "snapShot",
+        "set/setAlwaysOnTop",
+        "addElementDrag",
+        "removeElementDrag",
+        "registerShortcut",
+        "open/openFileDialog",
+        "open/openDirDialog",
+        "open/openSaveDialog",
+        "open/openDirBySystem",
+        "open/openFileBySystem",
+        "open/openFileOrDirBySystem",
+        "cleanCache",
+        "cleanStorage"
+        // {
+        //   title: "通用",
+        //   collapsable: true,
+        //   sidebarDepth: 0,
+        //   children: [
+        //     "get/getAppVersion",
+        //     "get/getAppPath",
+        //     "get/getClientInfo",
+        //     "jumpPage",
+        //     "relaunchApp",
+        //     "exitApp",
+        //     "snapShot",
+        //     "set/setAlwaysOnTop",
+        //     "addElementDrag",
+        //     "removeElementDrag",
+        //     "registerShortcut"
+        //   ]
+        // },
+        // {
+        //   title: "目录、文件",
+        //   collapsable: true,
+        //   sidebarDepth: 0,
+        //   children: [
+        //     "open/openFileDialog",
+        //     "open/openDirDialog",
+        //     "open/openSaveDialog",
+        //     "open/openDirBySystem",
+        //     "open/openFileBySystem",
+        //     "open/openFileOrDirBySystem"
+        //   ]
+        // },
+        // {
+        //   title: "缓存",
+        //   collapsable: true,
+        //   sidebarDepth: 0,
+        //   children: ["cleanCache", "cleanStorage"]
+        // }
       ]
     },
     {
-      title: "窗口功能",
+      title: "窗口能力",
       collapsable: true,
       sidebarDepth: 0,
       children: [
-        {
-          title: "通用",
-          collapsable: true,
-          sidebarDepth: 0,
-          children: [
-            "loadUrl",
-            "loadFile",
-            "set/setWindowState",
-            "changeWindowState",
-            "maximize",
-            "minimize",
-            "normal",
-            "closeWindow",
-            "reload",
-            "open/openWindow"
-          ]
-        },
-        {
-          title: "获取",
-          collapsable: true,
-          sidebarDepth: 0,
-          children: [
-            "get/getWindowState",
-            "get/getWindowBounds",
-            "get/getWindowSize",
-            "get/getWindowPosition"
-          ]
-        },
-        {
-          title: "设置",
-          collapsable: true,
-          sidebarDepth: 0,
-          children: [
-            "set/setSize",
-            "set/setWindowMinSize",
-            "set/setWindowMaxSize",
-            "set/setWindowLimitSize",
-            "set/setWindowCenter",
-            "set/setFullscreen",
-            "fullScreen",
-            "set/setWindowAble",
-            "set/setWindowPosition",
-            "set/setWindowBounds"
-          ]
-        }
+        "loadUrl",
+        "loadFile",
+        "set/setWindowState",
+        "changeWindowState",
+        "maximize",
+        "minimize",
+        "normal",
+        "closeWindow",
+        "reload",
+        "open/openWindow",
+        "get/getWindowState",
+        "get/getWindowBounds",
+        "get/getWindowSize",
+        "get/getWindowPosition",
+        "set/setSize",
+        "set/setWindowMinSize",
+        "set/setWindowMaxSize",
+        "set/setWindowLimitSize",
+        "set/setWindowCenter",
+        "set/setFullscreen",
+        "fullScreen",
+        "set/setWindowAble",
+        "set/setWindowPosition",
+        "set/setWindowBounds"
+        // {
+        //   title: "通用",
+        //   collapsable: true,
+        //   sidebarDepth: 0,
+        //   children: [
+        //     "loadUrl",
+        //     "loadFile",
+        //     "set/setWindowState",
+        //     "changeWindowState",
+        //     "maximize",
+        //     "minimize",
+        //     "normal",
+        //     "closeWindow",
+        //     "reload",
+        //     "open/openWindow",
+        //     "get/getWindowState",
+        //     "get/getWindowBounds",
+        //     "get/getWindowSize",
+        //     "get/getWindowPosition",
+        //     "set/setSize",
+        //     "set/setWindowMinSize",
+        //     "set/setWindowMaxSize",
+        //     "set/setWindowLimitSize",
+        //     "set/setWindowCenter",
+        //     "set/setFullscreen",
+        //     "fullScreen",
+        //     "set/setWindowAble",
+        //     "set/setWindowPosition",
+        //     "set/setWindowBounds"
+        //   ]
+        // },
+        // {
+        //   title: "获取",
+        //   collapsable: true,
+        //   sidebarDepth: 0,
+        //   children: [
+        //     "get/getWindowState",
+        //     "get/getWindowBounds",
+        //     "get/getWindowSize",
+        //     "get/getWindowPosition"
+        //   ]
+        // },
+        // {
+        //   title: "设置",
+        //   collapsable: true,
+        //   sidebarDepth: 0,
+        //   children: [
+        //     "set/setSize",
+        //     "set/setWindowMinSize",
+        //     "set/setWindowMaxSize",
+        //     "set/setWindowLimitSize",
+        //     "set/setWindowCenter",
+        //     "set/setFullscreen",
+        //     "fullScreen",
+        //     "set/setWindowAble",
+        //     "set/setWindowPosition",
+        //     "set/setWindowBounds"
+        //   ]
+        // }
       ]
     }
   ];

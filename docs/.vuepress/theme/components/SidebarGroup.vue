@@ -80,13 +80,13 @@ export default {
       border-left none
 
 .sidebar-heading
-  color $textColor
+  color #222
   transition color .15s ease
   cursor pointer
   font-size .9em
   font-weight bold
   // text-transform uppercase
-  padding 0.25rem 1.5rem 0.05rem 1.25rem
+  padding 0.25rem 1.5rem 0.5rem 1.25rem
   width 100%
   box-sizing border-box
   margin 0

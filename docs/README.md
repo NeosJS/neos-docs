@@ -3,7 +3,7 @@ home: true
 actionText: IpcMessage
 actionLink: /ipc/
 actionText1: NativeApi
-actionLink1: /native/
+actionLink1: /native/get/getAppVersion.html
 actionText2: DataBaseApi
 actionLink2: /db/
 actionText3: Logger
