@@ -3,7 +3,7 @@
 当检查到有新版的时候，可调用该接口下载更新
 
 ## API
-### `appUpdater.downloadUpdates(autoInstall: <Boolean>, callback: <Function>)`
+### `updaterApi.downloadUpdates(autoInstall: <Boolean>, callback: <Function>)`
 ### 
 
 :::info 
@@ -12,22 +12,22 @@
 
 ## 示例代码
 ```js
-import { appUpdater } from '@neosjs/electron-ipc'
+import { updaterApi } from '@neosjs/electron-ipc'
 
-const res = await appUpdater.downloadUpdates()
+const res = await updaterApi.downloadUpdates()
 ```
 #### 自动安装
 > 由于安全机制限制，经过签名的APP下载完更新后才能启动安装！！
 ```js
-import { appUpdater } from '@neosjs/electron-ipc'
+import { updaterApi } from '@neosjs/electron-ipc'
 
-const res = await appUpdater.downloadUpdates(true)
+const res = await updaterApi.downloadUpdates(true)
 ```
 #### 带回调
 ```js
-import { appUpdater } from '@neosjs/electron-ipc'
+import { updaterApi } from '@neosjs/electron-ipc'
 
-appUpdater.downloadUpdates(res => {
+updaterApi.downloadUpdates(res => {
   console.log(res)
 })
 ```

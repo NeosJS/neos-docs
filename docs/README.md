@@ -4,7 +4,7 @@ actionText: IpcMessage
 actionLink: /ipc/
 actionText1: NativeApi
 actionLink1: /native/get/getAppVersion.html
-actionText2: AppUpdater
+actionText2: UpdaterApi
 actionLink2: /updater/
 actionText3: DataBaseApi
 actionLink3: /db/

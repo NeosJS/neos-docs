@@ -3,21 +3,21 @@
 检查应用是否有更新
 
 ## API
-### `appUpdater.checkForUpdates(callback: <Function>)`
+### `updaterApi.checkForUpdates(callback: <Function>)`
 ### 
 
 
 ## 示例代码
 ```js
-import { appUpdater } from '@neosjs/electron-ipc'
+import { updaterApi } from '@neosjs/electron-ipc'
 
-const res = await appUpdater.checkForUpdates()
+const res = await updaterApi.checkForUpdates()
 ```
 #### 带回调
 ```js
-import { appUpdater } from '@neosjs/electron-ipc'
+import { updaterApi } from '@neosjs/electron-ipc'
 
-appUpdater.checkForUpdates(res => {
+updaterApi.checkForUpdates(res => {
   console.log(res)
 })
 ```

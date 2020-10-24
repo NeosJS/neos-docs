@@ -3,14 +3,14 @@
 当更新文件下载完成后，可调用该接口，进行安装
 
 ## API
-### `appUpdater.installUpdates()`
+### `updaterApi.installUpdates()`
 ### 
 
 ## 示例代码
 ```js
-import { appUpdater } from '@neosjs/electron-ipc'
+import { updaterApi } from '@neosjs/electron-ipc'
 
-appUpdater.installUpdates()
+updaterApi.installUpdates()
 ```
 
 :::danger
