@@ -3,7 +3,7 @@
 当检查到有新版的时候，可调用该接口下载更新
 
 ## API
-### `appUpdater.downloadUpdates(callback: <Function>, autoInstall: <Boolean>)`
+### `appUpdater.downloadUpdates(autoInstall: <Boolean>, callback: <Function>)`
 ### 
 
 :::info 
