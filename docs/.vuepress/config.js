@@ -19,6 +19,7 @@ module.exports = {
       { text: "首页", link: "/" },
       { text: "IpcMessage", link: "/ipc/" },
       { text: "NativeApi", link: "/native/get/getAppVersion.html" },
+      { text: "AppUpdater", link: "/updater/" },
       { text: "DataBaseApi", link: "/db/" },
       { text: "Logger", link: "/logger/" }
       // !isEnvProduction && { text: 'TEST', link: '/test/' }
@@ -26,6 +27,7 @@ module.exports = {
     sidebar: {
       "/ipc/": getIpcSiderBar("IpcMessage"),
       "/native/": getNativeSiderBar("NativeApi"),
+      "/updater/": getUpdaterSiderBar("AppUpdater"),
       "/logger/": getLoggerSiderBar("LoggerApi"),
       "/db/": getDBSiderBar("DataBaseApi")
     },
@@ -323,6 +325,17 @@ function getDBSiderBar(groupTitle) {
         "getState",
         "drop"
       ]
+    }
+  ];
+}
+
+function getUpdaterSiderBar(groupTitle) {
+  return [
+    {
+      title: groupTitle,
+      collapsable: false,
+      sidebarDepth: 0,
+      children: ["", "checkForUpdates", "downloadUpdates", "installUpdates"]
     }
   ];
 }
