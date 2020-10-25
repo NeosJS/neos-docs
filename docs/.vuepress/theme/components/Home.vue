@@ -1,6 +1,6 @@
 <template>
   <main class="home" :aria-labelledby="data.heroText !== null ? 'main-title' : null">
-    <div class="bg" :style="'background:url(' + bg + ') no-repeat;background-size:cover;background-position: 50%;op'"></div>
+    <div class="bg" :style="'background:url(' + bg + ') no-repeat;background-size:cover;background-position: 55%;op'"></div>
     <header class="hero">
       <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" />
 
@@ -123,12 +123,11 @@ export default {
       display inline-block
       font-size 1.2rem
       color #fff
-      background-color $--color-primary
+      background-image: linear-gradient(to right, #0097e6, #14d4f4);
       padding 0.5rem 1.2rem
       border-radius 4px
       transition background-color .1s ease
       box-sizing border-box
-      border-bottom 1px solid darken($--color-primary, 10%)
       &:hover
         background-color lighten($--color-primary, 10%)
   .features
@@ -172,11 +171,12 @@ export default {
     padding-left 1.5rem
     padding-right 1.5rem
     .hero
+      margin-left 0
       img
         max-height 210px
         margin 2rem auto 1.2rem
       h1
-        font-size 2rem
+        font-size 1.8rem
       h1, .description, .action
         margin 1.2rem auto
       .description
@@ -184,6 +184,9 @@ export default {
       .action-button
         font-size 1rem
         padding 0.6rem 1.2rem
+        margin .5rem
+      .action
+        text-align left
     .feature
       h2
         font-size 1.25rem
