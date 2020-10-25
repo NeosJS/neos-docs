@@ -340,7 +340,8 @@ function getUpdaterSiderBar(groupTitle) {
         "autoCheckUpdates",
         "checkForUpdates",
         "downloadUpdates",
-        "installUpdates"
+        "installUpdates",
+        "checkForUpdatesMain"
       ]
     }
   ];
