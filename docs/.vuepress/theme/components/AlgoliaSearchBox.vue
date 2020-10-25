@@ -79,8 +79,9 @@ export default {
     line-height normal
     .ds-dropdown-menu
       background-color #fff
-      border 1px solid #999
+      border 0px solid #999
       border-radius 4px
+      box-shadow  0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12), 0 3px 5px -1px rgba(0,0,0,.4);
       font-size 16px
       margin 6px 0 0
       padding 4px
@@ -97,7 +98,7 @@ export default {
     .algolia-docsearch-suggestion--highlight
       color #2c815b
     .algolia-docsearch-suggestion
-      border-color $borderColor
+      // border-color $borderColor
       padding 0
       .algolia-docsearch-suggestion--category-header
         padding 5px 10px

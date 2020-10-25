@@ -14,8 +14,9 @@
   height 1.25rem
   position absolute
   padding 0.6rem
-  top 0.6rem
+  top .75rem
   left 1rem
+  color #fff
   .icon
     display block
     width 1.25rem

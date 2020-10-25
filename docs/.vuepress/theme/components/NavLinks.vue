@@ -100,11 +100,13 @@ export default {
 .nav-links
   display inline-block
   a
-    line-height 3.5rem
-    color inherit
+    line-height 3.7rem
+    color #fff
     font-weight bold
+    opacity .7
     &:hover, &.router-link-active
-      color $--color-primary
+      // color $--color-primary
+      opacity: 1
   .nav-item
     position relative
     display inline-block
@@ -117,15 +119,19 @@ export default {
 
 @media (max-width: $MQMobile)
   .nav-links
+    a
+     line-height 1rem
+     color #2c3e50
     .nav-item, .repo-link
       margin-left 0
 
 @media (min-width: $MQMobile)
   .nav-links a
     &:hover, &.router-link-active
-      color $--color-primary
+      // color $--color-primary
+      opacity: 1
   .nav-item > a:not(.external)
     &:hover, &.router-link-active
       margin-bottom -2px
-      border-bottom 2px solid lighten($--color-primary, 8%)
+      border-bottom 2px solid lighten($--color-white, 8%)
 </style>
