@@ -23,5 +23,5 @@ updaterApi.autoCheckUpdates()
 ```
 
 :::danger
-由于该接口是自动检测和下载，在体验上可能不能满足UI的界面需求。建议调用手动检测接口 [checkForUpdates](updater/checkForUpdates.html)。
+由于该接口是自动检测和下载，在体验上可能不能满足UI的界面需求。为了更加自由和主动，需要用户手动触发更新，建议使用： [checkForUpdates](updater/checkForUpdates.html)。
 :::
