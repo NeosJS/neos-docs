@@ -29,4 +29,7 @@ messageCenter.on('MAIN_CHECK_UPDATES',(event, res) => {
   console.log(res)
 })
 ```
-> 没有更新会返回false, 有更新，则返回更新数据。详见：[checkForUpdates](/updater/checkForUpdates.html#fan-hui-shu-ju) 接口
+> 没有更新会返回false。有更新，则返回更新数据。详见：[checkForUpdates](/updater/checkForUpdates.html#fan-hui-shu-ju) 接口
+
+> 当有数据返回时，此时调用 [downloadUpdates](/updater/downloadUpdates.html) 即可开始下载。
+
