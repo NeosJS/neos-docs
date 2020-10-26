@@ -338,10 +338,10 @@ function getUpdaterSiderBar(groupTitle) {
       children: [
         "",
         "autoCheckUpdates",
-        "checkForUpdates",
+        "checkUpdates",
         "downloadUpdates",
         "installUpdates",
-        "checkForUpdatesMain"
+        "checkUpdatesMain"
       ]
     }
   ];
