@@ -93,7 +93,6 @@ export default {
   bottom 0
   right 0
 .home
-
   z-index 2
   // padding $navbarHeight 2rem 0
   max-width 100%

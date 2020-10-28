@@ -10,7 +10,7 @@
     "clean": "rimraf dist/* && rimraf *.log",
     "cname": "echo thinkacademy-docs.neosjs.com>>./dist/CNAME",
     "build": "npm run clean && npm run docs:build && npm run cname",
-    "deploy": "sh ./deploy.sh build",
+    "deploy": "sh ./deploy.sh push && sh ./deploy.sh build",
     "push": "sh ./deploy.sh push"
   },
   "repository": {
