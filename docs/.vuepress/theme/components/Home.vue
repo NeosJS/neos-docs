@@ -1,6 +1,6 @@
 <template>
   <main class="home" :aria-labelledby="data.heroText !== null ? 'main-title' : null">
-    <div class="bg" :style="'background:url(' + bg + ') no-repeat;background-size:cover;background-position: 55%;op'"></div>
+    <div class="bg" :style="'background:url(' + bg + ') no-repeat;background-size:cover;background-position: 55%;'"></div>
     <header class="hero">
       <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" />
 
@@ -16,6 +16,7 @@
         <NavLink class="action-button" :item="actionLink2" v-if="data.actionLink2" />
         <NavLink class="action-button" :item="actionLink3" v-if="data.actionLink3" />
         <NavLink class="action-button" :item="actionLink4" v-if="data.actionLink4" />
+        <NavLink class="action-button" :item="actionLink5" v-if="data.actionLink5" />
       </p>
     </header>
 
@@ -77,6 +78,12 @@ export default {
       return {
         link: this.data.actionLink4,
         text: this.data.actionText4
+      }
+    },
+    actionLink5() {
+      return {
+        link: this.data.actionLink5,
+        text: this.data.actionText5
       }
     }
   }

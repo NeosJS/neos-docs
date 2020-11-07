@@ -21,6 +21,7 @@ module.exports = {
       { text: "NativeApi", link: "/native/get/getAppVersion.html" },
       { text: "UpdaterApi", link: "/updater/" },
       { text: "DataBaseApi", link: "/db/" },
+      { text: "DownloaderApi", link: "/downloader/" },
       { text: "Logger", link: "/logger/" }
       // !isEnvProduction && { text: 'TEST', link: '/test/' }
     ],
@@ -29,7 +30,15 @@ module.exports = {
       "/native/": getNativeSiderBar("NativeApi"),
       "/updater/": getUpdaterSiderBar("UpdaterApi"),
       "/logger/": getLoggerSiderBar("LoggerApi"),
-      "/db/": getDBSiderBar("DataBaseApi")
+      "/db/": getDBSiderBar("DataBaseApi"),
+      "/downloader/": [
+        {
+          title: "课件资源下载",
+          collapsable: false,
+          sidebarDepth: 0,
+          children: ["", "checkCourseware", "downloadCourseware"]
+        }
+      ]
     },
     lastUpdated: "上次更新",
     smoothScroll: true
