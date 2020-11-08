@@ -36,7 +36,7 @@ module.exports = {
           title: "课件资源下载",
           collapsable: false,
           sidebarDepth: 0,
-          children: ["", "checkCourseware", "downloadCourseware"]
+          children: ["", "checkCourseware", "downloadCourseware", "extractZip"]
         }
       ]
     },
