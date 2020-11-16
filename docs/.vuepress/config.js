@@ -152,6 +152,7 @@ function getNativeSiderBar(groupTitle) {
         "get/getAppVersion",
         "get/getAppPath",
         "get/getClientInfo",
+        "get/getMediaAccessStatus",
         "jumpPage",
         "relaunchApp",
         "exitApp",
