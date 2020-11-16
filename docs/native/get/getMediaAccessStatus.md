@@ -1,4 +1,4 @@
-# 获取媒体状态
+# 获取媒体状态 <BadgeTip text="异步" type="green"></BadgeTip>
 
 获取麦克风、摄像头等媒体的授权情况
 
@@ -17,7 +17,7 @@ const accessStatus = await nativeApi.getMediaAccessStatus('microphone') // 获�
 
 ## Params
 
-| 参数  | 说明     | 类型   | 可选值     | 默认值 |
-| ----- | -------- | ------ | ---------- | ------ |
-| mediaType | 媒体类型 | String | microphone、camera | —      |
-| callback | 回调 | Function | —  | —      |
+| 参数  | 说明     | 类型   | 可选值     | 默认值 | 是否必选 |
+| ----- | -------- | ------ | ---------- | ------ |------ |
+| mediaType | 媒体类型 | String | microphone、camera | —      | 是      |
+| callback | 回调 | Function | —  | —      | 否 |
