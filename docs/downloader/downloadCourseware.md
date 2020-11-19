@@ -7,7 +7,7 @@
 该接口，会进行 `列队下载`，每次仅下载一个文件。
 
 ## API
-### `downloaderApi.downloadCourseware(fileUrl, fileMD5, resume, callback)`
+### `downloaderApi.downloadCourseware(fileUrl, fileMD5, callback)`
 ### 
 
 
@@ -25,20 +25,17 @@ await downloaderApi.downloadCourseware('https://xxxxxxx.zip', 'asd123123nsadasbd
 | ---- | ------- | ------ | ------ | ------ | ------ |
 | fileUrl | 需要下载的zip包地址 | String | —      | —      | 是      |
 | fileMD5 | zip包的md5值 | String | —      | —      | 是      |
-| resume | 重试次数 | Number | —      | 3      | 否      |
 | callback | 回调 | Function | —      | —      | 否      |
 
 ## 返回数据
 
 | 字段 | 说明    | 类型   | 
 | ---- | ------- | ------ | 
+| state | 当前下载的状态 | String |
 | percent | 百分百 | Number | 
-| speed | 下载速度 | String | 
 | totalSize | 文件总大小 | String | 
-| finishSize | 文件下载大小 | String | 
-| complete | 是否下载完成 | Boolean | 
-| md5 | 文件md5值 | String | 
+| receivedSize | 接收的文件大小 | String | 
 
 :::danger
-`complete`, `md5` 仅在文件下载成功后返回。
+`state`取值为： `completed`, `failed`。
 :::
