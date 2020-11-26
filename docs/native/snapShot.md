@@ -15,6 +15,27 @@ const filePath = await nativeApi.snapShot({
 
 // 拍摄当前激活的窗口快照，保存成png图片，并返回图片路径
 ```
+#### 返回缩略图示例
+```js
+import { nativeApi } from '@neosjs/electron-ipc'
+
+const filePath = await nativeApi.snapShot({
+  thumbnailWidth: 300,
+  thumbnailQuality: 0.5,
+  type: 'window',
+  ext: 'png'
+})
+
+// 生成宽为300像素并压缩50%的缩略图
+```
+## 返回值
+```json
+{
+  fileName: 'xxxxxxxx.png',
+  filePath: '/User/xxxxxxx/,
+  thumbnail: 'data:image/jpeg;base64,aadjxixizixczixcuzoxc' // 缩略图的返回，取决于是否设置了 thumbnailWidth
+}
+```
 
 ## Params
 
