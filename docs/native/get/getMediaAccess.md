@@ -2,6 +2,10 @@
 
 获取麦克风、摄像头等媒体的授权情况
 
+:::danger
+仅对 MacOS 有效！！！
+:::
+
 ## API
 ### `nativeApi.getMediaAccess(mediaType, callback)`
 ### 
