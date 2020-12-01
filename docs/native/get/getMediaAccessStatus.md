@@ -12,7 +12,7 @@ import { nativeApi } from '@neosjs/electron-ipc'
 
 const accessStatus = await nativeApi.getMediaAccessStatus('microphone') // 获取麦克风的授权情况
 
-// 返回 true 表示已授权, 否则返回 false
+// 返回 not-determined, granted, denied, restricted 或者 unknown 。请自行判断！
 ```
 
 ## Params
