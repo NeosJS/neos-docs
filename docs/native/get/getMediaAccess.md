@@ -1,6 +1,6 @@
 # 获取媒体权限 <BadgeTip text="异步" type="green"></BadgeTip>
 
-获取麦克风、摄像头等媒体的授权情况
+获取麦克风、摄像头等权限
 
 :::danger
 仅对 MacOS 有效！！！
