@@ -1,4 +1,4 @@
-# 获取媒体权限 <BadgeTip text="异步" type="green"></BadgeTip>
+# 获取媒体权限 <BadgeTip text="异步" type="green"></BadgeTip> <BadgeTip text="MacOS" type="blue"></BadgeTip>
 
 获取麦克风、摄像头等权限
 
