@@ -14,7 +14,7 @@
 ```js
 import { nativeApi } from '@neosjs/electron-ipc'
 
-const access = await nativeApi.getMediaAccess('microphone') // 获取麦克风的授权情况
+const access = await nativeApi.getMediaAccess('microphone') // 获取麦克风权限
 
 ```
 
