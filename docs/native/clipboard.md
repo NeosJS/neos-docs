@@ -1,6 +1,6 @@
 # 剪贴板 <BadgeTip text="同步" type="blue"></BadgeTip>
 
-在系统剪贴板上执行复制和粘贴操作
+在系统剪贴板上执行复制和粘贴操作。
 
 
 ## 写入
@@ -29,7 +29,7 @@ const html = nativeApi.clipboard.read('html')  // 读取剪贴板html内容
 
 ## Params
 
-| 参数  | 说明     | 类型   | 可选值     | 默认值 |
-| ----- | -------- | ------ | ---------- | ------ |
-| content | 需要写入剪贴板的内容 | String | — | —     |
-| type | 写入类型 | String | text、image、html | text    |
+| 参数  | 说明     | 类型   | 可选值     | 默认值 |必选 |
+| ----- | -------- | ------ | ---------- | ------ |------ |
+| content | 需要写入剪贴板的内容 | String | — | —     |是 |
+| type | 写入类型 | String | text、image、html | text    |否 |
