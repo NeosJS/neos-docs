@@ -175,7 +175,8 @@ function getNativeSiderBar(groupTitle) {
         "open/openFileBySystem",
         "open/openFileOrDirBySystem",
         "cleanCache",
-        "cleanStorage"
+        "cleanStorage",
+        "clipboard"
         // {
         //   title: "通用",
         //   collapsable: true,
