@@ -1,4 +1,4 @@
-# 剪贴板
+# 剪贴板 <BadgeTip text="同步" type="blue"></BadgeTip>
 
 在系统剪贴板上执行复制和粘贴操作
 
