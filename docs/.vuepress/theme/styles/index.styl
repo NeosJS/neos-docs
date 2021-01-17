@@ -25,7 +25,9 @@ body
   color $--color-text-regular
 #app
   &::before
-    position: relative;
+    position: fixed;
+    top:0;
+    left:0;
     display: block;
     width: 100%;
     height: 3px;
@@ -185,7 +187,7 @@ table
   margin 1rem 0
   // display: block
   overflow-x: auto
-  width 100%
+  max-width 100%
   th
     background-color: #f7f7f7;
 tr

@@ -4,8 +4,8 @@ const tools = require("./theme/util/tools");
 // const isEnvProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  title: "海外产研部 客户端开发文档",
-  description: "海外产研部前端组文档",
+  title: "客户端开发文档",
+  description: "前端组文档",
   dest: "./dist",
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
@@ -18,10 +18,11 @@ module.exports = {
     nav: [
       { text: "首页", link: "/" },
       { text: "IpcMessage", link: "/ipc/" },
-      { text: "NativeApi", link: "/native/get/getAppVersion.html" },
-      { text: "UpdaterApi", link: "/updater/" },
-      { text: "DataBaseApi", link: "/db/" },
-      { text: "DownloaderApi", link: "/downloader/" },
+      { text: "Native", link: "/native/get/getAppVersion.html" },
+      { text: "Updater", link: "/updater/" },
+      { text: "DataBase", link: "/db/" },
+      { text: "Downloader", link: "/downloader/" },
+      { text: "Recorder", link: "/recorder/" },
       { text: "Logger", link: "/logger/" }
       // !isEnvProduction && { text: 'TEST', link: '/test/' }
     ],
@@ -31,6 +32,26 @@ module.exports = {
       "/updater/": getUpdaterSiderBar("UpdaterApi"),
       "/logger/": getLoggerSiderBar("LoggerApi"),
       "/db/": getDBSiderBar("DataBaseApi"),
+      "/recorder/": [
+        {
+          title: "RecorderApi",
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            "",
+            "isSupport",
+            "init",
+            "open",
+            "start",
+            "stop",
+            "close",
+            "pause",
+            "resume",
+            "getBlob",
+            "play"
+          ]
+        }
+      ],
       "/downloader/": [
         {
           title: "课件资源下载",
