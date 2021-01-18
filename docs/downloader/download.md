@@ -12,7 +12,7 @@
 ```js
 import { downloaderApi } from '@neosjs/electron-ipc'
 
-await downloaderApi.downloadCourseware('https://xxxxxxx.exe', res => {
+await downloaderApi.download('https://xxxxxxx.exe', res => {
   console.log(res)
 })
 ```
