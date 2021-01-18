@@ -54,7 +54,7 @@ module.exports = {
       ],
       "/downloader/": [
         {
-          title: "课件资源下载",
+          title: "DownloadApi",
           collapsable: false,
           sidebarDepth: 0,
           children: [
@@ -62,7 +62,9 @@ module.exports = {
             "checkNetSpeed",
             "checkCourseware",
             "downloadCourseware",
-            "extractZip"
+            "extractZip",
+            "download",
+            "downloadexe"
           ]
         }
       ]
