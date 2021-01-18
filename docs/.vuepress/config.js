@@ -63,8 +63,7 @@ module.exports = {
             "checkCourseware",
             "downloadCourseware",
             "extractZip",
-            "download",
-            "downloadexe"
+            "download"
           ]
         }
       ]
@@ -382,7 +381,8 @@ function getUpdaterSiderBar(groupTitle) {
         "checkUpdates",
         "downloadUpdates",
         "installUpdates",
-        "checkUpdatesMain"
+        "checkUpdatesMain",
+        "download"
       ]
     }
   ];
