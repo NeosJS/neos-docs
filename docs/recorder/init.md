@@ -14,7 +14,7 @@ recorder.init({
   bitRate: 16, // 采用数位
   effective: 3, // 有效分贝值 0 -- 100
   autoOpen: true, // 初始化完成后，是否自动打开录音机
-  waveConfig: {
+  waveConfig: [{
     type: 'histogram', // 波形类型
     lineRound: true, 
     lineCount: 4,
@@ -22,7 +22,7 @@ recorder.init({
     minHeight: 0,
     position: 0,
     strokeColor: '#7ac70c'
-  }
+  }]
 })
 ```
 
@@ -32,6 +32,10 @@ recorder.on('init', () => {
   console.log('初始化完成')
 })
 ```
+
+::: warning
+  指定多个波形图配置，可在一个音频输入下，显示多个波形。
+:::
 
 ## 参数
 
@@ -43,7 +47,7 @@ recorder.on('init', () => {
 | options['type']             | 音频类型                   | string | wav        | wav          |
 | options['autoOpen']             | 初始化完成后，是否自动打开录音机                   | boolean | —        | true          |
 | options['effective']             | 有效分贝值。取值：0 --- 100                   | number | —        | 0          |
-| options['waveConfig']         | 波形图配置 | object | —               | —            |
+| options['waveConfig']         | 波形图配置 | array | —               | —            |
 | options['waveConfig']['type'] | 波形图类型                 | string | histogram、wave | histogram         |
 | options['waveConfig']['elem']  | 波形容器id选择器        | string | —               | waveContent |
 |  | <div style="color:#dc0000">**以下配置仅在波形类型 为 `histogram` 时有效**</div> |  |  |  |
