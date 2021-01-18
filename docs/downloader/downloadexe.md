@@ -1,14 +1,16 @@
 # 升级下载方案
 
-由于某些原因，windows的升级包无法实现自动升级。故：提供此示例进行曲线救国。
+由于某些原因，自动升级无法满足业务需求，故：制订该下载升级方案。
 
 ::: info
 具体方案：
 - 下载安装文件
-- 调用 `nativeApi.openFileBySystem(filePath)`，打开第一步下载的exe文件
-- 文件下载完成后，调用 `nativeApi.exitApp()`，退出应用程序
+- 调用 `nativeApi.openFileBySystem(filePath)`，打开第一步下载的文件
+- 调用 `nativeApi.exitApp()`，退出应用程序
 
-以上三步执行完毕，即可进行`windows`的升级。
+以上三步执行完毕，即可进行下载升级。
+
+此方法适合所有平台！
 :::
 
 ## 示例代码
@@ -21,9 +23,8 @@ downloaderApi.download('https://xxxxxxx.exe', res => {
   if(res.state === 'completed') {
     // 第二步 打开刚才下载的文件
     nativeApi.openFileBySystem('xxxxxxx.exe')
+    // 第三步 下载完成退出应用程序
+    nativeApi.exitApp() 
   }
 })
-
-// 第三步 下载完成退出应用程序
-nativeApi.exitApp() 
 ```
