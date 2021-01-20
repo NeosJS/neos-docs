@@ -37,11 +37,9 @@ import { downloaderApi,updaterApi } from '@neosjs/electron-ipc'
 // 第一步 下载文件
 downloaderApi.download('https://xxxxxxx.zip', res => {
   if(res.state === 'completed') {
-    // 第二步 调用mac的自动检查更新
-    updaterApi.checkUpdates()
+    // 第二步 调用mac的自动安装更新
+    updaterApi.installMacUpdates()
   }
 })
 
-// 第三步 如果有界面显示需要手动点击安装
-updaterApi.downloadUpdates(true) // 注意：这里不再需要显示进度了。第一步已经下载好文件了。
 ```
