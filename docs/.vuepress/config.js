@@ -179,6 +179,7 @@ function getNativeSiderBar(groupTitle) {
       children: [
         "get/getAppVersion",
         "get/getAppPath",
+        "get/getPathByName",
         "get/getClientInfo",
         "get/getMediaAccessStatus",
         "get/getMediaAccess",

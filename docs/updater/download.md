@@ -6,7 +6,7 @@
 
 ::: info
 具体方案：
-- 下载安装文件
+- 下载安装文件 (windows系统下载`.exe`，mac系统下载`.zip`)
 - 调用 `nativeApi.openFileBySystem(filePath)`，打开第一步下载的文件
 - 调用 `nativeApi.exitApp()`，退出应用程序
 
@@ -14,6 +14,7 @@
 :::
 
 ## 示例代码
+### Windows系统升级方案
 ```js
 import { downloaderApi } from '@neosjs/electron-ipc'
 
@@ -27,4 +28,20 @@ downloaderApi.download('https://xxxxxxx.exe', res => {
     nativeApi.exitApp() 
   }
 })
+```
+
+### Mac系统升级方案
+```js
+import { downloaderApi,updaterApi } from '@neosjs/electron-ipc'
+
+// 第一步 下载文件
+downloaderApi.download('https://xxxxxxx.zip', res => {
+  if(res.state === 'completed') {
+    // 第二步 调用mac的自动检查更新
+    updaterApi.checkUpdates()
+  }
+})
+
+// 第三步 如果有界面显示需要手动点击安装
+updaterApi.downloadUpdates(true) // 注意：这里不再需要显示进度了。第一步已经下载好文件了。
 ```
