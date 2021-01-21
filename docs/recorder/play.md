@@ -1,4 +1,4 @@
-# 播放录音文件
+# 播放录音文件 <BadgeTip text="异步" type="green"></BadgeTip>
 
 ## API
 ### `recorder.play(audioDomId: <String>)`

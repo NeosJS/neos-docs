@@ -1,4 +1,4 @@
-# 获取录音文件
+# 获取录音文件 <BadgeTip text="异步" type="green"></BadgeTip>
 
 ## API
 ### `recorder.getBlob()`

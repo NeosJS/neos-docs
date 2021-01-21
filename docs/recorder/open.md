@@ -1,4 +1,4 @@
-# 打开录音机
+# 打开录音机 <BadgeTip text="异步" type="green"></BadgeTip>
 
 开始录音之前应该先调用此接口来打开录音机
 

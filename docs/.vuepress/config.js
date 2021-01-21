@@ -41,6 +41,7 @@ module.exports = {
             "",
             "isSupport",
             "init",
+            "getDeviceLists",
             "open",
             "start",
             "stop",
@@ -48,7 +49,8 @@ module.exports = {
             "pause",
             "resume",
             "getBlob",
-            "play"
+            "play",
+            "destroy"
           ]
         }
       ],

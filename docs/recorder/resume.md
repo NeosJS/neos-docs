@@ -1,4 +1,4 @@
-# 恢复录音
+# 恢复录音 <BadgeTip text="异步" type="green"></BadgeTip>
 
 ## API
 ### `recorder.resume()`

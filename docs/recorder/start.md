@@ -1,4 +1,4 @@
-# 开始录音
+# 开始录音 <BadgeTip text="异步" type="green"></BadgeTip>
 
 ## API
 ### `recorder.start()`

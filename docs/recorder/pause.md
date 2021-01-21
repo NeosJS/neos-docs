@@ -1,4 +1,4 @@
-# 暂停录音
+# 暂停录音 <BadgeTip text="异步" type="green"></BadgeTip>
 
 ## API
 ### `recorder.pause()`

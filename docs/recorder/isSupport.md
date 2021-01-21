@@ -1,4 +1,4 @@
-# 检查是否支持录音
+# 检查是否支持录音 <BadgeTip text="同步" type="blue"></BadgeTip>
 
 ## API
 ### `recorder.isSupport()`

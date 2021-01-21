@@ -1,4 +1,4 @@
-# 关闭录音机
+# 关闭录音机 <BadgeTip text="异步" type="green"></BadgeTip>
 
 ## API
 ### `recorder.close(callback: <Function>)`
