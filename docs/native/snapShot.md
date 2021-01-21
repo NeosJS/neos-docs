@@ -43,7 +43,7 @@ const filePath = await nativeApi.snapShot({
 | ----- | -------- | ------ | ---------- | ------ |
 | options | 拍摄快照的参数。（可选） | Object | —| —|
 | options['width'] | 保存图片的宽度 | Number |  —  | 1200      |
-| options['height'] | 保存图片的高度 | Number |  —  | 7200      |
+| options['height'] | 保存图片的高度 | Number |  —  | 720      |
 | options['savePath'] | 图片保存的路径 | String |  —  | 本机的桌面      |
 | options['ext'] | 保存图片的后缀名 | String |  png、jpeg  | jpg      |
 | options['type'] | 快照类型。（支持 `屏幕快照` 和 `窗口快照`） | String |  screen、window  | window      |
