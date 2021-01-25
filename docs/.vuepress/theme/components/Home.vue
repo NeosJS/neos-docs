@@ -18,6 +18,7 @@
         <NavLink class="action-button" :item="actionLink4" v-if="data.actionLink4" />
         <NavLink class="action-button" :item="actionLink5" v-if="data.actionLink5" />
         <NavLink class="action-button" :item="actionLink6" v-if="data.actionLink6" />
+        <NavLink class="action-button" :item="actionLink7" v-if="data.actionLink7" />
       </p>
     </header>
 
@@ -91,6 +92,12 @@ export default {
       return {
         link: this.data.actionLink6,
         text: this.data.actionText6
+      }
+    },
+    actionLink7() {
+      return {
+        link: this.data.actionLink7,
+        text: this.data.actionText7
       }
     }
   }

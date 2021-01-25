@@ -33,6 +33,7 @@ await downloaderApi.downloadCourseware('https://xxxxxxx.zip', 'asd123123nsadasbd
 | ---- | ------- | ------ | 
 | state | 当前下载的状态 | String |
 | percent | 百分百 | Number | 
+| speed | 下载速度 | String | 
 | totalSize | 文件总大小 | String | 
 | receivedSize | 接收的文件大小 | String | 
 

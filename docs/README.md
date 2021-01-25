@@ -12,6 +12,8 @@ actionText4: DataBase
 actionLink4: /db/
 actionText5: Recorder
 actionLink5: /recorder/
+actionText6: Net
+actionLink6: /net/
 # actionText6: Logger
 # actionLink6: /logger/
 tagline: 写文档不易，请仔细阅读

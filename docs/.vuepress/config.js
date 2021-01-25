@@ -23,6 +23,7 @@ module.exports = {
       { text: "DataBase", link: "/db/" },
       { text: "Downloader", link: "/downloader/" },
       { text: "Recorder", link: "/recorder/" },
+      { text: "Net", link: "/net/" },
       { text: "Logger", link: "/logger/" }
       // !isEnvProduction && { text: 'TEST', link: '/test/' }
     ],
@@ -32,43 +33,9 @@ module.exports = {
       "/updater/": getUpdaterSiderBar("UpdaterApi"),
       "/logger/": getLoggerSiderBar("LoggerApi"),
       "/db/": getDBSiderBar("DataBaseApi"),
-      "/recorder/": [
-        {
-          title: "RecorderApi",
-          collapsable: false,
-          sidebarDepth: 0,
-          children: [
-            "",
-            "isSupport",
-            "init",
-            "getDeviceLists",
-            "open",
-            "start",
-            "stop",
-            "close",
-            "pause",
-            "resume",
-            "getBlob",
-            "play",
-            "destroy"
-          ]
-        }
-      ],
-      "/downloader/": [
-        {
-          title: "DownloadApi",
-          collapsable: false,
-          sidebarDepth: 0,
-          children: [
-            "",
-            "checkNetSpeed",
-            "checkCourseware",
-            "downloadCourseware",
-            "extractZip",
-            "download"
-          ]
-        }
-      ]
+      "/recorder/": getRecorderSiderBar("RecorderApi"),
+      "/downloader/": getDownloaderSiderBar("DownloaderApi"),
+      "/net/": getNetSiderBar("NetApi")
     },
     lastUpdated: "上次更新",
     smoothScroll: true
@@ -387,6 +354,59 @@ function getUpdaterSiderBar(groupTitle) {
         "checkUpdatesMain",
         "download"
       ]
+    }
+  ];
+}
+
+function getRecorderSiderBar(groupTitle) {
+  return [
+    {
+      title: groupTitle,
+      collapsable: false,
+      sidebarDepth: 0,
+      children: [
+        "",
+        "isSupport",
+        "init",
+        "getDeviceLists",
+        "open",
+        "start",
+        "stop",
+        "close",
+        "pause",
+        "resume",
+        "getBlob",
+        "play",
+        "destroy"
+      ]
+    }
+  ];
+}
+
+function getDownloaderSiderBar(groupTitle) {
+  return [
+    {
+      title: groupTitle,
+      collapsable: false,
+      sidebarDepth: 0,
+      children: [
+        "",
+        "checkCourseware",
+        "downloadCourseware",
+        "extractZip",
+        "downloadFiles",
+        "download"
+      ]
+    }
+  ];
+}
+function getNetSiderBar(groupTitle) {
+  return [
+    {
+      title: groupTitle,
+      collapsable: false,
+      sidebarDepth: 0,
+      children: ["", "checkNetSpeed", "reportNetSpeed", "getFastDomain"]
     }
   ];
 }
