@@ -1,6 +1,8 @@
 # 压缩包解压 <BadgeTip text="异步" type="green"></BadgeTip>
 
-解压一个压缩包到指定目录
+解压一个压缩包到指定目录。
+
+该接口目前仅在API内部使用。
 
 ## API
 ### `downloaderApi.extractZip(zipFile, destFolder, overwrite, callback)`

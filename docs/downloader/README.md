@@ -14,3 +14,8 @@ npm i @neosjs/electron-ipc -S
 yarn add @neosjs/electron-ipc
 ```
 
+::: info
+接口均提供事件。 
+
+事件的名称，取决于接口提供的方法名。 如：`downloaderApi.downloadCourseware()`, 方法名为 `downloadCourseware`, 那么事件名称就是：`downloadCourseware`。 监听事件的方法是： `downloaderApi.on('downloadCourseware')`。
+:::

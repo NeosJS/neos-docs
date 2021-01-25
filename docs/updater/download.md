@@ -23,8 +23,8 @@ import { downloaderApi } from '@neosjs/electron-ipc'
 downloaderApi.downloadUpdates('https://xxxxxxx.zip', res => {
   // 实时回调监听文件是否下载完成
   if(res.state === 'completed') {
-    // 第二步 打开刚才下载的文件
-    nativeApi.openFileBySystem('xxxxxxx.exe')
+    // 第二步 打开刚才下载的文件。接口会返回保存的路径。
+    nativeApi.openFileBySystem(`${res.filePath}/xxxxxxx.exe`)
     // 第三步 下载完成退出应用程序
     nativeApi.exitApp() 
   }
