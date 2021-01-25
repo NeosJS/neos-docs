@@ -1,6 +1,8 @@
-# 安装更新
+# 安装更新 <BadgeTip text="MacOS" type="warn"></BadgeTip>
 
-当更新文件下载完成后，可调用该接口，进行安装
+当更新文件下载完成后，可调用该接口，进行安装。
+
+windows系统安装更新，请参阅[下载升级包 升级方案](download.html)
 
 ## API
 ### `updaterApi.installUpdates()`

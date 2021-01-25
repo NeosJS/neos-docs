@@ -8,6 +8,14 @@
 ### `downloaderApi.downloadFiles(options: <Object>, callback: <Function>)`
 ### 
 
+:::danger
+1. 返回的`state`取值为： `completed`, `failed`。
+
+2. `savePath` 不填，则保存在 用户的`downloads`目录下。 `saveName` 不填，则保存为原文件名。
+
+3. 事件返回的数据和回调返回的数据是一样的。具体用回调还是用事件，请业务层自行决定。
+:::
+
 ## 示例代码
 ```js
 import { downloaderApi } from '@neosjs/electron-ipc'
@@ -17,6 +25,13 @@ await downloaderApi.downloadFiles({
   saveName: '123123123.zip', // 保存的文件名
   savePath: '/User/xxxx/xxxxxx' // 保存路径
 }, res => {
+  console.log(res)
+})
+```
+
+####  事件监听
+```js
+downloaderApi.on('downloadFiles', res => {
   console.log(res)
 })
 ```
@@ -40,9 +55,3 @@ await downloaderApi.downloadFiles({
 | speed | 下载速度 | String | 
 | totalSize | 文件总大小 | String | 
 | receivedSize | 接收的文件大小 | String | 
-
-:::danger
-`state`取值为： `completed`, `failed`。
-
-`savePath` 不填，则保存在 用户的`downloads`目录下。 `saveName` 不填，则保存为原文件名。
-:::

@@ -1,6 +1,10 @@
-# 下载更新 <BadgeTip text="异步" type="green"></BadgeTip>
+# 下载更新(Deprecated) <BadgeTip text="异步" type="green"></BadgeTip> <BadgeTip text="弃用" type="danger"></BadgeTip>
 
-当检查到有新版的时候，可调用该接口下载更新
+当检查到有新版的时候，可调用该接口下载更新。
+
+:::danger
+此接口已经迁移成内部接口。已不再对外提供下载服务。
+:::
 
 ## API
 ### `updaterApi.downloadUpdates(autoInstall: <Boolean>, callback: <Function>)`
@@ -31,6 +35,7 @@ updaterApi.downloadUpdates(res => {
   console.log(res)
 })
 ```
+
 ## 返回数据
 | Key | 说明    | 类型   |
 | ---- | ------- | ------ |

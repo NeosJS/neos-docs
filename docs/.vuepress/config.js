@@ -350,9 +350,9 @@ function getUpdaterSiderBar(groupTitle) {
         "autoCheckUpdates",
         "checkUpdates",
         "downloadUpdates",
-        "installUpdates",
         "checkUpdatesMain",
-        "download"
+        "download",
+        "installUpdates"
       ]
     }
   ];
@@ -391,11 +391,12 @@ function getDownloaderSiderBar(groupTitle) {
       sidebarDepth: 0,
       children: [
         "",
+        "extractZip",
         "checkCourseware",
         "downloadCourseware",
-        "extractZip",
         "downloadFiles",
-        "download"
+        "download",
+        "downloadUpdates"
       ]
     }
   ];

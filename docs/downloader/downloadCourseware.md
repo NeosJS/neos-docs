@@ -10,6 +10,11 @@
 ### `downloaderApi.downloadCourseware(fileUrl, fileMD5, callback)`
 ### 
 
+:::danger
+1. 返回的`state`取值为： `completed`, `failed`。
+
+2. 事件返回的数据和回调返回的数据是一样的。具体用回调还是用事件，请业务层自行决定。
+:::
 
 
 ## 示例代码
@@ -17,6 +22,13 @@
 import { downloaderApi } from '@neosjs/electron-ipc'
 
 await downloaderApi.downloadCourseware('https://xxxxxxx.zip', 'asd123123nsadasbd')
+```
+
+####  事件监听
+```js
+downloaderApi.on('downloadCourseware', res => {
+  console.log(res)
+})
 ```
 
 ## 参数
@@ -36,7 +48,3 @@ await downloaderApi.downloadCourseware('https://xxxxxxx.zip', 'asd123123nsadasbd
 | speed | 下载速度 | String | 
 | totalSize | 文件总大小 | String | 
 | receivedSize | 接收的文件大小 | String | 
-
-:::danger
-`state`取值为： `completed`, `failed`。
-:::

@@ -1,6 +1,10 @@
-# 检查更新 <BadgeTip text="异步" type="green"></BadgeTip>
+# 检查更新(Deprecated) <BadgeTip text="异步" type="green"></BadgeTip> <BadgeTip text="弃用" type="danger"></BadgeTip>
 
-检查应用是否有更新
+检查应用是否有更新。
+
+:::danger
+此接口已经迁移成内部接口。已不再对外提供检查服务。
+:::
 
 ## API
 ### `updaterApi.checkUpdates(callback: <Function>)`

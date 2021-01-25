@@ -1,4 +1,4 @@
-# 自动更新
+# 自动更新(Deprecated) <BadgeTip text="弃用" type="danger"></BadgeTip>
 
 应用程序在后台自动更新
 

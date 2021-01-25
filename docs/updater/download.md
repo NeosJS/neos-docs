@@ -6,7 +6,7 @@
 
 ::: info
 具体方案：
-- 下载安装文件 (windows系统下载`.exe`，mac系统下载`.zip`)
+- 下载安装文件 (`.zip`包)
 - 调用 `updaterApi.installMacUpdates()` (Mac)
 - 调用 `nativeApi.openFileBySystem(filePath)`，打开第一步下载的文件 (Windows)
 - 调用 `nativeApi.exitApp()`，退出应用程序 (Windows)
@@ -20,7 +20,7 @@
 import { downloaderApi } from '@neosjs/electron-ipc'
 
 // 第一步 下载文件
-downloaderApi.downloadUpdates('https://xxxxxxx.exe', res => {
+downloaderApi.downloadUpdates('https://xxxxxxx.zip', res => {
   // 实时回调监听文件是否下载完成
   if(res.state === 'completed') {
     // 第二步 打开刚才下载的文件
@@ -44,3 +44,6 @@ downloaderApi.downloadUpdates('https://xxxxxxx.zip', res => {
 })
 
 ```
+::: danger
+下载完成后，系统会自动解压下载的压缩包
+:::

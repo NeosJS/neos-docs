@@ -1,4 +1,4 @@
-# 主进程检查更新
+# 主进程检查更新(Deprecated) <BadgeTip text="弃用" type="danger"></BadgeTip>
 该接口主要用于顶部导航菜单
 
 ## API
