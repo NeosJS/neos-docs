@@ -13,6 +13,7 @@ import { netApi } from '@neosjs/electron-ipc'
 netApi.reportNetSpeed(
   {
     url: 'https://xxxxxxx.xxxxx.com/xxxxx',
+    method: 'POST',
     params: {
       type: 0
     },
@@ -30,6 +31,7 @@ netApi.reportNetSpeed(
 netApi.reportNetSpeed(
   {
     url: 'https://xxxxxxx.xxxxx.com/xxxxx',
+    method: 'GET',
     params: {
       type: 0
     },
