@@ -3,7 +3,7 @@
 通过连续请求某个远端地址，取其平均耗时，来上报当前网速
 
 ## API
-### `netApi.reportNetSpeed(options: <Object>, limit: <Number>, callback: <Function>)`
+### `netApi.reportNetSpeed(options: <Object>, times: <Number>, callback: <Function>)`
 ### 
 
 ## 示例代码
@@ -58,6 +58,13 @@ import { netApi } from '@neosjs/electron-ipc'
 const reportRes = await netApi.reportNetSpeed('https://xxxxxxx.xxxxx.com/xxxxx',10)
 ```
 
+####  事件监听
+```js
+downloaderApi.on('reportNetSpeed', res => {
+  console.log(res)
+})
+```
+
 ## 参数
 
 | 参数 | 说明    | 类型   | 可选值 | 默认值 |必选 |
@@ -67,7 +74,7 @@ const reportRes = await netApi.reportNetSpeed('https://xxxxxxx.xxxxx.com/xxxxx',
 | options['method'] | 请求方式 | String | GET、POST      | GET      | 否      |
 | options['timeout'] | 超时时间 (ms) | Number | —      | 15000      | 否      |
 | options['params'] | 请求参数 | Object | —      | —      | 否      |
-| limit | 请求次数 | Number | —      | 3      | 否      |
+| times | 请求总时长。（单位：秒） | Number | —      | 10      | 否      |
 | callback | 回调 | Function | —      | —      | 否      |
 
 ## 返回数据
@@ -76,10 +83,3 @@ const reportRes = await netApi.reportNetSpeed('https://xxxxxxx.xxxxx.com/xxxxx',
 | ---- | ------- | ------ | 
 | avg_round_trip | 平均耗时 | Number |
 | avg_succ_rate | 请求成功率 | Number |
-| requests | 请求的列表 | Array | 
-| requests[]['status'] | http标准状态码 | Number | 
-| requests[]['time'] | 请求消耗的时间。单位：ms | Number | 
-
-:::danger
-仅在请求成功时，`requests` 才返回 `time` 。
-:::
