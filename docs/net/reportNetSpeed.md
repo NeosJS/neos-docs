@@ -1,6 +1,6 @@
 # 网速上报
 
-通过连续请求某个远端地址，取其平均耗时，来上报当前网速
+在一段时间内，通过连续请求某个远端地址，取其平均耗时，来上报当前网速
 
 ## API
 ### `netApi.reportNetSpeed(options: <Object>, times: <Number>, callback: <Function>)`
@@ -26,7 +26,7 @@ netApi.reportNetSpeed(
 )
 ```
 
-> limit可以省略，直接写回调。例如：
+> times 可以省略，直接写回调。例如：
 ```js
 netApi.reportNetSpeed(
   {
@@ -72,9 +72,9 @@ downloaderApi.on('reportNetSpeed', res => {
 | options | 配置项 | Object | —      | —      | 是      |
 | options['url'] | 远端地址 | String | —      | —      | 是      |
 | options['method'] | 请求方式 | String | GET、POST      | GET      | 否      |
-| options['timeout'] | 超时时间 (ms) | Number | —      | 15000      | 否      |
+| options['timeout'] | 超时时间 (毫秒) | Number | —      | 15000      | 否      |
 | options['params'] | 请求参数 | Object | —      | —      | 否      |
-| times | 请求总时长。（单位：秒） | Number | —      | 10      | 否      |
+| times | 请求总时长（秒） | Number | —      | 10      | 否      |
 | callback | 回调 | Function | —      | —      | 否      |
 
 ## 返回数据
@@ -83,5 +83,5 @@ downloaderApi.on('reportNetSpeed', res => {
 | ---- | ------- | ------ | 
 | all | 请求总数 | Number |
 | success | 请求成功次数 | Number |
-| avg_round_trip | 平均耗时。（单位: 毫秒） | Number |
+| avg_round_trip | 平均耗时（毫秒） | Number |
 | avg_succ_rate | 请求成功率 | Number |
