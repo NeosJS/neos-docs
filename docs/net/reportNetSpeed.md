@@ -74,7 +74,8 @@ const reportRes = await netApi.reportNetSpeed('https://xxxxxxx.xxxxx.com/xxxxx',
 
 | 字段 | 说明    | 类型   | 
 | ---- | ------- | ------ | 
-| avg | 平均耗时 | Number |
+| avg_round_trip | 平均耗时 | Number |
+| avg_succ_rate | 请求成功率 | Number |
 | requests | 请求的列表 | Array | 
 | requests[]['status'] | http标准状态码 | Number | 
 | requests[]['time'] | 请求消耗的时间。单位：ms | Number | 
