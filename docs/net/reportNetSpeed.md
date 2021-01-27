@@ -83,5 +83,5 @@ downloaderApi.on('reportNetSpeed', res => {
 | ---- | ------- | ------ | 
 | all | 请求总数 | Number |
 | success | 请求成功次数 | Number |
-| avg_round_trip | 平均耗时 | Number |
+| avg_round_trip | 平均耗时。（单位: 毫秒） | Number |
 | avg_succ_rate | 请求成功率 | Number |
