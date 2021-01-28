@@ -49,4 +49,4 @@ downloaderApi.on('downloadUpdates', res => {
 | totalSize | 文件总大小 | String | 
 | receivedSize | 接收的文件大小 | String | 
 | filePath | 升级文件的地址 **下载成功后返回** | String | 
-
+| fileName | 下载的文件名称 | String |

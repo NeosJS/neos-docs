@@ -53,3 +53,4 @@ downloaderApi.on('downloadFiles', res => {
 | speed | 下载速度 | String | 
 | totalSize | 文件总大小 | String | 
 | receivedSize | 接收的文件大小 | String | 
+| fileName | 下载的文件名称 | String |
