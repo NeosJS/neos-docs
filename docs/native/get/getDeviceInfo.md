@@ -18,7 +18,7 @@ const deviceInfo = await nativeApi.getDeviceInfo()
 | 字段 | 说明    | 类型   | 
 | ---- | ------- | ------ | 
 | cpuModel | CPU型号 | String |
-| ip | 客户端出口IP地址 | Number |
+| ip | 客户端出口IP地址 | String |
 | osVersion | 客户端OS版本号 | String |
 | platform | 平台类型 | String |
 | totalMem | 设备内存大小 | String |
