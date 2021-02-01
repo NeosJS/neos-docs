@@ -11,7 +11,7 @@
 ### 
 
 :::danger
-- 返回的`state`取值为： `progressing`, `completed`, `failed`。
+- 返回的`state`取值为： `progressing`, `completed`, `failed`, `exists`。
 - **事件**返回的数据和**回调**返回的数据是一样的。具体用回调还是用事件，请业务层自行决定。 **建议使用 回调**
 :::
 
@@ -47,7 +47,7 @@ downloaderApi.removeAllListener('downloadCourseware')
 
 | 字段 | 说明    | 类型   | 
 | ---- | ------- | ------ | 
-| state | 当前下载的状态 (`progressing`, `completed`, `failed`) | String |
+| state | 当前下载的状态 (`progressing`, `completed`, `failed`, `exists`) | String |
 | percent | 百分比 | Number | 
 | speed | 下载速度 | String | 
 | totalSize | 文件总大小 | String | 
