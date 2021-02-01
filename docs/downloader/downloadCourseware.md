@@ -30,6 +30,11 @@ downloaderApi.on('downloadCourseware', res => {
 })
 ```
 
+#### 移除监听
+```js
+downloaderApi.removeAllListener('downloadCourseware')
+```
+
 ## 参数
 
 | 参数 | 说明    | 类型   | 可选值 | 默认值 |必选 |
