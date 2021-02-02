@@ -1,6 +1,6 @@
 # 获取设备信息
 
-获取客户端基本信息。
+获取设备的基本信息。
 
 ## API
 ### `nativeApi.getDeviceInfo(callback: <Function>)`
@@ -33,3 +33,7 @@ const deviceInfo = await nativeApi.getDeviceInfo()
 | appUsageMem| 当前应用使用的内存。(**实时使用率**) | String |
 | appUsageCPU| 当前应用使用CPU百分比。(**实时使用率**) | String |
 | appVersion | 当前运行的APP版本号| String |
+
+::: info
+  `appUsageMem`, `appUsageCPU`, `usageMem` 是当前设备的实时信息。
+:::
