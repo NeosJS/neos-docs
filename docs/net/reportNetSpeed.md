@@ -3,7 +3,7 @@
 在一段时间内，通过连续请求某个远端地址，取其平均耗时，来上报当前网速
 
 ## API
-### `netApi.reportNetSpeed(options: <Object>, times: <Number>, callback: <Function>)`
+### `netApi.reportNetSpeed(options: <Object>, duration: <Number>, callback: <Function>)`
 ### 
 
 ## 示例代码
@@ -19,14 +19,14 @@ netApi.reportNetSpeed(
     },
     timeout: 10000
   },
-  10,
+  10000,
   res => {
     console.log(res)
   }
 )
 ```
 
-> times 可以省略，直接写回调。例如：
+> duration 可以省略，直接写回调。例如：
 ```js
 netApi.reportNetSpeed(
   {
