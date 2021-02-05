@@ -73,8 +73,9 @@ downloaderApi.on('reportNetSpeed', res => {
 | options['url'] | 远端地址 | String | —      | —      | 是      |
 | options['method'] | 请求方式 | String | GET、POST      | GET      | 否      |
 | options['timeout'] | 超时时间 (毫秒) | Number | —      | 15000      | 否      |
+| options['delay'] | 发送请求间隔 (毫秒) | Number | —      | 800      | 否      |
 | options['params'] | 请求参数 | Object | —      | —      | 否      |
-| times | 请求总时长（秒） | Number | —      | 10      | 否      |
+| duration | 持续请求时长（毫秒） | Number | —      | 10000      | 否      |
 | callback | 回调 | Function | —      | —      | 否      |
 
 ## 返回数据
