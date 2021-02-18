@@ -413,7 +413,6 @@ function getDownloaderSiderBar2(groupTitle) {
       sidebarDepth: 0,
       children: [
         "",
-        "changelog",
         "checkCourseware",
         "downloadCourseware",
         "downloadUpdates",
