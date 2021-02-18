@@ -101,7 +101,7 @@ downloaderApi.removeListener(downloadTask)
 
 | 字段 | 说明    | 类型   | 
 | ---- | ------- | ------ | 
-| state | 当前下载的状态: <br>(`start`, `progress`, `complete`, `fail`, `exists`) | String |
+| state | 当前下载的状态: <br>(`start`, `progress`, `complete`, `pause`, `fail`, `exists`) | String |
 | percent | 下载进度百分比 | String | 
 | speed | 下载速度 | String | 
 | totalSize | 文件总大小 | String | 
