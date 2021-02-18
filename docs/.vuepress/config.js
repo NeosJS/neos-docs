@@ -22,6 +22,7 @@ module.exports = {
       { text: "Updater", link: "/updater/" },
       { text: "DataBase", link: "/db/" },
       { text: "Downloader", link: "/downloader/" },
+      { text: "Downloader2.0", link: "/downloader2/" },
       { text: "Recorder", link: "/recorder/" },
       { text: "Net", link: "/net/" },
       { text: "Logger", link: "/logger/" }
@@ -35,6 +36,7 @@ module.exports = {
       "/db/": getDBSiderBar("DataBaseApi"),
       "/recorder/": getRecorderSiderBar("RecorderApi"),
       "/downloader/": getDownloaderSiderBar("DownloaderApi"),
+      "/downloader2/": getDownloaderSiderBar2("DownloaderApi 2.0"),
       "/net/": getNetSiderBar("NetApi")
     },
     lastUpdated: "上次更新",
@@ -402,6 +404,26 @@ function getDownloaderSiderBar(groupTitle) {
     }
   ];
 }
+
+function getDownloaderSiderBar2(groupTitle) {
+  return [
+    {
+      title: groupTitle,
+      collapsable: false,
+      sidebarDepth: 0,
+      children: [
+        "",
+        "changelog",
+        "checkCourseware",
+        "downloadCourseware",
+        "downloadUpdates",
+        "downloadFile",
+        "extractZip"
+      ]
+    }
+  ];
+}
+
 function getNetSiderBar(groupTitle) {
   return [
     {
