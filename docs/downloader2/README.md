@@ -7,16 +7,7 @@
 :::
 
 ## 安装 
-![npm (scoped)](https://img.shields.io/npm/v/@neosjs/electron-ipc)
-
-#### NPM
-```sh
-npm i @neosjs/electron-ipc -S
-```
-#### YARN
-```sh
-yarn add @neosjs/electron-ipc
-```
+稍后发布...
 
 ::: info
 1. 接口提供：`start`, `progress`, `complete`, `pause`, `fail`, `exists` 事件回调。  
@@ -31,13 +22,14 @@ const downloadTask = await downloaderApi.downloadCourseware({
 
 下载器启动成功后，会返回当前正在下载的任务，那么监听事件为：
 ```js
-downloaderApi.on(downloadTask,res => {
+downloaderApi.on(downloadTask, res => {
   console.log(res)
 })
 ```
-这样就能监听到 https://www.xxxxx.com/xxxxxxxx.zip 的下载状态 。  
-移除事件监听： `downloaderApi.removeListener(downloadTask)`
+这样就能监听到 https://www.xxxxx.com/xxxxxxxx.zip 的下载状态 。
 
-3. 为什么要如此设计？  
+3. 移除事件监听： `downloaderApi.removeListener(downloadTask)`
+
+4. 为什么要如此设计？  
 答： 因为是<font color="#db4437">**多文件同时下载**</font>，所以，某个文件下载状态的监听，需要分配一个独立的下载任务。
 :::
