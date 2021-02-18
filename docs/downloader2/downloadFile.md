@@ -107,6 +107,7 @@ downloaderApi.removeListener(downloadTask)
 | totalSize | 文件总大小 | String | 
 | receivedSize | 接收的文件大小 | String | 
 | fileName | 下载的文件名称 | String |
+| filePath | 下载的文件保存路径 | String |
 | uptime | 运行时间，单位为毫秒 | Number |
 | remaining | 剩余时间，单位为毫秒 | Number |
 | <font color="#db4437">**MD5**</font> | 下载完成后的文件MD5值，仅 `complete` 状态返回 | String |
