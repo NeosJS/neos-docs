@@ -7,7 +7,15 @@
 :::
 
 ## 安装 
-稍后发布...
+![npm (scoped)](https://img.shields.io/npm/v/@neosjs/electron-ipc)
+#### NPM
+```sh
+npm i @neosjs/electron-ipc -S
+```
+#### YARN
+```sh
+yarn add @neosjs/electron-ipc
+```
 
 ::: info
 1. 接口提供：`start`, `progress`, `complete`, `pause`, `fail`, `exists` 事件回调。  
