@@ -3,11 +3,13 @@
 该模块提供课件资源的下载解压、更新文件的下载、普通文件的下载等功能。提供断点续传、暂停下载、恢复下载等功能！
 
 :::danger
-注： 这是一次破坏性的更新！！！接口参数、返回数据、回调均发生变化！
+注： 这是一次major版本更新！！！ 接口参数、返回数据、回调均发生变化！
 :::
 
 ## 安装 
+
 ![npm (scoped)](https://img.shields.io/npm/v/@neosjs/electron-ipc)
+
 #### NPM
 ```sh
 npm i @neosjs/electron-ipc -S
@@ -39,5 +41,5 @@ downloaderApi.on(downloadTask, res => {
 3. 移除事件监听： `downloaderApi.removeListener(downloadTask)`
 
 4. 为什么要如此设计？  
-答： 因为是<font color="#db4437">**多文件同时下载**</font>，所以，某个文件下载状态的监听，需要分配一个独立的下载任务。
+答： 因为是 <font color="#db4437">**多文件同时下载**</font>，所以，某个文件下载状态的监听，需要分配一个独立的下载任务。
 :::
