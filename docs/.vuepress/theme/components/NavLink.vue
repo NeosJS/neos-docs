@@ -6,7 +6,7 @@
     :exact="exact"
     @focusout.native="focusoutAction"
   >
-    {{ item.text }}
+    {{ item.text }} <BadgeTip text="N" type="danger" v-if="item.new" vertical="middle"></BadgeTip>
   </RouterLink>
   <a
     v-else

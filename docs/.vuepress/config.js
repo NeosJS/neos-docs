@@ -21,8 +21,8 @@ module.exports = {
       { text: "Native", link: "/native/get/getAppVersion.html" },
       { text: "Updater", link: "/updater/" },
       { text: "DataBase", link: "/db/" },
-      { text: "Downloader", link: "/downloader/" },
-      { text: "Downloader2.0", link: "/downloader2/" },
+      // { text: "Downloader", link: "/downloader/", deprecated: true },
+      { text: "Downloader 3.0", link: "/downloader/", new: true },
       { text: "Recorder", link: "/recorder/" },
       { text: "Net", link: "/net/" },
       { text: "Logger", link: "/logger/" }
@@ -35,8 +35,8 @@ module.exports = {
       "/logger/": getLoggerSiderBar("LoggerApi"),
       "/db/": getDBSiderBar("DataBaseApi"),
       "/recorder/": getRecorderSiderBar("RecorderApi"),
-      "/downloader/": getDownloaderSiderBar("DownloaderApi"),
-      "/downloader2/": getDownloaderSiderBar2("DownloaderApi 2.0"),
+      // "/downloader/": getDownloaderSiderBar("DownloaderApi"),
+      "/downloader/": getDownloaderSiderBar2("DownloaderApi 3.0"),
       "/net/": getNetSiderBar("NetApi")
     },
     lastUpdated: "上次更新",
