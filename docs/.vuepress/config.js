@@ -25,8 +25,8 @@ module.exports = {
       { text: "Downloader 3.0", link: "/downloader/", new: true },
       { text: "Recorder", link: "/recorder/" },
       { text: "Net", link: "/net/" },
-      { text: "Logger", link: "/logger/" }
-      // !isEnvProduction && { text: 'TEST', link: '/test/' }
+      { text: "Logger", link: "/logger/" },
+      { text: "Utils", link: "/utils/is.html" }
     ],
     sidebar: {
       "/ipc/": getIpcSiderBar("IpcMessage"),
@@ -35,9 +35,10 @@ module.exports = {
       "/logger/": getLoggerSiderBar("LoggerApi"),
       "/db/": getDBSiderBar("DataBaseApi"),
       "/recorder/": getRecorderSiderBar("RecorderApi"),
-      // "/downloader/": getDownloaderSiderBar("DownloaderApi"),
-      "/downloader/": getDownloaderSiderBar2("DownloaderApi 3.0"),
-      "/net/": getNetSiderBar("NetApi")
+      // "/downloader/": getDownloaderSiderBar2("DownloaderApi"),
+      "/downloader/": getDownloaderSiderBar("DownloaderApi 3.0"),
+      "/net/": getNetSiderBar("NetApi"),
+      "/utils/": getUtilsSiderBar("UtilsApi")
     },
     lastUpdated: "上次更新",
     smoothScroll: true
@@ -386,7 +387,7 @@ function getRecorderSiderBar(groupTitle) {
   ];
 }
 
-function getDownloaderSiderBar(groupTitle) {
+function getDownloaderSiderBar2(groupTitle) {
   return [
     {
       title: groupTitle,
@@ -405,7 +406,7 @@ function getDownloaderSiderBar(groupTitle) {
   ];
 }
 
-function getDownloaderSiderBar2(groupTitle) {
+function getDownloaderSiderBar(groupTitle) {
   return [
     {
       title: groupTitle,
@@ -433,13 +434,25 @@ function getNetSiderBar(groupTitle) {
     }
   ];
 }
+
+function getUtilsSiderBar(groupTitle) {
+  return [
+    {
+      title: groupTitle,
+      collapsable: false,
+      sidebarDepth: 0,
+      children: ["is", "get"]
+    }
+  ];
+}
+
 function getTestSiderBar(title) {
   return [
     {
       title,
       collapsable: false,
       sidebarDepth: 0,
-      children: [["", "Demo"]]
+      children: [""]
     }
   ];
 }

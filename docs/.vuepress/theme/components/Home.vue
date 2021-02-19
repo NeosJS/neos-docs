@@ -10,7 +10,7 @@
         {{ data.tagline || $description }}
       </p>
 
-      <p class="action" v-if="data.actionText && data.actionLink">
+      <p class="action" v-if="data.actionText && data.actionLink" style="text-align:left;margin-left:35rem;width:50rem">
         <NavLink class="action-button" :item="actionLink" v-if="data.actionLink" />
         <NavLink class="action-button" :item="actionLink1" v-if="data.actionLink1" />
         <NavLink class="action-button" :item="actionLink2" v-if="data.actionLink2" />
@@ -19,6 +19,8 @@
         <NavLink class="action-button" :item="actionLink5" v-if="data.actionLink5" />
         <NavLink class="action-button" :item="actionLink6" v-if="data.actionLink6" />
         <NavLink class="action-button" :item="actionLink7" v-if="data.actionLink7" />
+        <NavLink class="action-button" :item="actionLink8" v-if="data.actionLink8" />
+        <NavLink class="action-button" :item="actionLink9" v-if="data.actionLink9" />
       </p>
     </header>
 
@@ -99,6 +101,18 @@ export default {
         link: this.data.actionLink7,
         text: this.data.actionText7
       }
+    },
+    actionLink8() {
+      return {
+        link: this.data.actionLink8,
+        text: this.data.actionText8
+      }
+    },
+    actionLink9() {
+      return {
+        link: this.data.actionLink9,
+        text: this.data.actionText9
+      }
     }
   }
 }
@@ -122,7 +136,7 @@ export default {
   .hero
     text-align center
     position relative
-    top 20rem
+    top 15rem
     margin-left -30rem
     img
       max-width: 100%
@@ -139,7 +153,7 @@ export default {
       line-height 1.3
       color lighten($--color-black, 40%)
     .action-button
-      margin 0 0 0 1rem
+      margin 0 0 1rem 1rem
       display inline-block
       font-size 1.2rem
       color #fff
@@ -206,6 +220,8 @@ export default {
         padding 0.6rem 1.2rem
         margin .5rem
       .action
+        margin-left: 0 !important
+        width: 100% !important
         text-align left
     .feature
       h2
