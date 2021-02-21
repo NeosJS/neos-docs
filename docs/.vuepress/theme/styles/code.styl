@@ -21,7 +21,7 @@
     border-radius 6px
     overflow auto
     code
-      color #fff
+      color #333
       padding 0
       background-color transparent
       border-radius 0
@@ -97,7 +97,9 @@ div[class*="language-"]
       border-right 1px solid rgba(0, 0, 0, 66%)
       background-color $codeBgColor
 
-
+div.sealui-customblock
+  pre, pre[class*="language-"]
+    background-color: #cccccc3b;
 for lang in $codeLang
   div{'[class~="language-' + lang + '"]'}
     &:before
@@ -135,3 +137,35 @@ div[class~="language-php"]:before
   content "php"
 
 @import '~prismjs/themes/prism-tomorrow.css'
+
+.token.punctuation {
+    color: #666
+}
+
+.token.attr-name,.token.deleted,.token.namespace,.token.tag {
+    color: #b2085f
+}
+
+.token.attr-value,.token.char,.token.regex,.token.string,.token.variable {
+    color: #0a7a34
+}
+
+.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector {
+    color: #b92dbc
+}
+
+.token.boolean,.token.function,.token.number {
+    color: #c25205
+}
+
+.token.class-name,.token.constant,.token.property,.token.symbol {
+    color: #717c11
+}
+
+.token.entity,.token.operator,.token.url {
+    color: #0b7e7d
+}
+
+.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog {
+    color: #aaa
+}

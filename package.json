@@ -1,8 +1,8 @@
 {
-  "name": "thinkacademy-docs",
-  "productName": "thinkacademy-docs",
+  "name": "neosjs-docs",
+  "productName": "neosjs-docs",
   "version": "1.0.0",
-  "description": "ThinkAcademy Docs",
+  "description": "NeosJS Docs",
   "private": true,
   "scripts": {
     "docs:dev": "vuepress dev docs",
@@ -58,6 +58,6 @@
     "rimraf": "^3.0.2",
     "sass-loader": "^10.0.2",
     "transliteration": "^2.1.11",
-    "vuepress": "^1.5.4"
+    "vuepress": "^1.8.2"
   }
 }

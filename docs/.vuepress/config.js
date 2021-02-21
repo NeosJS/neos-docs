@@ -48,7 +48,7 @@ module.exports = {
     [
       "@vuepress/last-updated",
       {
-        transformer: (timestamp, lang) => {
+        transformer: timestamp => {
           const moment = require("moment");
           moment.locale("zh-CN");
           return moment(timestamp).fromNow();
