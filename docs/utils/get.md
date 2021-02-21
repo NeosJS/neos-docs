@@ -1,5 +1,7 @@
 # 工具类
 
+> 即将发布
+
 ```js
 import { utilsApi } from '@neosjs/electron-ipc'
 ```
@@ -44,3 +46,4 @@ import { utilsApi } from '@neosjs/electron-ipc'
 | ---- | ------- | ------ | ------ | ------ | ------ |
 | min | 起始值 | Number | —      | —      | 是      |
 | max | 结束 | Number | —      | —      | 是      |
+

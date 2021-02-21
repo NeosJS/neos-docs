@@ -5,19 +5,23 @@
     <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
 
     <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
-      <!-- <template slot="top">这是顶部插槽</template> -->
-      <!-- <template slot="bottom">这是底部插槽</template> -->
-      <slot name="sidebar-top" #top />
-      <slot name="sidebar-bottom" #bottom />
+      <template #top>
+        <slot name="sidebar-top" />
+      </template>
+      <template #bottom>
+        <slot name="sidebar-bottom" />
+      </template>
     </Sidebar>
 
     <Home v-if="$page.frontmatter.home" />
 
     <Page v-else :sidebar-items="sidebarItems">
-      <slot name="page-top" #top />
-      <slot name="page-bottom" #bottom />
-      <!-- <template slot="top">这是顶部插槽</template> -->
-      <!-- <template slot="bottom">这是底部插槽</template> -->
+      <template #top>
+        <slot name="page-top" />
+      </template>
+      <template #bottom>
+        <slot name="page-bottom" />
+      </template>
     </Page>
   </div>
 </template>

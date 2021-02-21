@@ -3,20 +3,21 @@
 开始录音之前应该先调用此接口来打开录音机
 
 ## API
-### `recorder.open(successCallback: <Function>, failCallback: <Function>)`
+### `recorder.open(options: <Object>)`
 ### 
 
 ## 示例代码
 ```js
 import recorder from '@neosjs/h5-recorder'
 
-recorder.open(res => {
-  console.log(res)
-},
-error => {
-  console.log(error)
+recorder.open({
+  success: res => {
+    console.log(res)
+  },
+  fail: err => {
+    console.log(err)
+  }
 })
-
 ```
 
 ### async/wait
@@ -28,15 +29,16 @@ console.log(res)
 ```
 ####  事件监听
 ```js
-recorder.on('open', flag => {
-  console.log(flag)
+recorder.on('open', res => {
+  console.log(res)
 })
 ```
 
-## 事件
-| 名称                        | 说明                       | 返回值   |
-| --------------------------- | -------------------------- | ------ |
-| open | 打开录音机时抛出 | 返回一个 boolean |
+## 参数
+| 参数                        | 说明                       | 类型   | 可选值          | 默认值       | 是否必选 |
+| --------------------------- | -------------------------- | ------ | --------------- | ------------ |------------ |
+| options['success'] | 录音机打开成功回调 | function | — | — | 否 |
+| options['fail'] | 录音机打开失败回调 | function | — | — | 否 |
 
 ::: info
 如果初始化时，设置了 `autoOpen` , 则不再需要调用该接口。

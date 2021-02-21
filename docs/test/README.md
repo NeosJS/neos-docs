@@ -2,6 +2,10 @@
 
 > 说明
 
+::: tip
+adsa
+:::
+
 <Badge :value="12" type="success">
   <sc-button size="small">评论</sc-button>
 </Badge>

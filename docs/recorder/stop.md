@@ -1,18 +1,23 @@
 # 停止录音 <BadgeTip text="异步" type="green"></BadgeTip>
 
+录音机停止录音
+
 ## API
-### `recorder.stop(successCallback: <Function>, failCallback: <Function>, autoClose: <Boolean>)`
+### `recorder.stop(options: <Object>)`
 ### 
 
 ## 示例代码
 ```js
 import recorder from '@neosjs/h5-recorder'
 
-recorder.stop(res => {
-  console.log(res)
-},
-error => {
-  console.log(error)
+recorder.stop({
+  autoClose: true, // 自动关闭录音机
+  success: res => {
+    console.log(res)
+  },
+  fail: err => {
+    console.log(err)
+  }
 })
 ```
 
@@ -32,16 +37,12 @@ recorder.on('stop', res => {
 })
 ```
 
+## 参数
 | 参数                        | 说明                       | 类型   | 可选值          | 默认值       | 是否必选 |
 | --------------------------- | -------------------------- | ------ | --------------- | ------------ |------------ |
-| successCallback | 成功回调 | function | — | — | 否 |
-| successCallback | 失败回调 | function | — | — | 否 |
-| autoClose | 是否自动关闭录音机 | boolean | — | false | 否 |
-
-## 事件
-| 名称                        | 说明                       | 返回值   |
-| --------------------------- | -------------------------- | ------ |
-| stop | 停止录音时抛出 | 返回一个object。失败时，返回失败原因 |
+| options['success'] | 成功回调 | function | — | — | 否 |
+| options['fail'] | 失败回调 | function | — | — | 否 |
+| options['autoClose'] | 是否自动关闭录音机 | boolean | — | false | 否 |
 
 ::: info
 成功停止录音机后。返回 blob数据，录音时长等信息。

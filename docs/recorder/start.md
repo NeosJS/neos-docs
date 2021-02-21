@@ -1,19 +1,33 @@
 # 开始录音 <BadgeTip text="异步" type="green"></BadgeTip>
 
+录音机开始录音
+
 ## API
-### `recorder.start()`
+### `recorder.start(options: <Object>)`
 ### 
 
 ## 示例代码
+
+```js
+import recorder from '@neosjs/h5-recorder'
+
+recorder.start({
+  success: res => {
+    console.log(res)
+  },
+  fail: err => {
+    console.log(err)
+  }
+})
+```
+
+### async/wait
+
 ```js
 import recorder from '@neosjs/h5-recorder'
 
 const res = await recorder.start()
-
-// 返回
-// {
-//   errCode: 0 || -1
-// }
+console.log(res)
 ```
 
 ####  事件监听
@@ -23,7 +37,8 @@ recorder.on('start', res => {
 })
 ```
 
-## 事件
-| 名称                        | 说明                       | 返回值   |
-| --------------------------- | -------------------------- | ------ |
-| start | 开始录音时抛出 | 返回一个 object。失败时，返回失败原因 |
+## 参数
+| 参数                        | 说明                       | 类型   | 可选值          | 默认值       | 是否必选 |
+| --------------------------- | -------------------------- | ------ | --------------- | ------------ |------------ |
+| options['success'] | 录音机开始录音成功回调 | function | — | — | 否 |
+| options['fail'] | 录音机开始失败回调 | function | — | — | 否 |

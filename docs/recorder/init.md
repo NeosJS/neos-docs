@@ -22,7 +22,13 @@ recorder.init({
     minHeight: 0,
     position: 0,
     strokeColor: '#7ac70c'
-  }]
+  }],
+  success: res => { // 成功回调
+    console.log(res)
+  },
+  fail: err => { // 失败回调
+    console.log(err)
+  }
 })
 ```
 
@@ -47,6 +53,8 @@ recorder.on('init', (res) => {
 | options['type']             | 音频类型                   | string | wav        | wav          |
 | options['autoOpen']             | 初始化完成后，是否自动打开录音机                   | boolean | —        | true          |
 | options['effective']             | 有效分贝值。取值：0 --- 100                   | number | —        | 0          |
+| options['success']             | 初始化成功后的回调    | function | —        | —          |
+| options['fail']             | 初始化失败后的回调    | function | —        | —          |
 | options['waveConfig']         | 波形图配置 | array | —               | —            |
 | options['waveConfig']['type'] | 波形图类型                 | string | histogram、wave | histogram         |
 | options['waveConfig']['elem']  | 波形容器id选择器        | string | —               | waveContent |
