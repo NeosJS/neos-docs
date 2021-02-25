@@ -24,6 +24,7 @@ module.exports = {
       // { text: "Downloader", link: "/downloader/", deprecated: true },
       { text: "Downloader 3.0", link: "/downloader/", new: true },
       { text: "Recorder", link: "/recorder/" },
+      { text: "Graffiti", link: "/graffiti/" },
       { text: "Net", link: "/net/" },
       { text: "Logger", link: "/logger/" },
       { text: "Utils", link: "/utils/is.html" }
@@ -35,6 +36,7 @@ module.exports = {
       "/logger/": getLoggerSiderBar("LoggerApi"),
       "/db/": getDBSiderBar("DataBaseApi"),
       "/recorder/": getRecorderSiderBar("RecorderApi"),
+      "/graffiti/": getGraffitiSiderBar("Graffiti"),
       // "/downloader/": getDownloaderSiderBar2("DownloaderApi"),
       "/downloader/": getDownloaderSiderBar("DownloaderApi 3.0"),
       "/net/": getNetSiderBar("NetApi"),
@@ -446,6 +448,26 @@ function getUtilsSiderBar(groupTitle) {
   ];
 }
 
+function getGraffitiSiderBar(groupTitle) {
+  return [
+    {
+      title: groupTitle,
+      collapsable: false,
+      sidebarDepth: 0,
+      children: [
+        "",
+        "init",
+        "lineColor",
+        "lineSize",
+        "eraserSize",
+        "undo",
+        "clear",
+        "createImage",
+        "saveImage"
+      ]
+    }
+  ];
+}
 function getTestSiderBar(title) {
   return [
     {

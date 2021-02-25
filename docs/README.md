@@ -12,11 +12,15 @@ actionText4: DataBase
 actionLink4: /db/
 actionText5: Recorder
 actionLink5: /recorder/
-actionText6: Net
-actionLink6: /net/
-actionText7: Logger
-actionLink7: /logger/
-actionText8: Utils
-actionLink8: /utils/is.html
+actionText6: Graffiti
+actionLink6: /graffiti/
+actionText7: Net
+actionLink7: /net/
+actionText8: Logger
+actionLink8: /logger/
+actionText9: Utils
+actionLink9: /utils/is.html
+actionText10: ChangeLog
+actionLink10: /changeLog.html
 tagline: 写文档不易，请仔细阅读
 ---
