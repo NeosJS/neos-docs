@@ -24,7 +24,7 @@ module.exports = {
       // { text: "Downloader", link: "/downloader/", deprecated: true },
       { text: "Downloader 3.0", link: "/downloader/", new: true },
       { text: "Recorder", link: "/recorder/" },
-      { text: "Graffiti", link: "/graffiti/" },
+      { text: "Graffiti", link: "/graffiti/", new: true },
       { text: "Net", link: "/net/" },
       { text: "Logger", link: "/logger/" },
       { text: "Utils", link: "/utils/is.html" }
@@ -460,6 +460,7 @@ function getGraffitiSiderBar(groupTitle) {
         "lineColor",
         "lineSize",
         "eraserSize",
+        "eraser",
         "undo",
         "clear",
         "createImage",

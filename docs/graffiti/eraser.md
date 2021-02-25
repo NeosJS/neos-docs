@@ -1,14 +1,14 @@
-# 撤销操作
+# 橡皮擦
 
-往前回退一步操作。
+擦除不需要的笔迹。
 
 ## API
-### `graffiti.undo()`
+### `graffiti.eraser()`
 ### 
 
 ## 示例代码
 ```js
 import graffiti from '@neosjs/h5-graffiti'
 
-graffiti.undo()
+graffiti.eraser()
 ```

@@ -1,6 +1,7 @@
 # 快速上手
 
-Html5 涂鸦。 支持画笔大小、橡皮擦、画笔颜色、撤销、生成图片、保存图片等功能。
+H5 涂鸦。  
+支持：画笔大小设置、橡皮擦大小设置、画笔颜色设置、撤销操作、打LOGO水印、生成图片、保存图片 等功能。
 
 ## 安装
 ![npm (scoped)](https://img.shields.io/npm/v/@neosjs/h5-graffiti)
@@ -13,3 +14,14 @@ npm i @neosjs/h5-graffiti -S
 yarn add @neosjs/h5-graffiti
 ```
 
+## API 接口列表
+
+- `graffiti.init(object: <Object>)` 
+- `graffiti.lineColor(color: <String>)`
+- `graffiti.lineSize(size: <Number>)`
+- `graffiti.eraserSize(size: <Number>)`
+- `graffiti.eraser()`
+- `graffiti.undo()`
+- `graffiti.clear()`
+- `graffiti.createImage()`
+- `graffiti.saveImage(fileName: <String>)`
