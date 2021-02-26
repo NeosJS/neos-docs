@@ -25,6 +25,7 @@ module.exports = {
       { text: "Downloader 3.0", link: "/downloader/", new: true },
       { text: "Recorder", link: "/recorder/" },
       { text: "Graffiti", link: "/graffiti/", new: true },
+      { text: "Camera", link: "/camera/", new: true },
       { text: "Net", link: "/net/" },
       { text: "Logger", link: "/logger/" },
       { text: "Utils", link: "/utils/is.html" }
@@ -37,6 +38,7 @@ module.exports = {
       "/db/": getDBSiderBar("DataBaseApi"),
       "/recorder/": getRecorderSiderBar("RecorderApi"),
       "/graffiti/": getGraffitiSiderBar("Graffiti"),
+      "/camera/": getCameraSiderBar("Camera"),
       // "/downloader/": getDownloaderSiderBar2("DownloaderApi"),
       "/downloader/": getDownloaderSiderBar("DownloaderApi 3.0"),
       "/net/": getNetSiderBar("NetApi"),
@@ -465,6 +467,25 @@ function getGraffitiSiderBar(groupTitle) {
         "clear",
         "createImage",
         "saveImage"
+      ]
+    }
+  ];
+}
+
+function getCameraSiderBar(groupTitle) {
+  return [
+    {
+      title: groupTitle,
+      collapsable: false,
+      sidebarDepth: 0,
+      children: [
+        "",
+        "init",
+        "getDeviceLists",
+        "collectVideo",
+        "changeDeviceId",
+        "photoShot",
+        "destroy"
       ]
     }
   ];

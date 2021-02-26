@@ -22,5 +22,7 @@ actionText9: Utils
 actionLink9: /utils/is.html
 actionText10: ChangeLog
 actionLink10: /changeLog.html
+actionText11: Camera
+actionLink11: /camera/
 tagline: 写文档不易，请仔细阅读
 ---
