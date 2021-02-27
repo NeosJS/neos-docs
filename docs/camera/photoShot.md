@@ -36,5 +36,6 @@ const res = await camera.photoShot()
 | options['fail'] | 失败回调 | function | — | — | 否 |
 
 ::: info
-拍照成功后，会返回一个文件所在的本地路径
+拍照成功后，会返回本地文件路径。    
+初始化的时候，设置了 `previewDom` 参数，将会显示拍照的预览图。
 :::
