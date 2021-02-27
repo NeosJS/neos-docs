@@ -1,4 +1,4 @@
-# 保存图片(Deprecated) <BadgeTip text="弃用" type="green"></BadgeTip>
+# 保存图片(Deprecated) <BadgeTip text="弃用" type="danger"></BadgeTip>
 
 保存涂鸦图片到本地。
 
