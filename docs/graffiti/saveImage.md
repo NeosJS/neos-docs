@@ -1,9 +1,9 @@
-# 保存图片
+# 保存图片(Deprecated) <BadgeTip text="弃用" type="green"></BadgeTip>
 
 保存涂鸦图片到本地。
 
 ## API
-### `graffiti.saveImage(fileName: <String>)`
+### ~~`graffiti.saveImage(fileName: <String>)`~~
 ### 
 
 ## 示例代码
