@@ -7,9 +7,10 @@
 
 ## API 接口列表
 
-- `camera.init(object: <Object>)` 
-- `camera.collectVideo(deviceId: <String>)`
+- `camera.init(options: <Object>)` 
+- `camera.startCapture(deviceId: <String>)`
+- `camera.stopCapture()`
 - `camera.changeDeviceId(deviceId: <String>)`
-- `camera.getDeviceList()`
+- `camera.getDeviceLists()`
 - `camera.photoShot()`
 - `camera.destroy()`

@@ -482,7 +482,8 @@ function getCameraSiderBar(groupTitle) {
         "",
         "init",
         "getDeviceLists",
-        "collectVideo",
+        "startCapture",
+        "stopCapture",
         "changeDeviceId",
         "photoShot",
         "destroy"

@@ -9,7 +9,7 @@
 ```js
 import camera from '@neosjs/h5-camera'
 
-camera.collectVideo('qweqeqwe12312asdasd')
+camera.changeDeviceId('qweqeqwe12312asdasd')
 ```
 
 ## 参数

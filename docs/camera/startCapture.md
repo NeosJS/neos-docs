@@ -3,7 +3,7 @@
 采集指定设备ID的视频
 
 # API
-### `camera.collectVideo(deviceId: <String>)`
+### `camera.startCapture(deviceId: <String>)`
 ### 
 
 ## 示例代码
@@ -11,7 +11,7 @@
 ```js
 import camera from '@neosjs/h5-camera'
 
-camera.collectVideo({
+camera.startCapture({
   success: res => {
     console.log(res)
   },
@@ -25,14 +25,14 @@ camera.collectVideo({
 ```js
 import camera from '@neosjs/h5-camera'
 
-const res = await camera.collectVideo()
+const res = await camera.startCapture()
 ```
 
 ####  事件监听
 ```js
 import camera from '@neosjs/h5-camera'
 
-camera.on('collectVideo', res => {
+camera.on('capture', res => {
   console.log(res)
 })
 ```
@@ -47,7 +47,7 @@ camera.on('collectVideo', res => {
 ## 相关事件
 | 名称                        | 说明                       | 返回值   |
 | --------------------------- | -------------------------- | ------ |
-| collectVideo | 返回当前是否处于视频采集中 | false |
+| capture | 返回当前是否处于视频采集中 | false |
 
 :::info 
 `deviceId` 可通过 [getDeviceLists](getDeviceLists.html) 获得。

@@ -30,6 +30,7 @@ camera.init({
 |options['previewDom']| 拍照的预览容器(ID选择器) | String | —               | —            | 否 |
 |options['width']| 相机容器宽度 | Number | —               | —            | 是 |
 |options['height']| 相机容器高度 | Number | —               | —            | 否 |
+|options['audio']| 是否采集音频 | Boolean | —               | false            | 否 |
 |options['ratio']| 相机缩放比 | String | `4:3`、`16:9`               | 4:3            | 否 |
 |options['quality']| 图片保存的质量 | String | —               | 0.75            | 否 |
 |options['ext']| 图片保存的后缀 | String | —               | png            | 否 |

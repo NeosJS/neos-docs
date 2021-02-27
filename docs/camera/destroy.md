@@ -9,7 +9,7 @@
 ```js
 import camera from '@neosjs/h5-camera'
 
-camera.photoShot(destroy)
+camera.destroy()
 ```
 
 ::: danger
