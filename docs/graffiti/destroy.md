@@ -7,7 +7,7 @@
 ## 示例代码
 
 ```js
-import graffiti from '@neosjs/h5-camera'
+import graffiti from '@neosjs/h5-graffiti'
 
 graffiti.destroy()
 ```
