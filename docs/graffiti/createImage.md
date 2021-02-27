@@ -16,5 +16,5 @@ const base64Data = await graffiti.createImage()
 
 :::info
 把涂鸦轨迹、背景图(如果有)、水印(如果有)合并成一张图片。  
-生成的图片是 base64 位图。
+生成的图片自动保存在特定的目录里，并返回图片路径。
 :::
