@@ -16,7 +16,7 @@ camera.changeDeviceId('qweqeqwe12312asdasd')
 
 | 参数                        | 说明                       | 类型   | 可选值          | 默认值       | 是否必选 |
 | --------------------------- | -------------------------- | ------ | --------------- | ------------ |------------ |
-| deviceId | 设备ID | function | — | — | 否 |
+| deviceId | 摄像头设备ID | String | — | — | 否 |
 
 :::info 
 `deviceId` 可通过 [getDeviceLists](getDeviceLists.html) 获得。
