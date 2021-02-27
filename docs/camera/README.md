@@ -1,8 +1,9 @@
 # 快速上手
- 
-## 安装
 
-#### 即将发布
+提供摄像头拍照，视频采集等功能。
+
+
+## 安装
 
 ![npm (scoped)](https://img.shields.io/npm/v/@neosjs/h5-camera)
 
