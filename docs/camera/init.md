@@ -34,7 +34,7 @@ camera.init({
 |options['ratio']| 相机缩放比 | String | `4:3`、`16:9`               | 4:3            | 否 |
 |options['quality']| 图片保存的质量 | String | —               | 0.75            | 否 |
 |options['ext']| 图片保存的后缀 | String | —               | png            | 否 |
-|options['autoCollect']| 相机初始化完成后，是否自动开始采集视频 | Boolean | —               | true            | 否 |
+|options['autoCapture']| 相机初始化完成后，是否自动开始采集视频 | Boolean | —               | true            | 否 |
 
 :::info
 如果同时设置了 `width` 和 `height`, 那么相机的尺寸将以设定值为准。  
