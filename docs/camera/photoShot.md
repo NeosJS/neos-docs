@@ -41,11 +41,7 @@ const res = await camera.photoShot()
 | ---- | ------- | ------ | 
 | errCode | 状态码 | Number |  
 | errMsg | 错误信息 | String |  
-| data | 数据 | Object |  
-| data['base64'] | 图片的base64信息 | String |  
-| data['fileName'] | 图片的文件名 | String |  
-| data['filePath'] | 图片的本地路径 | String |  
-| data['size'] | 图片大小 | String |  
+| base64 | 图片的base64信息 | String | 
 
 ::: info
 拍照成功后，会返回本地文件路径。    
