@@ -464,6 +464,7 @@ function getGraffitiSiderBar(groupTitle) {
         "eraserSize",
         "eraser",
         "undo",
+        "recover",
         "clear",
         "destroy",
         "createImage",
