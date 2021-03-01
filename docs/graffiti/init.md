@@ -34,6 +34,7 @@ graffiti.init({
 |options['height']| 画板高度 | Number | —               | 768            | 否 |
 |options['background']| 画板背景图片 | String | —               | —            | 否 |
 |options['quality']| 图片保存的质量 | String | —               | 0.75            | 否 |
+|options['ext']| 图片保存的后缀 | String | —               | jpg            | 否 |
 |options['lineSize']| 画笔初始尺寸 | Number | —               | 2            | 否 |
 |options['lineColor']| 画笔初始颜色 | String | —               | #000000            | 否 |
 |options['waterMark']| 水印设置 | Object | —               | —            | 否 |
