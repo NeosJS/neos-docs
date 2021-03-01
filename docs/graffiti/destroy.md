@@ -1,4 +1,4 @@
-# 销毁涂鸦
+# 销毁
 
 # API
 ### `graffiti.destroy()`
