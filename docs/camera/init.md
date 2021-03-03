@@ -17,7 +17,8 @@ camera.init({
   width: 500,
   ratio: '4:3',
   quality: 0.6,
-  ext: 'jpeg'
+  ext: 'jpeg',
+  hotKey:'space'
 })
 ```
 
@@ -35,6 +36,7 @@ camera.init({
 |options['quality']| 图片保存的质量 | String | —               | 0.75            | 否 |
 |options['ext']| 图片保存的后缀 | String | —               | png            | 否 |
 |options['autoCapture']| 相机初始化完成后，是否自动开始采集视频 | Boolean | —               | true            | 否 |
+|options['hotKey']| 快捷键拍照 | String | `space`、`enter`               | —            | 否 |
 
 :::info
 如果同时设置了 `width` 和 `height`, 那么相机的尺寸将以设定值为准。  
