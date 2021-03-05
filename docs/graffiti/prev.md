@@ -3,12 +3,12 @@
 往前回退一步操作。
 
 ## API
-### `graffiti.undo()`
+### `graffiti.prev()`
 ### 
 
 ## 示例代码
 ```js
 import graffiti from '@neosjs/h5-graffiti'
 
-graffiti.undo()
+graffiti.prev()
 ```
