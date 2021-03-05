@@ -21,8 +21,8 @@ yarn add @neosjs/h5-graffiti
 - `graffiti.lineSize(size: <Number>)`
 - `graffiti.eraserSize(size: <Number>)`
 - `graffiti.eraser()`
-- `graffiti.undo()`
-- `graffiti.recover()`
+- `graffiti.prev()`
+- `graffiti.next()`
 - `graffiti.clear()`
 - `graffiti.destroy()`
 - `graffiti.createImage()`
