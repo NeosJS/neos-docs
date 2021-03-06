@@ -13,8 +13,8 @@ import graffiti from '@neosjs/h5-graffiti'
 
 graffiti.init({
   dom: 'tuya',
-  width: 700,
-  height: 500,
+  width: 800,
+  height: 600,
   background: 'https://xxxxx.xxxx.com/xxxxxx.png',
   quality:0.8,
   waterMark: {
