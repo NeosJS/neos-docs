@@ -16,7 +16,7 @@ graffiti.init({
   width: 700,
   height: 500,
   background: 'https://xxxxx.xxxx.com/xxxxxx.png',
-  quality:'0.8',
+  quality:0.8,
   waterMark: {
     url: 'https://xxxxx.xxxx.com/water.png',
     postion: 'top-left'
