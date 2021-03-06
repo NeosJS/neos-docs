@@ -20,7 +20,7 @@ const base64Data = await graffiti.createImage()
 | ---- | ------- | ------ | 
 | errCode | 状态码 | Number |  
 | errMsg | 错误信息 | String |  
-| data['imgData'] | 图片的base64信息 | String | 
+| data | 数据 | Object | 
 
 
 :::info

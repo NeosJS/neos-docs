@@ -41,9 +41,9 @@ const res = await camera.photoShot()
 | ---- | ------- | ------ | 
 | errCode | 状态码 | Number |  
 | errMsg | 错误信息 | String |  
-| data['imgData'] | 图片的base64信息 | String | 
+| data | 数据 | Object | 
 
 ::: info
-拍照成功后，会返回本地文件路径。    
+拍照成功后，会返图片数据、拍照类型。    
 初始化的时候，设置了 `previewDom` 参数，将会显示拍照的预览图。
 :::

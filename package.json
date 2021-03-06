@@ -5,7 +5,7 @@
   "description": "NeosJS Docs",
   "private": true,
   "scripts": {
-    "docs:dev": "vuepress dev docs",
+    "dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "clean": "rimraf dist/* && rimraf *.log",
     "cname": "echo thinkacademy-docs.neosjs.com>>./dist/CNAME",
