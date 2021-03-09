@@ -173,6 +173,7 @@ function getNativeSiderBar(groupTitle) {
         "open/openSaveDialog",
         "open/openDirBySystem",
         "open/openFileBySystem",
+        "open/openFile",
         "open/openFileOrDirBySystem",
         "cleanCache",
         "cleanStorage",
