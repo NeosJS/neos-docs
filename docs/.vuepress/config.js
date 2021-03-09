@@ -176,6 +176,7 @@ function getNativeSiderBar(groupTitle) {
         "open/openFileOrDirBySystem",
         "cleanCache",
         "cleanStorage",
+        "cleanFiles",
         "clipboard"
         // {
         //   title: "通用",
