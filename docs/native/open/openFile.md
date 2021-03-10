@@ -14,18 +14,18 @@
 ```js
 import { nativeApi } from '@neosjs/electron-ipc'
 
-nativeApi.openFileSync('index.js')
+nativeApi.openFileSync('xxxx/xxxxx.exe')
 ```
 
 #### 异步
 ```js
 import { nativeApi } from '@neosjs/electron-ipc'
 
-const res = nativeApi.openFileAsync('index.js')
+const res = nativeApi.openFileAsync('xxxx/xxxxx.exe')
 ```
 或者
 ```js
-nativeApi.openFileAsync('index.js').then(() => {
+nativeApi.openFileAsync('xxxx/xxxxx.exe').then(() => {
   // 成功
 }).catch(() => {
   // 失败
