@@ -224,6 +224,7 @@ function getNativeSiderBar(groupTitle) {
       collapsable: true,
       sidebarDepth: 0,
       children: [
+        "elementDrag",
         "loadUrl",
         "loadFile",
         "set/setWindowState",
