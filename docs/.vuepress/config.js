@@ -27,6 +27,7 @@ module.exports = {
       { text: "Graffiti", link: "/graffiti/", new: true },
       { text: "Camera", link: "/camera/", new: true },
       { text: "Net", link: "/net/" },
+      { text: "Like", link: "/like/" },
       { text: "Logger", link: "/logger/" },
       { text: "Utils", link: "/utils/is.html" }
     ],
@@ -42,6 +43,7 @@ module.exports = {
       // "/downloader/": getDownloaderSiderBar2("DownloaderApi"),
       "/downloader/": getDownloaderSiderBar("DownloaderApi 3.0"),
       "/net/": getNetSiderBar("NetApi"),
+      "/like/": getLikeSiderBar("LikeApi"),
       "/utils/": getUtilsSiderBar("UtilsApi")
     },
     lastUpdated: "上次更新",
@@ -493,6 +495,17 @@ function getCameraSiderBar(groupTitle) {
         "photoShot",
         "destroy"
       ]
+    }
+  ];
+}
+
+function getLikeSiderBar(groupTitle) {
+  return [
+    {
+      title: groupTitle,
+      collapsable: false,
+      sidebarDepth: 0,
+      children: ["", "init", "destroy"]
     }
   ];
 }
