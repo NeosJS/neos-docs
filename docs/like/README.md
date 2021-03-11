@@ -1,7 +1,7 @@
 # 快速上手
 
 点赞动效。  
-当点击按钮是，随机飘出设定的一组icon图片。
+当点击按钮时，随机飘出设定的一组icon图片。
 
 ## 安装
 ![npm (scoped)](https://img.shields.io/npm/v/@neosjs/h5-like)
