@@ -6,6 +6,10 @@
 ### `like.init(options: <Object>)`
 ### 
 
+:::info
+只有初始化完成后，点击 `btnDom`, 点赞动效才能生效。
+:::
+
 ## 示例代码
 ```js
 import like from '@neosjs/h5-like'
@@ -16,14 +20,10 @@ like.init({
   flyDom: 'likeFly',
   width: 90,
   height: 300,
-  className: 'likeFlyClass'
+  className: 'likeFlyClass',
+  duration: 2000
 })
 ```
-
-:::info
-只有初始化完成后，点击 `btnDom`, 点赞动效才能生效。
-:::
-
 
 ## 参数
 
@@ -31,8 +31,9 @@ like.init({
 | --------------------------- | -------------------------- | ------ | --------------- | ------------ |------------ |
 | options = {}                | 初始化点赞的参数           | Object | —               | —            | 是 |
 |options['icons']| 漂浮出来的图标 | Array | —               | —            | 是 |
-|options['width']| 画板宽度 | Number | —               | 1024            | 是 |
-|options['height']| 画板高度 | Number | —               | 768            | 是 |
+|options['width']| icon漂浮范围宽度 | Number | —               | —            | 是 |
+|options['height']| icon漂浮范围高度 | Number | —               | —            | 是 |
 |options['btnDom']| 点赞的按钮(ID选择器) | String | —               | —            | 是 |
 |options['flyDom']| icon漂浮的父级DOM(ID选择器)） | String | —               | —            | 是 |
-|options['className']| icon漂浮的位置的样式 | String | —               | —            | — |
+|options['className']| icon漂浮的位置的样式 | String | —               | —            | 否 |
+| options['duration']| icon漂浮的速度, 越大越慢(单位: 毫秒) | Number | 3000               | —  | 否 |
