@@ -3,13 +3,9 @@
     <div class="bg" :style="'background:url(' + bg + ') no-repeat;background-size:cover;background-position: 55%;'"></div>
     <header class="hero">
       <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" />
-
-      <h1 v-if="data.heroText !== null" id="main-title">{{ data.heroText || $title || 'Hello' }}</h1>
-
-      <p class="description">
-        {{ data.tagline || $description }}
-      </p>
-
+      <h1 v-if="data.heroText !== null" id="mainTitle" style="text-align:left;margin-left:36rem;width:50rem;height:60px;"></h1>
+      <p class="description" id="description"  style="text-align:left;margin-left:36rem;width:58rem;height:33px;"></p>
+      <p class="description" id="line"  style="text-align:left;margin-left:36rem;width:60rem;height:33px;margin-top:-20px"></p>
       <p class="action" v-if="data.actionText && data.actionLink" style="text-align:left;margin-left:35rem;width:50rem">
         <NavLink class="action-button" :item="actionLink" v-if="data.actionLink" />
         <NavLink class="action-button" :item="actionLink1" v-if="data.actionLink1" />
@@ -23,7 +19,6 @@
         <NavLink class="action-button" :item="actionLink8" v-if="data.actionLink8" />
         <NavLink class="action-button" :item="actionLink9" v-if="data.actionLink9" />
         <NavLink class="action-button" :item="actionLink10" v-if="data.actionLink10" />
-
       </p>
     </header>
 
@@ -43,6 +38,7 @@
 </template>
 
 <script>
+import theaterJS from 'theaterjs';
 import NavLink from '@theme/components/NavLink.vue'
 import bg from '@imgs/bg.jpg'
 export default {
@@ -129,11 +125,62 @@ export default {
         text: this.data.actionText11
       }
     }
+  },
+  mounted () {
+    function typing(theater){
+      theater
+      .addScene("产品经理",1800,-4,600)
+      .addScene("UI设计师",1800,-5,700)
+      .addScene("程序猿",1800,-3,800)
+      .addScene((done) =>{
+        typing(theater)
+        done()
+      })
+    }
+    const theater = theaterJS();
+    theater.
+    on('type:start, erase:start', function () {
+      theater.getCurrentActor().$element.classList.add('typing')
+    }).
+    on('type:end, erase:end', function () {
+      theater.getCurrentActor().$element.classList.remove('typing')
+    })
+
+    theater
+    .addActor('mainTitle',{speed: 1, accuracy: 1 })
+    .addScene(`mainTitle:${this.$title}`,600)
+    theater
+    .addActor('description', { speed: 0.5, accuracy: 1 })
+    .addScene(`description:${this.data.tagline}`, 600)
+    theater
+    .addActor('line', { speed: 0.5, accuracy: 1 })
+    .addScene(300)
+    .addScene(`line:只为让你：少加班，多恋爱`, 800)
+    .addScene(`line:只为这样的你：`, 500)
+    .addScene(
+      (done) =>{
+        typing(theater)
+        done()
+      }
+    )
+    // .addScene(theater.replay.bind(theater));
   }
 }
 </script>
 
 <style lang="stylus">
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.typing::after {
+  content: "|";
+  animation: blink 500ms infinite;
+}
 .bg
   width 100%
   height 100%
@@ -163,10 +210,13 @@ export default {
     h1, .description, .action
       margin 1.8rem auto
     .description
-      max-width 35rem
+      text-align left
+      max-width 20rem
       font-size 1.6rem
       line-height 1.3
-      color lighten($--color-black, 40%)
+      color lighten($--color-black, 30%)
+    .action
+      margin-top:5rem
     .action-button
       margin 0 0 1rem 1rem
       display inline-block
@@ -225,10 +275,13 @@ export default {
         max-height 210px
         margin 2rem auto 1.2rem
       h1
+        margin-left auto !important
         font-size 1.8rem
       h1, .description, .action
         margin 1.2rem auto
       .description
+        margin-left auto !important
+        text-align  center
         font-size 1.2rem
       .action-button
         font-size 1rem
@@ -237,7 +290,8 @@ export default {
       .action
         margin-left: 0 !important
         width: 100% !important
-        text-align left
+        text-align left;
+        margin-top:0
     .feature
       h2
         font-size 1.25rem

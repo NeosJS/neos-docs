@@ -59,5 +59,8 @@
     "sass-loader": "^10.0.2",
     "transliteration": "^2.1.11",
     "vuepress": "^1.8.2"
+  },
+  "dependencies": {
+    "theaterjs": "^3.2.0"
   }
 }
