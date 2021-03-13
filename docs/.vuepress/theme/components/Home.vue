@@ -120,8 +120,8 @@ export default {
     function typing(theater){
       theater
       .addScene("少加班，多恋爱",1800,-7,600)
-      .addScene("少搬砖，多喝茶",1800,-7,700)
-      .addScene("少抓头发，多美发",1800,-8,800)
+      .addScene("少搬砖，把酒干",1800,-7,700)
+      .addScene("少抓头发，把灯开",1800,-8,800)
       .addScene((done) =>{
         typing(theater)
         done()
