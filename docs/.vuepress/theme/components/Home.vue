@@ -204,7 +204,7 @@ export default {
       margin 1.8rem auto
     .description
       text-align left
-      max-width 20rem
+      max-width 25rem
       font-size 1.6rem
       line-height 1.3
       color lighten($--color-black, 30%)
