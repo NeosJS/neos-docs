@@ -1,33 +1,22 @@
 <template>
   <main class="home" :aria-labelledby="data.heroText !== null ? 'main-title' : null">
-    <div class="bg" :style="'background:url(' + bg + ') no-repeat;background-size:cover;background-position: 55%;'"></div>
+    <div class="bg" :style="'background:url(' + bg + ') no-repeat;background-size:90%;background-position: 15rem top;opacity: .5;'"></div>
     <header class="hero">
       <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" />
       <h1 v-if="data.heroText !== null" id="mainTitle" style="text-align:left;margin-left:36rem;width:50rem;height:60px;"></h1>
       <p class="description" id="description"  style="text-align:left;margin-left:36rem;width:58rem;height:33px;"></p>
       <p class="description" id="line"  style="text-align:left;margin-left:36rem;width:60rem;height:33px;margin-top:-20px"></p>
-      <p class="action" v-if="data.actionText && data.actionLink" style="text-align:left;margin-left:35rem;width:50rem">
-        <NavLink class="action-button" :item="actionLink" v-if="data.actionLink" />
-        <NavLink class="action-button" :item="actionLink1" v-if="data.actionLink1" />
-        <NavLink class="action-button" :item="actionLink2" v-if="data.actionLink2" />
-        <NavLink class="action-button" :item="actionLink3" v-if="data.actionLink3" />
-        <NavLink class="action-button" :item="actionLink4" v-if="data.actionLink4" />
-        <NavLink class="action-button" :item="actionLink5" v-if="data.actionLink5" />
-        <NavLink class="action-button" :item="actionLink6" v-if="data.actionLink6" />
-        <NavLink class="action-button" :item="actionLink11" v-if="data.actionLink11" />
-        <NavLink class="action-button" :item="actionLink7" v-if="data.actionLink7" />
-        <NavLink class="action-button" :item="actionLink8" v-if="data.actionLink8" />
-        <NavLink class="action-button" :item="actionLink9" v-if="data.actionLink9" />
-        <NavLink class="action-button" :item="actionLink10" v-if="data.actionLink10" />
-      </p>
-    </header>
-
-    <div class="features" v-if="data.features && data.features.length">
+      <!-- <p class="action" v-if="data.actionText && data.actionLink" style="text-align:left;margin-left:35rem;width:50rem"></p> -->
+      <div class="features" v-if="data.features && data.features.length" style="margin-left:36rem;text-align:left">
       <div class="feature" v-for="(feature, index) in data.features" :key="index">
         <h2>{{ feature.title }}</h2>
         <p>{{ feature.details }}</p>
+        <BtnLink :link="feature.link">查看详情</BtnLink>
       </div>
     </div>
+    </header>
+
+
 
     <Content class="theme-default-content custom" />
 
@@ -40,9 +29,10 @@
 <script>
 import theaterJS from 'theaterjs';
 import NavLink from '@theme/components/NavLink.vue'
+import BtnLink from '@theme/components/BtnLink.vue'
 import bg from '@imgs/bg.jpg'
 export default {
-  components: { NavLink },
+  components: { NavLink,BtnLink },
   data() {
     return {
       bg
@@ -129,9 +119,10 @@ export default {
   mounted () {
     function typing(theater){
       theater
-      .addScene("产品经理",1800,-4,600)
-      .addScene("UI设计师",1800,-5,700)
-      .addScene("程序猿",1800,-3,800)
+      .addScene("少加班",1800,-3,600)
+      .addScene("多恋爱",1800,-3,700)
+      .addScene("少搬砖",1800,-3,800)
+      .addScene("多喝茶",1800,-3,800)
       .addScene((done) =>{
         typing(theater)
         done()
@@ -155,8 +146,8 @@ export default {
     theater
     .addActor('line', { speed: 0.5, accuracy: 1 })
     .addScene(300)
-    .addScene(`line:只为让你：少加班，多恋爱`, 800)
-    .addScene(`line:只为这样的你：`, 500)
+    .addScene(`line:只为让你：`, 500)
+    // .addScene(`line:只为这样的你：`, 500)
     .addScene(
       (done) =>{
         typing(theater)
@@ -181,6 +172,7 @@ export default {
   content: "|";
   animation: blink 500ms infinite;
 }
+
 .bg
   width 100%
   height 100%
@@ -194,11 +186,13 @@ export default {
   // padding $navbarHeight 2rem 0
   max-width 100%
   margin 0px auto
-  display block
+  display block;
+  height 100%
+  overflow hidden
   .hero
     text-align center
     position relative
-    top 15rem
+    top 3rem
     margin-left -30rem
     img
       max-width: 100%
@@ -230,27 +224,49 @@ export default {
       &:hover
         background-color lighten($--color-primary, 10%)
   .features
-    border-top 1px solid $borderColor
+    position relative
+    z-index 1
+    border-top 0px solid $borderColor
     padding 1.2rem 0
-    margin 2.5rem auto 0 auto
     display flex
     flex-wrap wrap
     align-items flex-start
     align-content stretch
-    justify-content space-between
-    max-width 80%
+    justify-content flex-start
+    max-width 60rem;
   .feature
+    box-sizing border-box
+    padding:.5rem
+    box-shadow: 0 6px 18px 0 rgba(0,0,0,.1);
     flex-grow 1
-    flex-basis 30%
-    max-width 30%
+    flex-basis 18%
+    max-width 18%
+    border-radius .2rem
+    background #fff
+    border 0px solid rgba(0,0,0,.05)
+    transition: all .3s ease-in-out;
+    overflow hidden
+    margin 0 1rem 1rem 0
+    &:hover{
+      // transform: translateY(-0.1rem);
+      box-shadow: 0 6px 32px 0 rgba(0,0,0,.2);
+      border 0px solid rgba(0,0,0,0)
+    }
     h2
       font-size 1.4rem
       font-weight 500
       border-bottom none
       padding-bottom 0
-      color lighten($textColor, 10%)
+      color rgba(0,0,0,.85)
+      margin 0
+      text-align center
+      background rgba(0,0,0,.01)
+      margin -0.5rem;
+      padding:.5rem
     p
-      color lighten($textColor, 25%)
+      height:3.8rem;
+      color rgba(0,0,0,.5)
+      line-height 1.5
   .footer
     padding 2.5rem
     border-top 1px solid $borderColor
@@ -259,18 +275,24 @@ export default {
 
 @media (max-width: $MQMobile)
   .home
+    overflow-y auto
+    .hero
+      top 1rem
     .features
       flex-direction column
+      margin-left 0 !important
     .feature
       max-width 100%
-      padding 0 2.5rem
+      width 100%
 
 @media (max-width: $MQMobileNarrow)
   .home
+    overflow-y auto
     padding-left 1.5rem
     padding-right 1.5rem
     .hero
       margin-left 0
+      top 1rem
       img
         max-height 210px
         margin 2rem auto 1.2rem

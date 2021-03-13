@@ -4,8 +4,8 @@ const tools = require("./theme/util/tools");
 // const isEnvProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  title: "客户端开发文档",
-  description: "前端组文档",
+  title: "NeosJS开发文档",
+  description: "NeosJS文档",
   dest: "./dist",
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
