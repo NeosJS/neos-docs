@@ -119,10 +119,9 @@ export default {
   mounted () {
     function typing(theater){
       theater
-      .addScene("少加班",1800,-3,600)
-      .addScene("多恋爱",1800,-3,700)
-      .addScene("少搬砖",1800,-3,800)
-      .addScene("多喝茶",1800,-3,800)
+      .addScene("少加班，多恋爱",1800,-7,600)
+      .addScene("少搬砖，多喝茶",1800,-7,700)
+      .addScene("少抓头发，多美发",1800,-8,800)
       .addScene((done) =>{
         typing(theater)
         done()
