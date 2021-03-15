@@ -9,9 +9,8 @@ module.exports = {
   dest: "./dist",
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
-    ["link", { rel: "manifest", href: "/manifest.json" }],
-    ["link", { rel: "icon", href: "/favicon.ico" }],
-    ["script", { src: "https://cdn.bootcss.com/vue/2.6.12/vue.min.js" }]
+    ["link", { rel: "manifest", href: "/manifest.json" }]
+    // ["script", { src: "https://cdn.bootcss.com/vue/2.6.12/vue.min.js" }]
     // ["link", { rel: "stylesheet", href: "/tal-sc.min.css" }]
   ],
   themeConfig: {
@@ -108,23 +107,6 @@ module.exports = {
   },
   chainWebpack(config) {
     config.resolve.alias.set("@imgs", path.resolve(__dirname, "public/")).end();
-    config
-      .externals({
-        vue: "Vue"
-      })
-      .end();
-    // config
-    //   .merge({
-    //     externals: {
-    //       vue: {
-    //         root: 'Vue',
-    //         commonjs: 'vue',
-    //         commonjs2: 'vue',
-    //         amd: 'vue'
-    //       }
-    //     }
-    //   })
-    //   .end()
   },
   clientRootMixin: path.resolve(__dirname, "mixin.js")
   // devServer: {

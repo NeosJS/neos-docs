@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [{ "src": "package.json", "use": "@vercel/static-build" }],
+  "routes": [
+    { "src": "^/favicon.ico", "dest": "/favicon.ico" },
+    { "src": "^/assets/js/(.*)", "dest": "/assets/js/$1" },
+    { "src": "^/assets/css/(.*)", "dest": "/assets/css/$1" },
+    { "src": "^/assets/img/(.*)", "dest": "/assets/img/$1" }
+  ]
+}

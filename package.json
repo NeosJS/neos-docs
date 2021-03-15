@@ -9,7 +9,8 @@
     "docs:build": "vuepress build docs",
     "clean": "rimraf dist/* && rimraf *.log",
     "cname": "echo docs.neosjs.com>>./dist/CNAME",
-    "build": "npm run clean && npm run docs:build && npm run cname",
+    "build": "npm run clean && npm run docs:build",
+    "vercel-build": "npm run docs:build",
     "deploy": "sh ./deploy.sh push && sh ./deploy.sh build",
     "push": "sh ./deploy.sh push"
   },
@@ -24,10 +25,6 @@
   "author": "听着情歌流泪 <develop@lingtal.com> (http://thinkacademy-docs.neosjs.com)",
   "homepage": "http://thinkacademy-docs.neosjs.com",
   "license": "MIT",
-  "engines": {
-    "node": ">= 8.0.0",
-    "npm": ">= 5.0.0"
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
