@@ -1,6 +1,6 @@
 {
-  "name": "thinkAcademyDocs",
-  "short_name": "thinkAcademyDocs",
+  "name": "NeosJSDocs",
+  "short_name": "NeosJSDocs",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#fff",

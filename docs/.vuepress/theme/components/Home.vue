@@ -233,6 +233,7 @@ export default {
     align-content stretch
     justify-content flex-start
     max-width 60rem;
+    margin-top 5rem
   .feature
     box-sizing border-box
     padding:.5rem
@@ -278,6 +279,7 @@ export default {
     .hero
       top 1rem
     .features
+      margin-top 0
       flex-direction column
       margin-left 0 !important
     .feature
@@ -314,6 +316,7 @@ export default {
         text-align left;
         margin-top:0
     .feature
+      margin-top 0
       h2
         font-size 1.25rem
 </style>

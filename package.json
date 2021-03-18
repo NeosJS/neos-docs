@@ -8,11 +8,8 @@
     "dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "clean": "rimraf dist/* && rimraf *.log",
-    "cname": "echo docs.neosjs.com>>./dist/CNAME",
-    "build": "npm run clean && npm run docs:build",
-    "vercel-build": "npm run docs:build",
-    "deploy": "sh ./deploy.sh push && sh ./deploy.sh build",
-    "push": "sh ./deploy.sh push"
+    "build": "npm run clean && npm run docs:build && node ./copyFile.js",
+    "deploy": "sh ./deploy.sh"
   },
   "repository": {
     "type": "git",
@@ -22,8 +19,8 @@
     "NeosJS",
     "Neos"
   ],
-  "author": "听着情歌流泪 <develop@lingtal.com> (http://thinkacademy-docs.neosjs.com)",
-  "homepage": "http://thinkacademy-docs.neosjs.com",
+  "author": "听着情歌流泪 <develop@lingtal.com> (https://docs.neosjs.com)",
+  "homepage": "https://docs.neosjs.com",
   "license": "MIT",
   "browserslist": [
     "> 1%",
