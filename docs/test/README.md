@@ -6,11 +6,9 @@
 adsa
 :::
 
-<Badge :value="12" type="success">
-  <sc-button size="small">评论</sc-button>
-</Badge>
-
 <BadgeTip text="Beta" type="danger"/>
+
+<Badge :value="12" type="success">评论</Badge>
 
 ::: tip
 提示信息
@@ -43,11 +41,10 @@ adsa
 ```html
 <template>
   <Badge :value="12" type="success">
-    <sc-button size="small">评论</sc-button>
+    评论
   </Badge>
 </template>
 ```
 
 :::
 
-[[toc]]

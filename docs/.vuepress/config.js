@@ -106,7 +106,9 @@ module.exports = {
     }
   },
   chainWebpack(config) {
-    config.resolve.alias.set("@imgs", path.resolve(__dirname, "public/")).end();
+    config.resolve.alias
+      .set("@imgs", path.resolve(__dirname, "public/imgs/"))
+      .end();
   },
   clientRootMixin: path.resolve(__dirname, "mixin.js")
   // devServer: {
