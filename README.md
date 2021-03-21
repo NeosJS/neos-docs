@@ -1,2 +1,2 @@
-# thinkacademy-docs
-thinkacademy-docs
+# NeosJS Docs
+neosjs docs
