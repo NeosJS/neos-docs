@@ -9,9 +9,10 @@ module.exports = {
   dest: "./dist",
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
-    ["link", { rel: "manifest", href: "/manifest.json" }]
-    // ["script", { src: "https://cdn.bootcss.com/vue/2.6.12/vue.min.js" }]
-    // ["link", { rel: "stylesheet", href: "/tal-sc.min.css" }]
+    ["link", { rel: "manifest", href: "/manifest.json" }],
+    ["script", { src: "/libs/vue.min.js" }],
+    ["script", { src: "/libs/neos.umd.min.js" }],
+    ["link", { rel: "stylesheet", href: "/libs/neos.css" }]
   ],
   themeConfig: {
     nav: [
@@ -21,14 +22,15 @@ module.exports = {
       { text: "Updater", link: "/updater/" },
       { text: "DataBase", link: "/db/" },
       // { text: "Downloader", link: "/downloader/", deprecated: true },
-      { text: "Downloader 3.0", link: "/downloader/", new: true },
+      { text: "Downloader 3.0", link: "/downloader/" },
       { text: "Recorder", link: "/recorder/" },
-      { text: "Graffiti", link: "/graffiti/", new: true },
-      { text: "Camera", link: "/camera/", new: true },
+      { text: "Graffiti", link: "/graffiti/" },
+      { text: "Camera", link: "/camera/" },
       { text: "Net", link: "/net/" },
       { text: "Like", link: "/like/" },
       { text: "Logger", link: "/logger/" },
-      { text: "Utils", link: "/utils/is.html" }
+      { text: "Components", link: "/components/", new: true }
+      // { text: "Utils", link: "/utils/is.html" }
     ],
     sidebar: {
       "/ipc/": getIpcSiderBar("IpcMessage"),
@@ -43,7 +45,8 @@ module.exports = {
       "/downloader/": getDownloaderSiderBar("DownloaderApi 3.0"),
       "/net/": getNetSiderBar("NetApi"),
       "/like/": getLikeSiderBar("LikeApi"),
-      "/utils/": getUtilsSiderBar("UtilsApi")
+      "/components/": getComponentsSiderBar("Components")
+      // "/utils/": getUtilsSiderBar("UtilsApi")
     },
     lastUpdated: "上次更新",
     smoothScroll: true
@@ -106,8 +109,11 @@ module.exports = {
     }
   },
   chainWebpack(config) {
-    config.resolve.alias
-      .set("@imgs", path.resolve(__dirname, "public/imgs/"))
+    config.resolve.alias.set("@imgs", path.resolve(__dirname, "public/imgs/")).end();
+    config
+      .externals({
+        vue: "Vue"
+      })
       .end();
   },
   clientRootMixin: path.resolve(__dirname, "mixin.js")
@@ -303,16 +309,7 @@ function getLoggerSiderBar(groupTitle) {
       title: groupTitle,
       collapsable: false,
       sidebarDepth: 0,
-      children: [
-        "",
-        "start",
-        "info",
-        "error",
-        "log",
-        "readLog",
-        "removeLog",
-        "query"
-      ]
+      children: ["", "start", "info", "error", "log", "readLog", "removeLog", "query"]
     }
   ];
 }
@@ -322,16 +319,7 @@ function getDBSiderBar(groupTitle) {
       title: groupTitle,
       collapsable: false,
       sidebarDepth: 0,
-      children: [
-        "",
-        "createCol",
-        "insert",
-        "find",
-        "update",
-        "remove",
-        "getState",
-        "drop"
-      ]
+      children: ["", "createCol", "insert", "find", "update", "remove", "getState", "drop"]
     }
   ];
 }
@@ -405,14 +393,7 @@ function getDownloaderSiderBar(groupTitle) {
       title: groupTitle,
       collapsable: false,
       sidebarDepth: 0,
-      children: [
-        "",
-        "checkCourseware",
-        "downloadCourseware",
-        "downloadUpdates",
-        "downloadFile",
-        "extractZip"
-      ]
+      children: ["", "checkCourseware", "downloadCourseware", "downloadUpdates", "downloadFile", "extractZip"]
     }
   ];
 }
@@ -469,16 +450,7 @@ function getCameraSiderBar(groupTitle) {
       title: groupTitle,
       collapsable: false,
       sidebarDepth: 0,
-      children: [
-        "",
-        "init",
-        "getDeviceLists",
-        "startCapture",
-        "stopCapture",
-        "changeDeviceId",
-        "photoShot",
-        "destroy"
-      ]
+      children: ["", "init", "getDeviceLists", "startCapture", "stopCapture", "changeDeviceId", "photoShot", "destroy"]
     }
   ];
 }
@@ -490,6 +462,17 @@ function getLikeSiderBar(groupTitle) {
       collapsable: false,
       sidebarDepth: 0,
       children: ["", "init", "destroy"]
+    }
+  ];
+}
+
+function getComponentsSiderBar(groupTitle) {
+  return [
+    {
+      title: groupTitle,
+      collapsable: false,
+      sidebarDepth: 0,
+      children: ["", "loading"]
     }
   ];
 }
