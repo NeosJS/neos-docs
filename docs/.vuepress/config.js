@@ -10,13 +10,11 @@ module.exports = {
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
     ["link", { rel: "manifest", href: "/manifest.json" }],
-    ["script", { src: "/libs/vue.min.js" }],
-    ["script", { src: "/libs/neos.umd.min.js" }],
     ["link", { rel: "stylesheet", href: "/libs/neos.css" }]
   ],
   themeConfig: {
     nav: [
-      { text: "首页", link: "/" },
+      // { text: "首页", link: "/" },
       { text: "IpcMessage", link: "/ipc/" },
       { text: "Native", link: "/native/get/getAppVersion.html" },
       { text: "Updater", link: "/updater/" },
@@ -28,7 +26,7 @@ module.exports = {
       { text: "Camera", link: "/camera/" },
       { text: "Net", link: "/net/" },
       { text: "Like", link: "/like/" },
-      { text: "Logger", link: "/logger/" },
+      // { text: "Logger", link: "/logger/" },
       { text: "Components", link: "/components/", new: true }
       // { text: "Utils", link: "/utils/is.html" }
     ],
@@ -110,11 +108,13 @@ module.exports = {
   },
   chainWebpack(config) {
     config.resolve.alias.set("@imgs", path.resolve(__dirname, "public/imgs/")).end();
-    config
-      .externals({
-        vue: "Vue"
-      })
-      .end();
+    config.resolve.alias.set("utils", path.resolve(__dirname, "utils")).end();
+    config.resolve.alias.set("packages", path.resolve(__dirname, "packages")).end();
+    // config
+    //   .externals({
+    //     vue: "Vue"
+    //   })
+    //   .end();
   },
   clientRootMixin: path.resolve(__dirname, "mixin.js")
   // devServer: {

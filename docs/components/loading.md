@@ -5,34 +5,46 @@
 ::: demo 基础用法 设置 `size`, `stroke-color`, `circle-color` 等，可以显示不同的loading图标。
 
 ``` html
-<div class="demo-base">
-  <div class="block">
-    <Loading />
+<template>
+  <div class="demo-base">
+    <div class="block">
+      <Loading />
+    </div>
+    <div class="block">
+      <Loading stroke-color="rgba(255,150,60,1)" />
+    </div>
+    <div class="block">
+      <Loading stroke-color="rgba(255,150,60,1)" circle-color="#FFD518" />
+    </div>
+    <div class="block">
+      <Loading stroke-color="rgba(255,110,10,1)" circle-color="#FFD518" :size="60" />
+    </div>
   </div>
-  <div class="block">
-    <Loading stroke-color="rgba(255,150,60,1)" />
-  </div>
-  <div class="block">
-    <Loading stroke-color="rgba(255,150,60,1)" circle-color="#FFD518" />
-  </div>
-  <div class="block">
-    <Loading stroke-color="rgba(255,150,60,1)" circle-color="#FFD518" :stroke-width="5" :size="80" />
-  </div>
-</div>
+</template>
 ```
 :::
 
 ### 带有Logo图标、文本
+通过设置logo或text，可以达到不同的视觉效果。
+
 :::demo 设置 `logo` 属性，即可在圆环内显示设置的logo图片。设置 `text` 属性，即可在圆环内显示设置的文本。  **注意：尺寸小于60，将不会显示文本！**
 ``` html
-<div class="demo-base">
-  <div class="block">
-    <Loading :logo="logo" stroke-color="rgba(255,150,60,1)" circle-color="#FFD518"/>
+<template>
+  <div class="demo-base">
+    <div class="block">
+      <Loading :logo="logo" :size="100" stroke-color="rgba(255,150,60,1)" circle-color="#FFD518"/>
+    </div>
+    <div class="block">
+      <Loading logo="https://static.haibian.com/favicon.ico?v=1" :size="100" stroke-color="rgba(255,150,60,1)" circle-color="#FFD518"/>
+    </div>
+    <div class="block">
+      <Loading :text="text" :size="100" stroke-color="rgba(255,150,60,1)" circle-color="#FFD518"/>
+    </div>
+    <div class="block">
+      <Loading text="loading" :size="100" stroke-color="rgba(255,150,60,1)" circle-color="#FFD518"/>
+    </div>
   </div>
-  <div class="block">
-    <Loading :text="text" size="80" stroke-color="rgba(255,150,60,1)" circle-color="#FFD518"/>
-  </div>
-</div>
+</template>
 
 <script>
 export default{
@@ -48,22 +60,28 @@ export default{
 :::
 
 ### 自定义尺寸
+通过设置不同的尺寸，来缩放loading的大小。
 :::demo 设置 `size` 属性，即可改变组件的大小。
 ```html
-<div class="demo-base">
-  <div class="block">
-    <Loading :logo="logo" :size="30" />
+<template>
+  <div class="demo-base">
+    <div class="block">
+      <Loading :logo="logo" :size="24" />
+    </div>
+    <div class="block">
+      <Loading :logo="logo" :size="30" />
+    </div>
+    <div class="block">
+      <Loading :logo="logo" :size="60" />
+    </div>
+    <div class="block">
+      <Loading :logo="logo" :size="80" />
+    </div>
+    <div class="block">
+      <Loading :logo="logo" :size="100" />
+    </div>
   </div>
-  <div class="block">
-    <Loading :logo="logo" :size="60" />
-  </div>
-  <div class="block">
-    <Loading :logo="logo" :size="80" />
-  </div>
-  <div class="block">
-    <Loading :logo="logo" :size="100" />
-  </div>
-</div>
+</template>
 
 <script>
 export default{
@@ -78,37 +96,60 @@ export default{
 :::
 
 ### 自定义颜色
-
+通过设置不同的颜色，达到不同风格的loading图标。
 :::demo 设置 `stroke-color`, `circle-color`, `fill-color` 属性，可以很方便的得到自己想要的颜色。
 ```html
-<div class="demo-base">
-  <div class="block">
-    <Loading 
-      :logo="logo"
-      size="80"
-      :stroke-color="strokeColor"
-      circle-color="#FFD518"
-      fill-color="rgba(255,255,255,1)"
-    ></Loading>
-  </div>
+<template>
+  <div class="demo-base">
+    <div class="block">
+      <Loading 
+        :logo="logo"
+        :size="80"
+        :stroke-color="strokeColor"
+        circle-color="#FFB610"
+        fill-color="rgba(255,255,255,1)"
+      ></Loading>
+    </div>
 
-  <div class="block">
-    <Loading 
-      :logo="logo"
-      size="80"
-      stroke-color="#108ee9"
-      circle-color="#87d068"
-      fill-color="rgba(255,255,255,1)"
-    ></Loading>
+    <div class="block">
+      <Loading 
+        :logo="logo"
+        :size="80"
+        :stroke-color="{from:'#AB7EF6',to:'#ea4c89'}"
+        circle-color="#e7e7e7"
+        fill-color="rgba(255,255,255,1)"
+      ></Loading>
+    </div>
+
+    <div class="block">
+      <Loading 
+        :logo="logo"
+        :size="80"
+        circle-color="#f5f5f5"
+        :stroke-color="strokeColor1"
+        fill-color="rgba(255,255,255,1)"
+      ></Loading>
+    </div>
+
+    <div class="block">
+      <Loading 
+        :logo="logo"
+        :size="80"
+        circle-color="#e8e8e8"
+        :stroke-color="{from: '#8549ba',to: '#ab7ef6'}"
+        fill-color="#FFF5CD"
+      ></Loading>
+    </div>
   </div>
-</div>
+</template>
 
 <script>
 export default{
   data(){
     return {
       logo: '/favicon.ico',
-      strokeColor: { from: 'rgba(255,180,60,1)', to: 'rgba(255,150,60,1)' }
+      strokeColor: { from: 'rgba(255,180,60,1)', to: 'rgba(255,150,60,1)' },
+      strokeColor1:{from:'#108ee9',to:'#87d068'}
     }
   }
 }
@@ -117,22 +158,24 @@ export default{
 :::
 
 ### 自定义遮罩
-
+通常用于全局加载。
 :::demo 设置 `mask-class` 属性，可以自定义遮罩的样式。
 ```html
-<div class="demo-base" style="height:200px;">
-  文本文本文本
-  <div class="block">
-    <Loading 
-      :logo="logo"
-      size="80"
-      :stroke-color="strokeColor"
-      circle-color="#FFD518"
-      fill-color="rgba(255,255,255,1)"
-      mask-class="maskClass"
-    ></Loading>
+<template>
+  <div class="demo-base" style="height:200px;">
+    文本文本文本
+    <div class="block">
+      <Loading 
+        :logo="logo"
+        :size="80"
+        :stroke-color="strokeColor"
+        circle-color="#FFD518"
+        fill-color="rgba(255,255,255,1)"
+        mask-class="maskClass"
+      ></Loading>
+    </div>
   </div>
-</div>
+</template>
 
 <script>
 export default{
@@ -199,9 +242,10 @@ export default{
 export default{
   data(){
     return {
-      text: 'Loading',
+      text: '加载中',
       logo: '/favicon.ico',
       strokeColor: { from: 'rgba(255,180,60,1)', to: 'rgba(255,150,60,1)' },
+      strokeColor1:{ from: '#108ee9', to: '#87d068' }
     }
   }
 }
