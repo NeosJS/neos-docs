@@ -8,7 +8,7 @@
     "dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "clean": "rimraf dist/* && rimraf *.log",
-    "vercel-build": "vuepress build docs && node ./copyFile.js",
+    "vercel-build": "vuepress build docs",
     "deploy": "sh ./deploy.sh"
   },
   "repository": {
