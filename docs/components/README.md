@@ -2,4 +2,8 @@
 
 提供一些常用的基础组件。
 
+
 ## 组件列表
+
+[loading](loading)  
+[countdown](countdown)

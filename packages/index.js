@@ -1,26 +1,25 @@
-import CanvasCountdown from "./canvas-countdown/index.js";
 // import Countdown from "./countdown/index.js";
-import Loading from "./loading/index.js";
-import ClockCountdown from "./clock-countdown/index.js";
+import Loading from './loading/index.js'
+import ClockCountdown from './clock-countdown/index.js'
+import CanvasCountdown from './canvas-countdown/index.js'
 
-const components = [Loading, ClockCountdown, CanvasCountdown];
+const components = [Loading, ClockCountdown, CanvasCountdown]
+
 const install = (Vue, opts = {}) => {
   components.forEach(component => {
-    Vue.component(component.name, component);
-  });
+    Vue.component(component.name, component)
+  })
   Vue.prototype.$ThinkAcademy = {
-    size: opts.size || "",
+    size: opts.size || '',
     zIndex: opts.zIndex || 2000
-  };
-};
-if (typeof window !== "undefined" && window.Vue) {
-  install(window.Vue);
+  }
+}
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue)
 }
 export default {
   install,
-  // CanvasCountdown,
-  // Countdown,
+  Loading,
   ClockCountdown,
-  CanvasCountdown,
-  Loading
-};
+  CanvasCountdown
+}

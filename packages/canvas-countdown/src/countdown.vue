@@ -86,7 +86,7 @@ export default {
      * 绘制内环
      */
     drawInner() {
-      this.drawCircle(0, 360, 23, this.settings.innerColor)
+      this.drawCircle(0, 360, 50, this.settings.innerColor)
       this.strokeBorder(this.settings.innerBorderWidth)
     },
     /**

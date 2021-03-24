@@ -18,10 +18,40 @@
 ```
 :::
 
+
+:::demo
+```html
+<div class="demo-base">
+  <div class="block">
+    <ne-canvas-countdown :options="optin"/>
+  </div>
+
+  <div class="block">
+    <ne-canvas-countdown :options="optin1"/>
+  </div>
+
+</div>
+```
+:::
+
 <script>
 export default{
   data(){
     return {
+      optin:{
+        countDownTime:60
+      },
+      optin1:{
+        countDownTime:60,
+        borderColor: '#AB7EF6', // 边框颜色
+        outerColor: '#ffc715', // 最外层底圆颜色
+        scheduleColor: '#7ac70c', // 进度条动画颜色
+        fontColor: '#AB7EF6', // 字体颜色
+        ringColor: '#377FEA', // 进度条环形颜色
+        innerColor: '#FFF5CD', // 最内圆底色
+        innerBorderWidth:4,
+        drawInnerRing:true
+      },
       options1:{
         countDownTime:90,
         borderWidth:18,

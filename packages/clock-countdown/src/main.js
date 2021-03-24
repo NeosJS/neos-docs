@@ -176,12 +176,12 @@ export default class ClockCountdown {
     this.ctx.lineTo(size / 2 - 75, 0)
     this.ctx.stroke()
 
-    this.ctx.beginPath()
-    this.ctx.lineWidth = pointerWidth || size * 0.0525
-    this.ctx.moveTo(0, 0)
-    this.ctx.lineTo(-12, 0)
-    this.ctx.stroke()
-    this.ctx.restore()
+    // this.ctx.beginPath()
+    // this.ctx.lineWidth = pointerWidth || size * 0.0525
+    // this.ctx.moveTo(0, 0)
+    // this.ctx.lineTo(-12, 0)
+    // this.ctx.stroke()
+    // this.ctx.restore()
 
     // 长针
     this.ctx.save()
@@ -191,26 +191,26 @@ export default class ClockCountdown {
     this.ctx.strokeStyle = pointerColor
     this.ctx.lineCap = 'round'
     this.ctx.moveTo(0, 0)
-    this.ctx.lineTo(size / 2 - 60, 0)
+    this.ctx.lineTo(size / 2 - 75, 0)
     this.ctx.stroke()
 
-    this.ctx.beginPath()
-    this.ctx.lineWidth = pointerWidth || size * 0.0525
-    this.ctx.moveTo(0, 0)
-    this.ctx.lineTo(-pointerWidth * 2.2, 0)
-    this.ctx.stroke()
+    // this.ctx.beginPath()
+    // this.ctx.lineWidth = pointerWidth || size * 0.0525
+    // this.ctx.moveTo(0, 0)
+    // this.ctx.lineTo(-pointerWidth * 2.2, 0)
+    // this.ctx.stroke()
 
-    this.ctx.beginPath()
-    this.ctx.fillStyle = pointerColor
-    this.ctx.arc(0, 0, 10, 0, Math.PI * 2, true)
-    this.ctx.fill()
+    // this.ctx.beginPath()
+    // this.ctx.fillStyle = pointerColor
+    // this.ctx.arc(0, 0, 10, 0, Math.PI * 2, true)
+    // this.ctx.fill()
 
-    this.ctx.beginPath()
-    this.ctx.strokeStyle = pointerDotColor
-    this.ctx.lineWidth = 2
-    this.ctx.arc(0, 0, 5, 0, Math.PI * 2, true)
-    this.ctx.stroke()
-    this.ctx.restore()
+    // this.ctx.beginPath()
+    // this.ctx.strokeStyle = pointerDotColor
+    // this.ctx.lineWidth = 2
+    // this.ctx.arc(0, 0, 5, 0, Math.PI * 2, true)
+    // this.ctx.stroke()
+    // this.ctx.restore()
   }
 
   /**
