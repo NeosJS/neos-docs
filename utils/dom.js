@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { trim, camelCase } from 'utils/util'
-const isServer = Vue.prototype.$isServer
+export const isServer = Vue.prototype.$isServer
 const ieVersion = isServer ? 0 : Number(document.documentMode)
 // 是否存在样式名
 export const hasClass = (el, cls) => {

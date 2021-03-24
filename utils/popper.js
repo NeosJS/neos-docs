@@ -1,5 +1,5 @@
 /* eslint-disable */
-const root = window
+const root = window || global
 const DEFAULTS = {
   // placement of the popper
   placement: 'bottom',
@@ -122,7 +122,11 @@ Popper.prototype.update = function() {
   data.offsets = this._getOffsets(this._popper, this._reference, data.placement)
 
   // get boundaries
-  data.boundaries = this._getBoundaries(data, this._options.boundariesPadding, this._options.boundariesElement)
+  data.boundaries = this._getBoundaries(
+    data,
+    this._options.boundariesPadding,
+    this._options.boundariesElement
+  )
 
   data = this.runModifiers(data, this._options.modifiers)
 
@@ -205,7 +209,11 @@ Popper.prototype.parse = function(config) {
   if (typeof parent === 'string') {
     parent = d.querySelectorAll(config.parent)
     if (parent.length > 1) {
-      console.warn('WARNING: the given `parent` query(' + config.parent + ') matched more than one element, the first one will be used')
+      console.warn(
+        'WARNING: the given `parent` query(' +
+          config.parent +
+          ') matched more than one element, the first one will be used'
+      )
     }
     if (parent.length === 0) {
       throw "ERROR: the given `parent` doesn't exists!"
@@ -215,7 +223,9 @@ Popper.prototype.parse = function(config) {
   // if the given parent is a DOM nodes list or an array of nodes with more than one element,
   // the first one will be used as parent
   if (parent.length > 1 && parent instanceof Element === false) {
-    console.warn('WARNING: you have passed as parent a list of elements, the first one will be used')
+    console.warn(
+      'WARNING: you have passed as parent a list of elements, the first one will be used'
+    )
     parent = parent[0]
   }
 
@@ -293,7 +303,11 @@ Popper.prototype._getOffsets = function(popper, reference, placement) {
   //
   // Get reference element position
   //
-  var referenceOffsets = getOffsetRectRelativeToCustomParent(reference, getOffsetParent(popper), isParentFixed)
+  var referenceOffsets = getOffsetRectRelativeToCustomParent(
+    reference,
+    getOffsetParent(popper),
+    isParentFixed
+  )
 
   //
   // Get popper sizes
@@ -387,8 +401,20 @@ Popper.prototype._getBoundaries = function(data, padding, boundariesElement) {
     var body = root.document.body,
       html = root.document.documentElement
 
-    height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
-    width = Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth)
+    height = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight
+    )
+    width = Math.max(
+      body.scrollWidth,
+      body.offsetWidth,
+      html.clientWidth,
+      html.scrollWidth,
+      html.offsetWidth
+    )
 
     boundaries = {
       top: 0,
@@ -403,10 +429,14 @@ Popper.prototype._getBoundaries = function(data, padding, boundariesElement) {
 
     // Thanks the fucking native API, `document.body.scrollTop` & `document.documentElement.scrollTop`
     var getScrollTopValue = function(element) {
-      return element == document.body ? Math.max(document.documentElement.scrollTop, document.body.scrollTop) : element.scrollTop
+      return element == document.body
+        ? Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+        : element.scrollTop
     }
     var getScrollLeftValue = function(element) {
-      return element == document.body ? Math.max(document.documentElement.scrollLeft, document.body.scrollLeft) : element.scrollLeft
+      return element == document.body
+        ? Math.max(document.documentElement.scrollLeft, document.body.scrollLeft)
+        : element.scrollLeft
     }
 
     // if the popper is fixed we don't have to substract scrolling from the boundaries
@@ -450,7 +480,10 @@ Popper.prototype._getBoundaries = function(data, padding, boundariesElement) {
 Popper.prototype.runModifiers = function(data, modifiers, ends) {
   var modifiersToRun = modifiers.slice()
   if (ends !== undefined) {
-    modifiersToRun = this._options.modifiers.slice(0, getArrayKeyIndex(this._options.modifiers, ends))
+    modifiersToRun = this._options.modifiers.slice(
+      0,
+      getArrayKeyIndex(this._options.modifiers, ends)
+    )
   }
 
   modifiersToRun.forEach(
@@ -536,7 +569,10 @@ Popper.prototype.modifiers.applyStyle = function(data) {
   this._popper.setAttribute('x-placement', data.placement)
 
   // if the arrow modifier is required and the arrow style has been computed, apply the arrow style
-  if (this.isModifierRequired(this.modifiers.applyStyle, this.modifiers.arrow) && data.offsets.arrow) {
+  if (
+    this.isModifierRequired(this.modifiers.applyStyle, this.modifiers.arrow) &&
+    data.offsets.arrow
+  ) {
     setStyle(data.arrowElement, data.offsets.arrow)
   }
 
@@ -669,7 +705,9 @@ Popper.prototype.modifiers.flip = function(data) {
   // check if preventOverflow is in the list of modifiers before the flip modifier.
   // otherwise flip would not work as expected.
   if (!this.isModifierRequired(this.modifiers.flip, this.modifiers.preventOverflow)) {
-    console.warn('WARNING: preventOverflow modifier is required by flip modifier in order to work, be sure to include it before flip!')
+    console.warn(
+      'WARNING: preventOverflow modifier is required by flip modifier in order to work, be sure to include it before flip!'
+    )
     return data
   }
 
@@ -706,8 +744,12 @@ Popper.prototype.modifiers.flip = function(data) {
 
       // using Math.floor because the reference offsets may contain decimals we are not going to consider here
       if (
-        (a && Math.floor(data.offsets.reference[placement]) > Math.floor(popperOffsets[placementOpposite])) ||
-        (!a && Math.floor(data.offsets.reference[placement]) < Math.floor(popperOffsets[placementOpposite]))
+        (a &&
+          Math.floor(data.offsets.reference[placement]) >
+            Math.floor(popperOffsets[placementOpposite])) ||
+        (!a &&
+          Math.floor(data.offsets.reference[placement]) <
+            Math.floor(popperOffsets[placementOpposite]))
       ) {
         // we'll use this boolean to detect any flip loop
         data.flipped = true
@@ -778,7 +820,9 @@ Popper.prototype.modifiers.arrow = function(data) {
 
   // arrow depends on keepTogether in order to work
   if (!this.isModifierRequired(this.modifiers.arrow, this.modifiers.keepTogether)) {
-    console.warn('WARNING: keepTogether modifier is required by arrow modifier in order to work, be sure to include it before arrow!')
+    console.warn(
+      'WARNING: keepTogether modifier is required by arrow modifier in order to work, be sure to include it before arrow!'
+    )
     return data
   }
 
@@ -926,7 +970,9 @@ function getStyleComputedProperty(element, property) {
 function getOffsetParent(element) {
   // NOTE: 1 DOM access here
   var offsetParent = element.offsetParent
-  return offsetParent === root.document.body || !offsetParent ? root.document.documentElement : offsetParent
+  return offsetParent === root.document.body || !offsetParent
+    ? root.document.documentElement
+    : offsetParent
 }
 
 /**
@@ -999,7 +1045,10 @@ function setStyle(element, styles) {
   Object.keys(styles).forEach(function(prop) {
     var unit = ''
     // add unit if the value is numeric and is one of the following
-    if (['width', 'height', 'top', 'right', 'bottom', 'left'].indexOf(prop) !== -1 && is_numeric(styles[prop])) {
+    if (
+      ['width', 'height', 'top', 'right', 'bottom', 'left'].indexOf(prop) !== -1 &&
+      is_numeric(styles[prop])
+    ) {
       unit = 'px'
     }
     element.style[prop] = styles[prop] + unit
@@ -1108,7 +1157,9 @@ function getSupportedPropertyName(property) {
   var prefixes = ['', 'ms', 'webkit', 'moz', 'o']
 
   for (var i = 0; i < prefixes.length; i++) {
-    var toCheck = prefixes[i] ? prefixes[i] + property.charAt(0).toUpperCase() + property.slice(1) : property
+    var toCheck = prefixes[i]
+      ? prefixes[i] + property.charAt(0).toUpperCase() + property.slice(1)
+      : property
     if (typeof root.document.body.style[toCheck] !== 'undefined') {
       return toCheck
     }

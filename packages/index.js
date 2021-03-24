@@ -1,8 +1,9 @@
-// import CanvasCountdown from "./canvas-countdown/index.js";
+import CanvasCountdown from "./canvas-countdown/index.js";
 // import Countdown from "./countdown/index.js";
 import Loading from "./loading/index.js";
+import ClockCountdown from "./clock-countdown/index.js";
 
-const components = [Loading];
+const components = [Loading, ClockCountdown, CanvasCountdown];
 const install = (Vue, opts = {}) => {
   components.forEach(component => {
     Vue.component(component.name, component);
@@ -19,5 +20,7 @@ export default {
   install,
   // CanvasCountdown,
   // Countdown,
+  ClockCountdown,
+  CanvasCountdown,
   Loading
 };

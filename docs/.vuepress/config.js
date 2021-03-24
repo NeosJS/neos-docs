@@ -9,8 +9,7 @@ module.exports = {
   dest: "./dist",
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
-    ["link", { rel: "manifest", href: "/manifest.json" }],
-    ["link", { rel: "stylesheet", href: "/libs/neos.css" }]
+    ["link", { rel: "manifest", href: "/manifest.json" }]
   ],
   themeConfig: {
     nav: [
@@ -108,8 +107,8 @@ module.exports = {
   },
   chainWebpack(config) {
     config.resolve.alias.set("@imgs", path.resolve(__dirname, "public/imgs/")).end();
-    config.resolve.alias.set("utils", path.resolve(__dirname, "utils")).end();
-    config.resolve.alias.set("packages", path.resolve(__dirname, "packages")).end();
+    config.resolve.alias.set("utils", path.resolve(__dirname, "../../utils")).end();
+    config.resolve.alias.set("packages", path.resolve(__dirname, "../../packages")).end();
     // config
     //   .externals({
     //     vue: "Vue"
@@ -472,7 +471,7 @@ function getComponentsSiderBar(groupTitle) {
       title: groupTitle,
       collapsable: false,
       sidebarDepth: 0,
-      children: ["", "loading"]
+      children: ["", "loading", "countdown"]
     }
   ];
 }

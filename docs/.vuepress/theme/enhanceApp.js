@@ -1,4 +1,5 @@
 import NeUI from "packages";
+import "packages/theme/src/index.scss";
 
 export default ({
   Vue, // VuePress 正在使用的 Vue 构造函数

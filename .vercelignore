@@ -1,2 +1,4 @@
 *.sh
 *.bak
+_vercel.json
+copyFile.js

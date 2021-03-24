@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+dist
 .versionrc.json
 *.sh
 .zip
@@ -26,3 +27,5 @@ pnpm-debug.log*
 *.sw?
 
 .vercel
+_vercel.json
+copyFile.js

@@ -5,7 +5,6 @@ export default function(target) {
     for (let prop in source) {
       if (hasOwn(source, prop)) {
         let value = source[prop]
-        // eslint-disable-next-line no-undefined
         if (value !== undefined) {
           target[prop] = value
         }
