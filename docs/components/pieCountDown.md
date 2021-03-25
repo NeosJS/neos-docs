@@ -141,8 +141,7 @@ export default{
         scheduleColor: '#E6ECF1', // 进度条动画颜色
         ringColor: '#FFD518', 
         drawInnerRing:false,
-        outerBorderWidth:0,
-        
+        outerBorderWidth:0
       }
     }
   },

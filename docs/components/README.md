@@ -5,5 +5,6 @@
 
 ## 组件列表
 
-[loading](loading)  
-[countdown](countdown)
+[loading加载](loading.html)  
+[指针倒计时](countdown.html)  
+[扇形倒计时](pieCountDown.html)
