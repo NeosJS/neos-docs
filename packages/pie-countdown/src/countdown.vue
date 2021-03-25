@@ -5,7 +5,7 @@
 <script>
 import merge from 'utils/merge'
 export default {
-  name: 'NeCanvasCountdown',
+  name: 'NePieCountdown',
   props: {
     options: {
       type: Object,
@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       settings: {
-        size: 130, // 绘制圆形的最大尺寸，宽=高
+        size: 60, // 绘制圆形的最大尺寸，宽=高
         outerBorderWidth: 4, // 边框宽度
         innerBorderWidth: 5, // 边框宽度
         borderColor: '#ffaa0a', // 边框颜色
@@ -23,13 +23,14 @@ export default {
         scheduleColor: '#ffffff', // 进度条动画颜色
         fontColor: '#3370ff', // 字体颜色
         ringColor: '#ffaa0a', // 进度条环形颜色
-        innerColor: '#dc0000', // 最内圆底色
+        innerColor: '#FFD518', // 最内圆底色
         fontSize: 0, // 字体大小
         beginTime: +new Date(), // 开始时间
         nowTime: +new Date(), // 结束时间
         countDownTime: 0, // 倒计时时长
         drawInnerRing: false, // 是否绘制内环
-        stepRing: 100 // 步长（值越小，圆环的动效约流畅）
+        stepRing: 100, // 步长（值越小，圆环的动效约流畅）
+        ratio:2
       },
       timer: null,
       uuid: Math.random()
@@ -65,9 +66,12 @@ export default {
     init() {
       this.settings = merge({}, this.settings, this.options)
       this.obj = this.$refs.countdown
-      this.obj.width = this.settings.size
-      this.obj.height = this.settings.size
+      this.obj.width = this.settings.size * this.settings.ratio
+      this.obj.height = this.settings.size * this.settings.ratio
+      this.obj.style.width=`${this.settings.size}px`
+      this.obj.style.height=`${this.settings.size}px`
       this.ctx = this.obj.getContext('2d')
+      this.ctx.scale(this.settings.ratio, this.settings.ratio)
       this.settings.countDownTime && this.startCountdown()
     },
     /**

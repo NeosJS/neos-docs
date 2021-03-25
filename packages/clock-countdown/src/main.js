@@ -1,19 +1,24 @@
 import { isServer } from 'utils/dom'
+import { EventEmitter } from 'events'
+
 const isArray = val => Array.isArray(val)
 const requestAnimationFrame =
   (!isServer && (window.requestAnimationFrame || window.webkitRequestAnimationFrame)) ||
   (fn => setTimeout(fn, 16))
 const cancelAnimationFrame =
   (!isServer && (window.cancelAnimationFrame || window.webkitCancelAnimationFrame)) ||
-  (fn => clearTimeout())
+  (() => clearTimeout())
 
-export default class ClockCountdown {
+export default class ClockCountdown extends EventEmitter {
   constructor(options = {}) {
+    super()
     this.options = options
     this.ctx = null
     this.rotate = null
     this.stepRing = 60
     this.animationStep = 60
+    this.animation = null
+    this.countDownTime = 0
     this.init()
   }
 
@@ -43,22 +48,33 @@ export default class ClockCountdown {
     this.ctx.scale(ratio, ratio)
     this.stepRing++
     this.rotate = this.stepRing * (Math.PI / ((countDownTime * this.animationStep) / 2))
-
+    this.countDownTime = countDownTime
+    this.text = text
     this.drawBg(size, background)
     scale && this.drawScale(size, scale, borderWidth)
-    text && this.drawText(text, size, borderWidth, countDownTime)
+    // text && size >= 150 && this.drawText(text, size, borderWidth)
     this.drawPointer(pointerColor, pointerWidth, pointerDotColor, size)
     this.drawBorder(borderWidth, borderColor, size)
 
-    this.ctx.save()
-    this.ctx.beginPath()
-
-    this.start(this.stepRing, countDownTime, this.animationStep)
+    this.emit('remain', countDownTime - Math.floor(this.stepRing / 60))
+    this.start()
   }
-  start(stepRing, countDownTime, animationStep) {
-    const animate = requestAnimationFrame(this.init.bind(this))
-    if (stepRing === countDownTime * animationStep) {
-      cancelAnimationFrame(animate)
+  start() {
+    this.animation = requestAnimationFrame(this.init.bind(this))
+    if (this.stepRing === this.countDownTime * this.animationStep) {
+      cancelAnimationFrame(this.animation)
+      this.emit('complete')
+    }
+  }
+  destroy() {
+    if (this.animation) {
+      cancelAnimationFrame(this.animation)
+      this.ctx = null
+      this.rotate = null
+      this.stepRing = 60
+      this.animationStep = 60
+      this.animation = null
+      this.countDownTime = 0
     }
   }
   /**
@@ -128,7 +144,7 @@ export default class ClockCountdown {
    * @param {*} countDownTime
    * @returns
    */
-  drawText(text, size, borderWidth, countDownTime) {
+  drawText(text, size, borderWidth) {
     const { content, color = '#ffffff', font = '20px Microsoft yahei' } = text
     if (!content.length) return
     const y = size / 2 - 30 - borderWidth
@@ -153,7 +169,11 @@ export default class ClockCountdown {
     this.ctx.font = font
     this.ctx.textAlign = 'center'
     this.ctx.textBaseline = 'middle'
-    this.ctx.fillText('剩余 ' + (countDownTime - Math.floor(this.stepRing / 60)) + ' 秒', 0, 80)
+    this.ctx.fillText(
+      '剩余 ' + (this.countDownTime - Math.floor(this.stepRing / 60)) + ' 秒',
+      0,
+      80
+    )
     this.ctx.restore()
   }
 
@@ -173,9 +193,10 @@ export default class ClockCountdown {
     this.ctx.beginPath()
     this.ctx.lineCap = 'round'
     this.ctx.moveTo(0, 0)
-    this.ctx.lineTo(size / 2 - 75, 0)
+    this.ctx.lineTo(size / 3.5, 0)
     this.ctx.stroke()
 
+    // 短针针尾
     // this.ctx.beginPath()
     // this.ctx.lineWidth = pointerWidth || size * 0.0525
     // this.ctx.moveTo(0, 0)
@@ -191,9 +212,10 @@ export default class ClockCountdown {
     this.ctx.strokeStyle = pointerColor
     this.ctx.lineCap = 'round'
     this.ctx.moveTo(0, 0)
-    this.ctx.lineTo(size / 2 - 75, 0)
+    this.ctx.lineTo(size / 3.5, 0)
     this.ctx.stroke()
 
+    // 长针针尾
     // this.ctx.beginPath()
     // this.ctx.lineWidth = pointerWidth || size * 0.0525
     // this.ctx.moveTo(0, 0)

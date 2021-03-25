@@ -471,7 +471,7 @@ function getComponentsSiderBar(groupTitle) {
       title: groupTitle,
       collapsable: false,
       sidebarDepth: 0,
-      children: ["", "loading", "countdown"]
+      children: ["", "loading", "countdown","pieCountDown"]
     }
   ];
 }

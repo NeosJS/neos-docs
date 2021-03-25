@@ -1,9 +1,9 @@
 // import Countdown from "./countdown/index.js";
 import Loading from './loading/index.js'
 import ClockCountdown from './clock-countdown/index.js'
-import CanvasCountdown from './canvas-countdown/index.js'
+import PieCountdown from './pie-countdown/index.js'
 
-const components = [Loading, ClockCountdown, CanvasCountdown]
+const components = [Loading, ClockCountdown, PieCountdown]
 
 const install = (Vue, opts = {}) => {
   components.forEach(component => {
@@ -21,5 +21,5 @@ export default {
   install,
   Loading,
   ClockCountdown,
-  CanvasCountdown
+  PieCountdown
 }

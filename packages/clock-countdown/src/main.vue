@@ -1,5 +1,5 @@
 <template>
-  <canvas :id="countDownId"  ref="countDown" />
+  <canvas :id="countDownId"  ref="countDown" :class="customClass" />
 </template>
 
 <script>
@@ -7,7 +7,7 @@ import merge from 'utils/merge'
 import ClockCountdown from './main.js'
 
 export default {
-  name:'ClockCountdown',
+  name:'NeClockCountdown',
   props: {
     options: {
       type: Object,
@@ -20,13 +20,14 @@ export default {
   },
   data(){
     return {
-      defaultOptions:{
+      countdown:null,
+      opts:{
         ratio:2,
-        size: 300,
-        countDownTime:60,
-        borderWidth:10,
+        size: 60,
+        countDownTime:0,
+        borderWidth:2,
         borderColor:'#9DAAB6',
-        pointerWidth:10,
+        pointerWidth:2,
         pointerColor:'#9DAAB6',
         pointerDotColor:'#ffffff',
         background:'#E6ECF1'
@@ -39,6 +40,13 @@ export default {
   mounted() {
     this.$nextTick(() => {
       this.init()
+      this.countdown.on('complete',() => {
+        this.$emit('complete')
+        this.countdown.destroy()
+      })
+      this.countdown.on('remain', time => {
+        this.$emit('remain', time)
+      })
     })
   },
   computed:{
@@ -48,11 +56,26 @@ export default {
   },
   methods: {
     init(){
-
-      this.obj = this.$refs.countDown,
-      this.defaultOptions = merge({dom:this.obj}, this.defaultOptions, this.options)
-      new ClockCountdown(this.defaultOptions)
+      const dom = this.$refs.countDown
+      this.opts = merge({dom}, this.opts, this.options)
+      this.countdown = new ClockCountdown(this.opts)
     }
+  },
+  watch: {
+    options: {
+      deep: true,
+      handler(options) {
+        if (options) {
+          this.init()
+        }
+      }
+    }
+  },
+  beforeDestroy() {
+    this.countdown.destroy()
+  },
+  destroyed() {
+    this.$destroy()
   },
 }
 </script>
