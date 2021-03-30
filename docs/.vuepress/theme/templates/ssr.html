@@ -12,6 +12,14 @@
   <body>
     <!--vue-ssr-outlet-->
     {{{ renderScripts() }}}
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B9TZFK5MM3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-B9TZFK5MM3');
+    </script>
   </body>
 </html>

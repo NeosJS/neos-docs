@@ -26,7 +26,7 @@ export default {
   padding:1rem;
   text-align: center;
   transition: all .5s;
-  color:#0097e6;
+  color:#505050;
   background:#fff;
   &:hover{
     background:#0097e6;

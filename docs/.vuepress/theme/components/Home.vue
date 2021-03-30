@@ -181,6 +181,7 @@ export default {
   bottom 0
   right 0
 .home
+  // font-family: neo-sans, sans-serif;
   z-index 2
   // padding $navbarHeight 2rem 0
   max-width 100%
@@ -233,7 +234,7 @@ export default {
     align-content stretch
     justify-content flex-start
     max-width 60rem;
-    margin-top 5rem
+    margin-top 3rem
   .feature
     box-sizing border-box
     padding:.5rem
@@ -267,6 +268,7 @@ export default {
       height:3.8rem;
       color rgba(0,0,0,.5)
       line-height 1.5
+      text-indent: 1.5rem;
   .footer
     padding 2.5rem
     border-top 1px solid $borderColor

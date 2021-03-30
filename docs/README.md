@@ -42,13 +42,13 @@ features:
   details: 该模块提供一些 数据库 的能力。
   link: /db/
 - title: Recorder
-  details: Html5 JS 录音机。
+  details: H5录音机，提供一些录音功能。
   link: /recorder/
 - title: Graffiti
-  details: H5 涂鸦。
+  details: H5涂鸦，提供画布功能。
   link: /graffiti/
 - title: Camera
-  details: H5 摄像机。
+  details: H5摄像机，利用摄像头进行拍照。
   link: /camera/
 - title: Net
   details: 网络检测、测速上报等。
