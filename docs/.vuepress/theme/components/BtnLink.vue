@@ -29,7 +29,7 @@ export default {
   color:#505050;
   background:#fff;
   &:hover{
-    background:#0097e6;
+    background:#638cec;
     color:#fff
   }
 }
