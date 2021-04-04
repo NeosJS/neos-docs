@@ -9,7 +9,10 @@ module.exports = {
   dest: "./dist",
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
-    ["link", { rel: "manifest", href: "/manifest.json" }]
+    ["link", { rel: "manifest", href: "/manifest.json" }],
+    ['link',{href:'/libs/neosui/neosui.min.css',rel:"stylesheet"}],
+    ['script',{src:'/libs/vue.min.js'}],
+    ['script',{src:'/libs/neosui/neosui.umd.min.js'}]
   ],
   themeConfig: {
     nav: [
@@ -106,14 +109,16 @@ module.exports = {
     }
   },
   chainWebpack(config) {
+    config.target('web').end();
     config.resolve.alias.set("@imgs", path.resolve(__dirname, "public/imgs/")).end();
     config.resolve.alias.set("utils", path.resolve(__dirname, "../../utils")).end();
     config.resolve.alias.set("packages", path.resolve(__dirname, "../../packages")).end();
-    // config
-    //   .externals({
-    //     vue: "Vue"
-    //   })
-    //   .end();
+    config.resolve.alias.set("neosui", path.resolve(__dirname, "../../neosui")).end();
+    config
+      .externals({
+        vue: "Vue"
+      })
+      .end();
   },
   clientRootMixin: path.resolve(__dirname, "mixin.js")
   // devServer: {
@@ -471,7 +476,7 @@ function getComponentsSiderBar(groupTitle) {
       title: groupTitle,
       collapsable: false,
       sidebarDepth: 0,
-      children: ["", "loading", "countdown","pieCountDown"]
+      children: ["", "icon","loading", "clockCountdown", "pieCountdown"]
     }
   ];
 }

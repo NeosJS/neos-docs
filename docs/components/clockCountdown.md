@@ -10,10 +10,10 @@
 <template>
   <div class="demo-base">
     <div class="block">
-      <ne-clock-countdown :options="{countDownTime:60}"/>
+      <ne-clock-countdown :options="{countDownTime:60000}"/>
     </div>
     <div class="block">
-      <ne-clock-countdown :options="{countDownTime:50,size:100}"/>
+      <ne-clock-countdown :options="{countDownTime:50000,size:100}"/>
     </div>
   </div>
 </template>
@@ -43,7 +43,7 @@ export default{
   data(){
     return {
       options:{
-        countDownTime:90,
+        countDownTime:90000,
         borderWidth:2,
         borderColor:'#FFAA0A',
         background:['rgba(255,213,24,.3)', 'rgba(255,170,10,.5)'],
@@ -74,7 +74,7 @@ export default{
 
 | 参数                        | 说明                       | 类型   | 可选值          | 默认值       | 是否必选 |
 | --------------------------- | -------------------------- | ------ | --------------- | ------------ |------------ |
-| countDownTime | 倒计时时长(单位：秒) | Number | — | — | 是 |
+| countDownTime | 倒计时时长(单位：毫秒) | Number | — | — | 是 |
 | size | 组件大小 | Number | — | 60 | 否 |
 | background | 组件背景色(为Array时，背景将绘制成渐变) | String、Array | — | #E6ECF1 | 否 |
 | borderWidth | 外层边框宽度 | Number | — | 2 | 否 |
@@ -98,10 +98,10 @@ export default{
   data(){
     return {
       optin:{
-        countDownTime:60
+        countDownTime:60000
       },
       optin1:{
-        countDownTime:60,
+        countDownTime:60000,
         borderColor: '#AB7EF6', // 边框颜色
         outerColor: '#ffc715', // 最外层底圆颜色
         scheduleColor: '#7ac70c', // 进度条动画颜色
@@ -112,7 +112,7 @@ export default{
         drawInnerRing:true
       },
       options1:{
-        countDownTime:90,
+        countDownTime:90000,
         borderWidth:2,
         borderColor:'#FFAA0A',
         background:['rgba(255,213,24,.3)', 'rgba(255,170,10,.5)'],
@@ -121,7 +121,7 @@ export default{
       },
       options:{
         size:200,
-        countDownTime:60,
+        countDownTime:60000,
         borderWidth:8,
         borderColor:['#8e5cd4','#ea4c89'],
         background:['#fff1f0','#ffa39e'],
@@ -137,7 +137,7 @@ export default{
       },
       opts:{
         size:200,
-        countDownTime:30,
+        countDownTime:30000,
         borderWidth:10,
         borderColor:['#f60'],
         pointerWidth:8,

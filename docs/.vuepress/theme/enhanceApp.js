@@ -1,5 +1,6 @@
-import NeUI from "packages";
-import "packages/theme/src/index.scss";
+// import NeUI from 'packages'
+// import 'packages/theme/src/index.scss'
+// import 'neosui'
 
 export default ({
   Vue, // VuePress 正在使用的 Vue 构造函数
@@ -7,5 +8,6 @@ export default ({
   router, // 当前应用的路由实例
   siteData // 站点元数据
 }) => {
-  Vue.use(NeUI);
-};
+  // Vue.use(NeUI)
+  Vue.use(window.NeosUI)
+}

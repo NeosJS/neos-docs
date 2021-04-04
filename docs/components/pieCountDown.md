@@ -1,6 +1,7 @@
 # 扇形倒计时
 
 扇形倒计时，转动一圈倒计时结束。
+
 ## 基础用法
 
 :::demo 使用默认配置
@@ -44,7 +45,7 @@ export default {
     return {
       options1:{
         size:150,
-        countDownTime:50,
+        countDownTime:5000,
         borderColor: '#0194EF', // 边框颜色
         outerColor: '#0194EF', // 最外层底圆颜色
         scheduleColor: '#fff', // 进度条动画颜色
@@ -56,7 +57,7 @@ export default {
       },
       options:{
         size:150,
-        countDownTime:30,
+        countDownTime:30000,
         outerColor: '#8E44AD', // 最外层底圆颜色
         innerColor:'#ab7ef6',
         borderColor:'#8e5cd4',
@@ -68,7 +69,7 @@ export default {
       },
       options2:{
         size:150,
-        countDownTime:60,
+        countDownTime:60000,
         outerColor: '#FFD518', // 最外层底圆颜色
         scheduleColor: '#E6ECF1', // 进度条动画颜色
         ringColor: '#FFD518', 
@@ -87,7 +88,7 @@ export default {
 
 | 参数                        | 说明                       | 类型   | 可选值          | 默认值       | 是否必选 |
 | --------------------------- | -------------------------- | ------ | --------------- | ------------ |------------ |
-| countDownTime | 倒计时时长(单位：秒) | Number | — | — | 是 |
+| countDownTime | 倒计时时长(单位：毫秒) | Number | — | — | 是 |
 | size | 组件大小 | Number | — | 60 | 否 |
 | outerBorderWidth | 外边框宽度 | Number | — | 5 | 否 |
 | outerColor | 外边框颜色 | String | — | #ffaa0a | 否 |
@@ -112,7 +113,7 @@ export default{
     return {
       options1:{
         size:150,
-        countDownTime:50,
+        countDownTime:50000,
         borderColor: '#0194EF', // 边框颜色
         outerColor: '#0194EF', // 最外层底圆颜色
         scheduleColor: '#fff', // 进度条动画颜色
@@ -124,7 +125,7 @@ export default{
       },
       options:{
         size:150,
-        countDownTime:30,
+        countDownTime:30000,
         outerColor: '#8E44AD', // 最外层底圆颜色
         innerColor:'#ab7ef6',
         borderColor:'#8e5cd4',
@@ -136,7 +137,7 @@ export default{
       },
       options2:{
         size:150,
-        countDownTime:60,
+        countDownTime:60000,
         outerColor: '#FFD518', // 最外层底圆颜色
         scheduleColor: '#E6ECF1', // 进度条动画颜色
         ringColor: '#FFD518', 

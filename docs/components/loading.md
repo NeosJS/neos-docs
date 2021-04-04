@@ -1,7 +1,7 @@
 # Loading 加载
 加载数据时显示动效。
 
-### 基础用法
+## 基础用法
 ::: demo 基础用法 设置 `size`, `stroke-color`, `circle-color` 等，可以显示不同的loading图标。
 
 ``` html
@@ -24,7 +24,7 @@
 ```
 :::
 
-### 带有Logo图标、文本
+## 带有Logo图标、文本
 通过设置logo或text，可以达到不同的视觉效果。
 
 :::demo 设置 `logo` 属性，即可在圆环内显示设置的logo图片。设置 `text` 属性，即可在圆环内显示设置的文本。  **注意：尺寸小于60，将不会显示文本！**
@@ -59,7 +59,7 @@ export default{
 ```
 :::
 
-### 自定义尺寸
+## 自定义尺寸
 通过设置不同的尺寸，来缩放loading的大小。
 :::demo 设置 `size` 属性，即可改变组件的大小。
 ```html
@@ -95,7 +95,7 @@ export default{
 ```
 :::
 
-### 自定义颜色
+## 自定义颜色
 通过设置不同的颜色，达到不同风格的loading图标。
 :::demo 设置 `stroke-color`, `circle-color`, `fill-color` 属性，可以很方便的得到自己想要的颜色。
 ```html
@@ -157,7 +157,7 @@ export default{
 ```
 :::
 
-### 自定义遮罩
+## 自定义遮罩
 通常用于全局加载。
 :::demo 设置 `mask-class` 属性，可以自定义遮罩的样式。
 ```html
