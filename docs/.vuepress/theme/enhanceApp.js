@@ -1,7 +1,7 @@
 // import NeUI from 'packages'
-import 'neosui/theme/src/index.scss'
-import NeosUI from 'neosui'
-// import 'neosui/neosui.min.css'
+// import 'neosui/theme/src/index.scss'
+import NeosUI from 'neosui/neosui.umd.min.js'
+import 'neosui/neosui.min.css'
 
 export default ({
   Vue, // VuePress 正在使用的 Vue 构造函数
