@@ -93,7 +93,7 @@ module.exports = {
     }
   },
   chainWebpack(config) {
-    config.resolve.alias.set('vue$', 'vue/dist/vue.esm.js').end();
+    // config.resolve.alias.set('vue$', 'vue/dist/vue.esm.js').end();
     config.resolve.alias.set("@imgs", path.resolve(__dirname, "public/imgs/")).end();
     config.resolve.alias.set("utils", path.resolve(__dirname, "../../neosui/utils")).end();
     config.resolve.alias.set("packages", path.resolve(__dirname, "../../packages")).end();

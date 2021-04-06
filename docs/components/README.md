@@ -7,5 +7,5 @@
 
 [Icon 图标](icon.html)  
 [loading加载](loading.html)  
-[指针倒计时](countdown.html)  
-[扇形倒计时](pieCountDown.html)
+[指针倒计时](clockCountdown.html)  
+[扇形倒计时](pieCountdown.html)
