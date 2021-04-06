@@ -3,16 +3,21 @@ const slugify = require("transliteration").slugify;
 const tools = require("./theme/util/tools");
 // const isEnvProduction = process.env.NODE_ENV === 'production'
 
+// if(typeof window !== 'undefined'){
+//   head.push(['link',{href:'/libs/neosui/neosui.min.css',rel:"stylesheet"}])
+//   head.push(['script',{src:'/libs/vue.min.js'}])
+//   head.push(['script',{src:'/libs/neosui/neosui.umd.min.js'}])
+// }
 module.exports = {
   title: "NeosJS开发文档",
   description: "NeosJS文档",
   dest: "./dist",
-  head: [
+  head:[
     ["link", { rel: "icon", href: "/favicon.ico" }],
     ["link", { rel: "manifest", href: "/manifest.json" }],
-    ['link',{href:'/libs/neosui/neosui.min.css',rel:"stylesheet"}],
-    ['script',{src:'/libs/vue.min.js'}],
-    ['script',{src:'/libs/neosui/neosui.umd.min.js'}]
+    // ['link',{ href:'/libs/neosui/neosui.min.css',rel:"stylesheet" }],
+    // ['script',{src:'/libs/vue.min.js'}],
+    // ['script',{src:'/libs/neosui/neosui.umd.min.js'}]
   ],
   themeConfig: {
     nav: [
@@ -109,16 +114,16 @@ module.exports = {
     }
   },
   chainWebpack(config) {
-    config.target('web').end();
+    // config.resolve.alias.set('vue$', 'vue/dist/vue.esm.js').end();
     config.resolve.alias.set("@imgs", path.resolve(__dirname, "public/imgs/")).end();
-    config.resolve.alias.set("utils", path.resolve(__dirname, "../../utils")).end();
+    config.resolve.alias.set("utils", path.resolve(__dirname, "../../neosui/utils")).end();
     config.resolve.alias.set("packages", path.resolve(__dirname, "../../packages")).end();
     config.resolve.alias.set("neosui", path.resolve(__dirname, "../../neosui")).end();
-    config
-      .externals({
-        vue: "Vue"
-      })
-      .end();
+    // config
+    //   .externals({
+    //     vue: "Vue"
+    //   })
+    //   .end();
   },
   clientRootMixin: path.resolve(__dirname, "mixin.js")
   // devServer: {

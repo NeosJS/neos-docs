@@ -6,7 +6,7 @@ dist
 .zip
 .bak
 *.lock
-
+!icon/
 # local env files
 .env.local
 .env.*.local

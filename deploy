@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo ""
+echo "\033[33m 开始部署... \033[0m"
+echo ""
+
+vercel --prod
+
+echo ""
+echo "\033[32m ✔ 部署完成... \033[0m"
+
+  # cd -
+echo ""
+exit 0
