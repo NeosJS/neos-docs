@@ -14,7 +14,7 @@ module.exports = {
   ],
   themeConfig: {
     nav: [
-      // { text: "首页", link: "/" },
+      { text: "首页", link: "/" },
       { text: "IpcMessage", link: "/ipc/"},
       { text: "Native", link: "/native/get/getAppVersion.html"},
       { text: "Updater", link: "/updater/",dropdown:true},
