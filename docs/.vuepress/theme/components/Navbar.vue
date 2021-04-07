@@ -81,6 +81,8 @@ $navbar-horizontal-padding = 1.5rem
   line-height $navbarHeight
   a, span, img
     display inline-block
+  .sidebar-button
+    color #222
   .logo
     height $navbarHeight - 1.4rem
     min-width $navbarHeight - 1.4rem
@@ -89,7 +91,7 @@ $navbar-horizontal-padding = 1.5rem
   .site-name
     font-size 1.3rem
     font-weight 600
-    color #fff
+    color $--color-black
     position relative
   .links
     padding-left 1.5rem
@@ -103,6 +105,7 @@ $navbar-horizontal-padding = 1.5rem
     // top $navbar-vertical-padding
     display flex
     .search-box
+      margin-right 2rem
       flex: 0 0 auto
       vertical-align top
       // padding-top $navbar-vertical-padding

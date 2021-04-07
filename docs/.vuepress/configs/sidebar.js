@@ -9,10 +9,9 @@ module.exports = {
   "/recorder/": getSidebar.getRecorderSiderBar("RecorderApi"),
   "/graffiti/": getSidebar.getGraffitiSiderBar("Graffiti"),
   "/camera/": getSidebar.getCameraSiderBar("Camera"),
-  // "/downloader/": getDownloaderSiderBar2("DownloaderApi"),
-  "/downloader/": getSidebar.getDownloaderSiderBar("DownloaderApi 3.0"),
+  "/downloader/": getSidebar.getDownloaderSiderBar("DownloaderApi"),
   "/net/": getSidebar.getNetSiderBar("NetApi"),
   "/like/": getSidebar.getLikeSiderBar("LikeApi"),
-  "/components/": getSidebar.getComponentsSiderBar("Components")
-  // "/utils/": getUtilsSiderBar("UtilsApi")
+  "/components/": getSidebar.getComponentsSiderBar("Components"),
+  "/utils/": getSidebar.getUtilsSiderBar("UtilsApi")
 }

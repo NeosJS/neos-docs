@@ -15,20 +15,20 @@ module.exports = {
   themeConfig: {
     nav: [
       // { text: "首页", link: "/" },
-      { text: "IpcMessage", link: "/ipc/" },
-      { text: "Native", link: "/native/get/getAppVersion.html" },
-      { text: "Updater", link: "/updater/" },
-      { text: "DataBase", link: "/db/" },
+      { text: "IpcMessage", link: "/ipc/"},
+      { text: "Native", link: "/native/get/getAppVersion.html"},
+      { text: "Updater", link: "/updater/",dropdown:true},
+      { text: "DataBase", link: "/db/",dropdown:true},
       // { text: "Downloader", link: "/downloader/", deprecated: true },
-      { text: "Downloader 3.0", link: "/downloader/" },
+      { text: "Downloader", link: "/downloader/" },
       { text: "Recorder", link: "/recorder/" },
-      { text: "Graffiti", link: "/graffiti/" },
-      { text: "Camera", link: "/camera/" },
-      { text: "Net", link: "/net/" },
-      { text: "Like", link: "/like/" },
-      // { text: "Logger", link: "/logger/" },
-      { text: "Components", link: "/components/", new: true }
-      // { text: "Utils", link: "/utils/is.html" }
+      { text: "Graffiti", link: "/graffiti/", dropdown:true},
+      { text: "Camera", link: "/camera/", dropdown:true },
+      { text: "Net", link: "/net/", dropdown:true },
+      { text: "Like", link: "/like/", dropdown:true },
+      { text: "Logger", link: "/logger/", dropdown:true},
+      { text: "Components", link: "/components/", new: true, dropdown:true},
+      { text: "Utils", link: "/utils/is.html", dropdown:true }
     ],
     sidebar:sidebars,
     lastUpdated: "上次更新",

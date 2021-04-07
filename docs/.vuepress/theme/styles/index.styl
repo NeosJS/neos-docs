@@ -53,7 +53,10 @@ body
   left 0
   right 0
   height $navbarHeight
-  background-image linear-gradient(to right, $--color-primary, #2196f3)
+  background #fff
+  box-shadow 0 5px 10px rgba(0,0,0,0.12);
+  border-bottom 1px solid #eaeaea
+  // background-image linear-gradient(to right, $--color-primary, #2196f3)
   box-sizing border-box
   // border-bottom 1px solid $borderColor
   // box-shadow: 0 2px 8px #f0f1f2;
@@ -178,9 +181,6 @@ a.header-anchor
   &:hover
     text-decoration none
 
-code, kbd, .line-number
-  font-family source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
-
 p, ul, ol
   line-height 1.7
 
@@ -238,9 +238,9 @@ th, td
     top 2.2rem !important
     border-radius 3px !important
   input
-    border-radius: .2rem !important
-    border: 0px solid #cecece !important
-    background rgba(0,0,0,.26) url(/assets/img/search.83621669.svg) 0.6rem 0.65rem no-repeat !important
+    border-radius: .3rem !important
+    border: 1px solid $borderColor !important
+    background rgba(255,255,255,1) url(/assets/img/search.83621669.svg) 0.6rem 0.65rem no-repeat !important
 .search-box input:focus
   background #fff url(/assets/img/search.83621669.svg) 0.6rem 0.65rem no-repeat !important
 

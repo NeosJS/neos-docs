@@ -59,7 +59,7 @@
     box-sizing: border-box;
     font-size: 14px;
     line-height: 1.8;
-    color: #5e6d82;
+    color: #777;
     word-break: break-word;
     position: relative;
     border-top: solid 1px #e9e9e9;
@@ -84,7 +84,7 @@
       background-color: #fff;
       padding: 0 10px;
       border-radius: 0 0 3px 0;
-      color: #314659;
+      color: #555;
     }
     p {
       margin: 12px 0 0px;

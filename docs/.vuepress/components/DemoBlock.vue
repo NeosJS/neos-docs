@@ -58,7 +58,7 @@
     box-sizing: border-box;
     font-size: 14px;
     line-height: 1.8;
-    color: #5e6d82;
+    color: #333;
     word-break: break-word;
     position: relative;
     border-top: solid 1px #e9e9e9;

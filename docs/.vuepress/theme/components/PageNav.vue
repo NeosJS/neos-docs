@@ -103,7 +103,7 @@ function flatten(items, res) {
   padding-top 1rem
   padding-bottom 0
   a
-   color $--color-info
+   color #666
   .inner
     min-height 2rem
     margin-top 0

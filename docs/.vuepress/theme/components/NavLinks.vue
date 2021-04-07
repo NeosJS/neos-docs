@@ -1,11 +1,23 @@
 <template>
   <nav class="nav-links" v-if="userLinks.length || repoLink">
     <!-- user links -->
-    <div class="nav-item" v-for="item in userLinks" :key="item.link">
+    <!-- <div class="nav-item" v-for="item in userLinks" :key="item.link">
       <DropdownLink v-if="item.type === 'links'" :item="item" />
       <NavLink v-else :item="item" />
-    </div>
-
+    </div> -->
+    <template v-for="item in userLinks">
+      <div class="nav-item" v-if="!item.dropdown && item.type !== 'links'"  :key="item.id">
+        <NavLink :item="item"  />
+      </div>
+    </template>
+    <ne-dropdown class="nav-item">
+      <span class="ne-dropdown-link">{{navName}}<i class="sealui-icon-chevron-down"></i> </span>
+      <ne-dropdown-menu slot="dropdown">
+        <ne-dropdown-item  :command="item.text" v-for="item in userLinks" :key="item.link">
+          <NavLink v-if="item.type !== 'links' && item.dropdown" :item="item" />
+        </ne-dropdown-item>
+      </ne-dropdown-menu>
+    </ne-dropdown>
     <!-- repo link -->
     <a v-if="repoLink" :href="repoLink" class="repo-link" target="_blank" rel="noopener noreferrer">
       {{ repoLabel }}
@@ -20,6 +32,11 @@ import { resolveNavLinkItem } from '../util'
 import NavLink from '@theme/components/NavLink.vue'
 
 export default {
+  data(){
+    return {
+      navName: 'More API'
+    }
+  },
   components: { NavLink, DropdownLink },
 
   computed: {
@@ -97,16 +114,37 @@ export default {
 </script>
 
 <style lang="stylus">
+.ne-dropdown-link
+  color #555
+  pointer cursor
+  font-weight: 500;
+.ne-dropdown
+  .sealui-icon-chevron-down
+    margin-left .5rem
+    color #888
+    font-size 1rem
+.ne-dropdown-menu__item
+  .nav-link
+    display block
+    color #555
+    pointer cursor
+.ne-dropdown-menu__item:focus,
+.ne-dropdown-menu__item:not(.is-disabled):hover
+  background transparent
+  a
+    color #000
 .nav-links
   display inline-block
   a
     line-height 3.7rem
-    color #fff
-    font-weight bold
-    opacity .7
-    &:hover, &.router-link-active
-      // color $--color-primary
-      opacity: 1
+    color #555
+    transition: color 0.2s ease;
+    &:hover
+      color $--color-black
+    &.router-link-active
+      color $--color-primary
+    .sealui-badge
+      vertical-align .2rem !important
   .nav-item
     position relative
     display inline-block
