@@ -13,10 +13,14 @@
 <script>
 import PageEdit from '@theme/components/PageEdit.vue'
 import PageNav from '@theme/components/PageNav.vue'
+import watermark from '../watermark'
 
 export default {
   components: { PageEdit, PageNav },
-  props: ['sidebarItems']
+  props: ['sidebarItems'],
+  mounted () {
+    watermark.set('NeosJS')
+  }
 }
 </script>
 
