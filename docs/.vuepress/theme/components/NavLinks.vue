@@ -11,7 +11,9 @@
       </div>
     </template>
     <ne-dropdown class="nav-item">
-      <span class="ne-dropdown-link">{{navName}}<i class="sealui-icon-chevron-down"></i> </span>
+      <span class="ne-dropdown-link">{{navName}}
+        <NeIcon name="chevron-down" />
+      </span>
       <ne-dropdown-menu slot="dropdown">
         <ne-dropdown-item  :command="item.text" v-for="item in userLinks" :key="item.link">
           <NavLink v-if="item.type !== 'links' && item.dropdown" :item="item" />
@@ -119,7 +121,12 @@ export default {
   pointer cursor
   font-weight: 500;
 .ne-dropdown
-  .sealui-icon-chevron-down
+  border:1px solid $borderColor;
+  border-radius .2rem
+  padding:.2rem .5rem
+  line-height:1.5rem !important
+  .ne-icon
+    margin-top -.3rem
     margin-left .5rem
     color #888
     font-size 1rem
