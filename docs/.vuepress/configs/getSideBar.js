@@ -347,7 +347,7 @@ exports.getComponentsSiderBar = (groupTitle)=>{
       title: groupTitle,
       collapsable: false,
       sidebarDepth: 0,
-      children: ["", "icon","loading", "clockCountdown", "pieCountdown"]
+      children: ["", "icon","loader", "clockCountdown", "pieCountdown"]
     }
   ];
 }

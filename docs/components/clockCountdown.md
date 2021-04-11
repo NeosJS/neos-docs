@@ -2,6 +2,11 @@
 
 指针倒计时，**指针走动一圈**，倒计时结束。
 
+## 引入
+```js
+import { NeClockCountdown } from 'neosui'
+Vue.use(NeClockCountdown)
+```
 
 ## 基础用法
 
@@ -69,6 +74,7 @@ export default{
 </script>
 ```
 :::
+
 
 ## 参数
 

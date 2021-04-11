@@ -1,6 +1,12 @@
 # Icon 图标
 提供了一套项目里常用的图标集合。
 
+## 引入
+```js
+import { NeIcon } from 'neosui'
+Vue.use(NeIcon)
+```
+
 ## 基础用法
 直接通过设置icon的 `name` 来使用即可。例如：
 :::demo 使用默认配置
@@ -20,6 +26,7 @@
     <span class="icon-name">{{item}}</span>
   </li>
 </ul>
+
 
 ## 参数
 

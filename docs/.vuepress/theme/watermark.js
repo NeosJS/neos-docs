@@ -55,8 +55,8 @@ class WaterMark {
       }
     }, 500)
     //在窗口大小改变之后,自动触发加水印事件
-    window.onresize = function(){
-      setWatermark(args);
+    window.onresize = ()=>{
+      this.setWatermark(args);
     }
   }
 }

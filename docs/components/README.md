@@ -11,6 +11,6 @@ layout: UI
 ## 组件列表
 
 [Icon 图标](icon.html)  
-[loading加载](loading.html)  
+[loader加载](loader.html)  
 [指针倒计时](clockCountdown.html)  
 [扇形倒计时](pieCountdown.html)

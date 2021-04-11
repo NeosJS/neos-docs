@@ -17,7 +17,7 @@
     </header>
 
 
-
+    <div id="cc" class="cc"></div>
     <Content class="theme-default-content custom" />
 
     <div class="footer" v-if="data.footer">
@@ -27,10 +27,13 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import theaterJS from 'theaterjs';
+// import 'particles.js'
 import NavLink from '@theme/components/NavLink.vue'
 import BtnLink from '@theme/components/BtnLink.vue'
 // import bg from '@imgs/bg.jpg'
+const isServer = Vue.prototype.$isServer
 export default {
   components: { NavLink,BtnLink },
   data() {
@@ -117,6 +120,10 @@ export default {
     }
   },
   mounted () {
+    if(!isServer){
+      require('particles.js')
+      window.particlesJS.load('cc', 'cc.json');
+    }
     function typing(theater){
       theater
       .addScene("少加班，多恋爱",1800,-7,600)
@@ -171,7 +178,14 @@ export default {
   content: "|";
   animation: blink 500ms infinite;
 }
-
+.cc{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 1
+}
 .bg
   width 40%
   height 100%
@@ -189,6 +203,7 @@ export default {
   display block;
   height 100%
   overflow hidden
+  background #f8fafc
   .hero
     text-align center
     position relative
@@ -225,7 +240,7 @@ export default {
         background-color lighten($--color-primary, 10%)
   .features
     position relative
-    z-index 1
+    z-index 10
     border-top 0px solid $borderColor
     padding 1.2rem 0
     display flex

@@ -10,7 +10,7 @@
         <NavLink :item="item"  />
       </div>
     </template>
-    <ne-dropdown class="nav-item">
+    <ne-dropdown class="nav-item" trigger="click">
       <span class="ne-dropdown-link">{{navName}}
         <NeIcon name="chevron-down" />
       </span>
@@ -125,6 +125,7 @@ export default {
   border-radius .2rem
   padding:.2rem .5rem
   line-height:1.5rem !important
+  cursor pointer
   .ne-icon
     margin-top -.3rem
     margin-left .5rem

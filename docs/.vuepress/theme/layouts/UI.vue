@@ -15,15 +15,16 @@
 
     <main class="page">
       <div class="theme-default-content content__default">
-        <h1>组件列表</h1>
+        <h1>组件列表 <badge-tip text="组件暂未发布至安装源" type="danger" /></h1>
         <p>提供一些常用的基础组件。</p>
+
         <div class="ui-list">
           <nav class="list-group">
             <RouterLink class="list-group-item list-group-item-action" to="icon">
               <strong>Icon</strong> — <span>提供了一套项目里常用的图标集合。</span>
             </RouterLink>
-            <RouterLink class="list-group-item list-group-item-action" to="loading">
-              <strong>Loading</strong> — <span>加载数据时显示动效。</span>
+            <RouterLink class="list-group-item list-group-item-action" to="loader">
+              <strong>Loader</strong> — <span>加载数据时显示动效。</span>
             </RouterLink>
             <RouterLink class="list-group-item list-group-item-action" to="clockCountdown">
               <strong>ClockCountdown</strong> — <span>指针倒计时。指针倒计时，指针走动一圈，倒计时结束。</span>

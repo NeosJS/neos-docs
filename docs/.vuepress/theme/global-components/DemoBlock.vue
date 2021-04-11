@@ -11,12 +11,15 @@
       <slot name="highlight"></slot>
     </div>
     <div class="demo-block-control" ref="control" @click="isExpanded = !isExpanded">
-      <transition name="arrow-slide">
+      <i :class="[iconClass, { hovering: hovering }]"></i>
+      <span>{{controlText}}</span>
+      <!-- <transition name="arrow-slide">
         <i :class="[iconClass, { hovering: hovering }]"></i>
-      </transition>
-      <transition name="text-slide">
+        <span>{{ controlText }}</span>
+      </transition> -->
+      <!-- <transition name="text-slide">
         <span v-show="hovering">{{ controlText }}</span>
-      </transition>
+      </transition> -->
     </div>
   </div>
 </template>
@@ -27,7 +30,7 @@
   border: solid 1px #e9e9e9;
   border-radius: 4px;
   transition: 0.2s;
-  width: 90%;
+  // width: 90%;
   &.hover {
     box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5);
   }
@@ -171,9 +174,10 @@
       font-size: 20px;
       line-height: 40px;
       transition: 0.3s;
-      &.hovering {
-        transform: translateX(-40px);
-      }
+      transform: translateX(-30px);
+      // &.hovering {
+      //   transform: translateX(-40px);
+      // }
     }
 
     > span {

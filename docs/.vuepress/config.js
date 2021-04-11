@@ -97,7 +97,7 @@ module.exports = {
     config.resolve.alias.set("@imgs", path.resolve(__dirname, "public/imgs/")).end();
     config.resolve.alias.set("utils", path.resolve(__dirname, "../../neosui/utils")).end();
     config.resolve.alias.set("packages", path.resolve(__dirname, "../../packages")).end();
-    config.resolve.alias.set("neosui", path.resolve(__dirname, "../../neosui")).end();
+    config.resolve.alias.set("NeosUI", path.resolve(__dirname, "../../neosui")).end();
   },
   clientRootMixin: path.resolve(__dirname, "mixin.js")
   // devServer: {

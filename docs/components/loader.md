@@ -1,5 +1,11 @@
-# Loading 加载
+# Loader 加载
 加载数据时显示动效。
+
+## 引入
+```js
+import { NeLoader } from 'neosui'
+Vue.use(NeLoader)
+```
 
 ## 基础用法
 ::: demo 基础用法 设置 `size`, `stroke-color`, `circle-color` 等，可以显示不同的loading图标。
@@ -8,16 +14,16 @@
 <template>
   <div class="demo-base">
     <div class="block">
-      <Loading />
+      <ne-loader />
     </div>
     <div class="block">
-      <Loading stroke-color="rgba(255,150,60,1)" />
+      <ne-loader stroke-color="rgba(255,150,60,1)">
     </div>
     <div class="block">
-      <Loading stroke-color="rgba(255,150,60,1)" circle-color="#FFD518" />
+      <ne-loader stroke-color="rgba(255,150,60,1)" circle-color="#FFD518" />
     </div>
     <div class="block">
-      <Loading stroke-color="rgba(255,110,10,1)" circle-color="#FFD518" :size="60" />
+      <ne-loader stroke-color="rgba(255,110,10,1)" circle-color="#FFD518" :size="60" />
     </div>
   </div>
 </template>
@@ -32,16 +38,16 @@
 <template>
   <div class="demo-base">
     <div class="block">
-      <Loading :logo="logo" :size="100" stroke-color="rgba(255,150,60,1)" circle-color="#FFD518"/>
+      <ne-loader :logo="logo" :size="100" stroke-color="rgba(255,150,60,1)" circle-color="#FFD518" />
     </div>
     <div class="block">
-      <Loading logo="https://static.haibian.com/favicon.ico?v=1" :size="100" stroke-color="rgba(255,150,60,1)" circle-color="#FFD518"/>
+      <ne-loader logo="https://static.haibian.com/favicon.ico?v=1" :size="100" stroke-color="rgba(255,150,60,1)" circle-color="#FFD518" />
     </div>
     <div class="block">
-      <Loading :text="text" :size="100" stroke-color="rgba(255,150,60,1)" circle-color="#FFD518"/>
+      <ne-loader :text="text" :size="100" stroke-color="rgba(255,150,60,1)" circle-color="#FFD518" />
     </div>
     <div class="block">
-      <Loading text="loading" :size="100" stroke-color="rgba(255,150,60,1)" circle-color="#FFD518"/>
+      <ne-loader text="loading" :size="100" stroke-color="rgba(255,150,60,1)" circle-color="#FFD518" />
     </div>
   </div>
 </template>
@@ -66,19 +72,19 @@ export default{
 <template>
   <div class="demo-base">
     <div class="block">
-      <Loading :logo="logo" :size="24" />
+      <ne-loader :logo="logo" :size="24" />
     </div>
     <div class="block">
-      <Loading :logo="logo" :size="30" />
+      <ne-loader :logo="logo" :size="30" />
     </div>
     <div class="block">
-      <Loading :logo="logo" :size="60" />
+      <ne-loader :logo="logo" :size="60" />
     </div>
     <div class="block">
-      <Loading :logo="logo" :size="80" />
+      <ne-loader :logo="logo" :size="80" />
     </div>
     <div class="block">
-      <Loading :logo="logo" :size="100" />
+      <ne-loader :logo="logo" :size="100" />
     </div>
   </div>
 </template>
@@ -102,43 +108,43 @@ export default{
 <template>
   <div class="demo-base">
     <div class="block">
-      <Loading 
+      <ne-loader 
         :logo="logo"
         :size="80"
         :stroke-color="strokeColor"
         circle-color="#FFB610"
         fill-color="rgba(255,255,255,1)"
-      ></Loading>
+      />
     </div>
 
     <div class="block">
-      <Loading 
+      <ne-loader 
         :logo="logo"
         :size="80"
         :stroke-color="{from:'#AB7EF6',to:'#ea4c89'}"
         circle-color="#e7e7e7"
         fill-color="rgba(255,255,255,1)"
-      ></Loading>
+      />
     </div>
 
     <div class="block">
-      <Loading 
+      <ne-loader 
         :logo="logo"
         :size="80"
         circle-color="#f5f5f5"
         :stroke-color="strokeColor1"
         fill-color="rgba(255,255,255,1)"
-      ></Loading>
+      />
     </div>
 
     <div class="block">
-      <Loading 
+      <ne-loader 
         :logo="logo"
         :size="80"
         circle-color="#e8e8e8"
         :stroke-color="{from: '#8549ba',to: '#ab7ef6'}"
         fill-color="#FFF5CD"
-      ></Loading>
+      />
     </div>
   </div>
 </template>
@@ -165,14 +171,14 @@ export default{
   <div class="demo-base" style="height:200px;">
     文本文本文本
     <div class="block">
-      <Loading 
+      <ne-loader 
         :logo="logo"
         :size="80"
         :stroke-color="strokeColor"
         circle-color="#FFD518"
         fill-color="rgba(255,255,255,1)"
         mask-class="maskClass"
-      ></Loading>
+      >/
     </div>
   </div>
 </template>
@@ -201,7 +207,6 @@ export default{
 ```
 :::
 
-
 ## 参数
 
 | 参数                        | 说明                       | 类型   | 可选值          | 默认值       | 是否必选 |
@@ -217,6 +222,7 @@ export default{
 | square | 外环是否直接 | Boolean | true、false | false | 否 |
 | duration | 外环转动速度 | String | — | 1s | 否 |
 | mask-class | 遮罩样式 | String | — | — | 否 |
+
 
 
 <style lang="scss">
