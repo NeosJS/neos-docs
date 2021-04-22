@@ -277,13 +277,15 @@ export default {
       margin 0
       text-align center
       background rgba(0,0,0,.01)
-      margin -0.5rem;
+      margin -0.5rem -0.5rem 0 -0.5rem;
       padding:.5rem
     p
-      height:3.8rem;
+      height:4.5rem;
       color rgba(0,0,0,.5)
       line-height 1.5
+      font-size .85rem
       text-indent: 1.5rem;
+      padding-top .5rem
   .footer
     padding 2.5rem
     border-top 1px solid $borderColor

@@ -1,5 +1,5 @@
 <template>
-<div class="theme-container" :class="pageClasses" @touchstart="onTouchStart" @touchend="onTouchEnd">
+<div class="theme-container components" :class="pageClasses" @touchstart="onTouchStart" @touchend="onTouchEnd">
     <Navbar v-if="shouldShowNavbar && !$page.frontmatter.home" @toggle-sidebar="toggleSidebar" />
 
     <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
@@ -20,8 +20,26 @@
 
         <div class="ui-list">
           <nav class="list-group">
+            <RouterLink class="list-group-item list-group-item-action" to="colors">
+              <strong>Colors</strong> — <span>避免视觉传达差异，使用一套特定的调色板来规定颜色，为产品提供一致的外观视觉感受。</span>
+            </RouterLink>
+            <!-- <RouterLink class="list-group-item list-group-item-action" to="logo">
+              <strong>Logo</strong> — <span></span>
+            </RouterLink> -->
+            <RouterLink class="list-group-item list-group-item-action" to="button">
+              <strong>Button</strong> — <span>标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。</span>
+            </RouterLink>
             <RouterLink class="list-group-item list-group-item-action" to="icon">
               <strong>Icon</strong> — <span>提供了一套项目里常用的图标集合。</span>
+            </RouterLink>
+            <RouterLink class="list-group-item list-group-item-action" to="tooltip">
+              <strong>Tooltip</strong> — <span>文字提示气泡框，在鼠标悬停时显示，代替了系统的title提示。</span>
+            </RouterLink>
+            <RouterLink class="list-group-item list-group-item-action" to="toast">
+              <strong>Toast</strong> — <span>Toast。</span>
+            </RouterLink>
+            <RouterLink class="list-group-item list-group-item-action" to="progress">
+              <strong>Progress</strong> — <span>Progress。</span>
             </RouterLink>
             <RouterLink class="list-group-item list-group-item-action" to="loader">
               <strong>Loader</strong> — <span>加载数据时显示动效。</span>
@@ -32,6 +50,7 @@
             <RouterLink class="list-group-item list-group-item-action" to="clockCountdown">
               <strong>PieCountdown</strong> — <span>扇形倒计时。扇形倒计时，转动一圈倒计时结束。</span>
             </RouterLink>
+
           </nav>
         </div>
       </div>

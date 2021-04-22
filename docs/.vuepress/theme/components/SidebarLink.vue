@@ -133,7 +133,7 @@ a.sidebar-link
   display inline-block
   color #333
   position: relative;
-  padding 0.35rem 1rem 0.35rem 1.35rem
+  padding 0.4rem 0rem 0.4rem 1.35rem
   line-height 1.4
   width: 100%
   box-sizing: border-box

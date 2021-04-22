@@ -1,3 +1,7 @@
+---
+pageClass: components
+---
+
 # 扇形倒计时
 
 扇形倒计时，转动一圈倒计时结束。
@@ -84,11 +88,6 @@ export default {
 ```
 :::
 
-## 组件引用
-您可以通过以下名称将单个组件导入到项目中:
-| 组件 | 导出名称 | 引入路径 |
-| -------- | -------- | -------- |
-| ne-pie-countdown | NePieCountdown | `@neosui/neos` | 
 
 ## 参数
 

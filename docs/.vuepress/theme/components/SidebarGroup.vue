@@ -62,11 +62,13 @@ export default {
   &.is-sub-group
     padding-left 0
     & > .sidebar-heading
-      font-size 0.95em
+      font-size 0.65em
       line-height 2
       font-weight normal
       padding-left 2rem
-      cursor pointer
+      cursor default
+      color #999
+      padding-bottom 0
       &:not(.clickable)
         opacity 0.8
     & > .sidebar-group-items
@@ -75,18 +77,19 @@ export default {
         font-size: 0.95em;
         border-left none
         padding-left 3rem
+
   &.depth-2
     & > .sidebar-heading
       border-left none
 
 .sidebar-heading
-  color #222
+  color #1a1a1a
   transition color .15s ease
   cursor pointer
   font-size .9em
   font-weight bold
   // text-transform uppercase
-  padding 0.25rem 1.5rem 0.5rem 1.25rem
+  padding 0.25rem 1.5rem 0.25rem 1.25rem
   width 100%
   box-sizing border-box
   margin 0

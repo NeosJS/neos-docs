@@ -3,9 +3,9 @@
     <slot name="source"></slot>
     <div class="description">
       <slot></slot>
-      <!-- <seal-tooltip placement="top" :content="controlText">
+      <!-- <ne-tooltip placement="top" :content="controlText">
       <i :class="[iconClass, { 'hovering': hovering }]" @click="isExpanded = !isExpanded"></i>
-      </seal-tooltip> -->
+      </ne-tooltip> -->
     </div>
     <div class="meta">
       <slot name="highlight"></slot>
@@ -25,6 +25,9 @@
 </template>
 
 <style lang="scss">
+p ~ .demo-block{
+  margin-top: .5rem;
+}
 .demo-block {
   margin-bottom: 1rem;
   border: solid 1px #e9e9e9;
@@ -229,7 +232,7 @@ export default {
 
   computed: {
     blockClass() {
-      return `demo-${this.$router.currentRoute.path.split('/').pop()}`
+      return `demo-${this.$router.currentRoute.path.split('/').pop().split('.html')[0]}`
     },
 
     iconClass() {

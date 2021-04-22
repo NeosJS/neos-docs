@@ -125,6 +125,7 @@ export default {
   border-radius .2rem
   padding:.2rem .5rem
   line-height:1.5rem !important
+  font-size .9rem
   cursor pointer
   .ne-icon
     margin-top -.3rem
@@ -135,7 +136,7 @@ export default {
   .nav-link
     display block
     color #555
-    pointer cursor
+    cursor pointer
 .ne-dropdown-menu__item:focus,
 .ne-dropdown-menu__item:not(.is-disabled):hover
   background transparent

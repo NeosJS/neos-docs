@@ -72,6 +72,7 @@ export default {
         userPageClass
       ]
     }
+    // this.$router.currentRoute.path.split('/')
   },
 
   mounted() {

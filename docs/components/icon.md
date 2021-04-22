@@ -1,3 +1,7 @@
+---
+pageClass: components
+---
+
 # Icon 图标
 提供了一套项目里常用的图标集合。
 
@@ -69,14 +73,16 @@ export default {
     margin-bottom: -1px;
     i{
       display:block;
-      margin:30px auto 0 auto
+      margin:2rem auto 0 auto;
+      width:1.5rem;
+      height:1.5rem
     }
   }
   
   .icon-name{
     display: inline-block;
-      padding: 0 3px;
-      height: 1em;
+    padding: 0 3px;
+    height: 1em;
   }
 }
 </style>

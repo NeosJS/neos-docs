@@ -3,9 +3,9 @@
     <slot name="source"></slot>
     <div class="description">
       <slot></slot>
-      <!-- <seal-tooltip placement="top" :content="controlText">
+      <!-- <ne-tooltip placement="top" :content="controlText">
       <i :class="[iconClass, { 'hovering': hovering }]" @click="isExpanded = !isExpanded"></i>
-      </seal-tooltip> -->
+      </ne-tooltip> -->
     </div>
     <div class="meta">
       <slot name="highlight"></slot>

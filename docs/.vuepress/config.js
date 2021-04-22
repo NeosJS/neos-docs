@@ -27,7 +27,7 @@ module.exports = {
       { text: "Net", link: "/net/", dropdown:true },
       { text: "Like", link: "/like/", dropdown:true },
       { text: "Logger", link: "/logger/", dropdown:true},
-      { text: "Components", link: "/components/", new: true, dropdown:true},
+      { text: "Components", link: "/components/"},
       { text: "Utils", link: "/utils/is.html", dropdown:true }
     ],
     sidebar:sidebars,

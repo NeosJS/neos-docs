@@ -36,13 +36,6 @@ exports.getNativeSiderBar = (groupTitle)=>{
         "addElementDrag",
         "removeElementDrag",
         "registerShortcut",
-        "open/openFileDialog",
-        "open/openDirDialog",
-        "open/openSaveDialog",
-        "open/openDirBySystem",
-        "open/openFile",
-        "open/openFileBySystem",
-        "open/openFileOrDirBySystem",
         "cleanCache",
         "cleanStorage",
         "cleanFiles",
@@ -175,6 +168,21 @@ exports.getNativeSiderBar = (groupTitle)=>{
         //     "set/setWindowBounds"
         //   ]
         // }
+      ]
+    },
+    {
+      title: "文件操作能力",
+      collapsable: true,
+      sidebarDepth: 0,
+      children: [
+        "open/openFileDialog",
+        "open/openDirDialog",
+        "open/openSaveDialog",
+        "open/openDirBySystem",
+        "open/openFile",
+        "open/openFileBySystem",
+        "open/openFileOrDirBySystem",
+        "writeFileAsync"
       ]
     }
   ];
@@ -347,7 +355,33 @@ exports.getComponentsSiderBar = (groupTitle)=>{
       title: groupTitle,
       collapsable: false,
       sidebarDepth: 0,
-      children: ["", "icon","loader", "clockCountdown", "pieCountdown"]
+      // children: ["", "colors","button","icon","loader", "clockCountdown", "pieCountdown"]
+      children: [
+        "",
+        {
+          title: "通用",
+          collapsable: false,
+          sidebarDepth: 0,
+          children: ["colors","button","icon"]
+        },
+        {
+          title: "数据展示",
+          collapsable: false,
+          sidebarDepth: 0,
+          children:['tooltip']
+        },
+        {
+          title: "反馈",
+          collapsable: false,
+          sidebarDepth: 0,
+          children:['toast','progress','loader','clockCountdown','pieCountdown']
+        },
+        {
+          title: "其它",
+          collapsable: false,
+          sidebarDepth: 0,
+        }
+      ]
     }
   ];
 }

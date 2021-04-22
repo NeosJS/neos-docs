@@ -10,6 +10,7 @@ layout: UI
 
 ## 组件列表
 
+[Colors 色彩](colors.html)  
 [Icon 图标](icon.html)  
 [loader加载](loader.html)  
 [指针倒计时](clockCountdown.html)  
