@@ -18,7 +18,7 @@ yarn add @neosjs/electron-ipc
 ```
 
 ::: info
-1. 接口提供：`start`, `progress`, `complete`, `pause`, `fail`, `exists` 事件回调。  
+1. 接口提供：`start`, `progress`, `complete`, `pause`, `fail`, `exists`, `extract` 事件回调。  
 
 2. 接口提供事件监听。  
 如：  

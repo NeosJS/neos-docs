@@ -40,5 +40,6 @@ console.log(res)
 | options[] | 接口参数 | Object | —      | —      | 是      |
 | options['savePath'] | 文件保存的路径 | String | —      | —      | 是      |
 | options['content'] | 需要写入的内容| Any[] | —      | —      | 是      |
+| options['overwrite'] | 是否覆盖原内容| Boolean | —      | true      | 否      |
 | options['success'] | 写入成功的回调 | Function | —      | —      | 否      |
 | options['fail'] | 写入失败的回调 | Function | —      | —      | 否      |

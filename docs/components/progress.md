@@ -148,7 +148,8 @@ export default {
         { color: '#1989fa', percent: 80 },
         { color: '#6f7ad3', percent: 100 }
       ],
-      customLinear:['#FF2F2F','#FF4EBF']
+      customLinear:['#FF2F2F','#FF4EBF'],
+      colors:'#1989fa'
     }
   },
   methods: {

@@ -15,7 +15,7 @@
 
 当更新文件下载完成后，下载器会返回计算出来的 `MD5` 值。业务层可根据该 `MD5` 来判断文件是否准确。
 
-该接口不接受 `fileMD5`、`savePath`、`saveName`、`extract`参数。
+该接口不接受 `fileMD5`、`savePath`、`saveName`参数。
 
 **具体用法，参见：[文件下载](/downloader/downloadFile.html)**
 :::

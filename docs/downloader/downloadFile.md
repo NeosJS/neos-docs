@@ -38,6 +38,9 @@ await downloaderApi.downloadFile({
   },
   exists: res => { // 文件已经存在
     console.log(res)
+  },
+  extract: res => { // 解压的回调
+    console.log(res) 
   }
 })
 ```
@@ -81,14 +84,13 @@ downloaderApi.removeListener(downloadTask)
 | ---- | ------- | ------ | ------ | ------ | ------ |
 | options[] | 接口参数 | Object | —      | —      | 是      |
 | options['fileURL'] | 下载资源的 url | String | —      | —      | 是      |
-| options['fileMD5'] | zip包的md5值 | String | —      | —      | 是      |
-| options['savePath'] | 文件保存的目录 | String | — | — | 否 |
-| options['saveName'] | 重命名的文件名称 | String | — | — | 否 |
+| options['fileMD5'] | zip包的md5值(**升级包无效**) | String | —      | —      | 是      |
+| options['savePath'] | 文件保存的目录(**升级包无效**) | String | — | — | 否 |
+| options['saveName'] | 重命名的文件名称(**升级包无效**) | String | — | — | 否 |
 | options['retry'] | 重试次数 | Number | — | 10 | 否 |
 | options['interval'] | 发送下载状态的时间间隔，单位为毫秒| Number | —      | 1000      | 否      |
 | options['headers'] | Header | Object | — | —| 否|
 | options['timeout'] | 请求超时时间，单位为毫秒 | Number | — | 300000 | 否|
-| options['extract'] | 下载完成后，是否需要解压 | Boolean | — | false | 否|
 |  | <font color="#db4437">**以下为回调配置**</font> |  |  |  |  |
 | options['start'] | 开始下载的回调函数 | Function | — | — | 否|
 | options['progress'] | 下载进度的回调函数 | Function | — | — | 否|
@@ -96,13 +98,14 @@ downloaderApi.removeListener(downloadTask)
 | options['pause'] | 下载暂停的回调函数 | Function | — | — | 否|
 | options['fail'] | 下载错误的回调函数 | Function | — | — | 否|
 | options['exists'] | 文件已经存在的回调函数 | Function | — | — | 否|
+| options['extract'] | 下载完成后，解压回调 | Function | — | — | 否|
 
 ## 返回数据
 
 | 字段 | 说明    | 类型   | 
 | ---- | ------- | ------ | 
-| state | 当前下载的状态: <br>(`start`, `progress`, `complete`, `pause`, `fail`, `exists`) | String |
-| percent | 下载进度百分比 | String | 
+| state | 返回的状态: <br>`start`, `progress`, `complete`, `pause`, `fail`, `exists`, `extract` | String |
+| percent | 下载进度百分比 | Number | 
 | speed | 下载速度 | String | 
 | totalSize | 文件总大小 | String | 
 | receivedSize | 接收的文件大小 | String | 
@@ -113,5 +116,6 @@ downloaderApi.removeListener(downloadTask)
 | <font color="#db4437">**MD5**</font> | 下载完成后的文件MD5值，仅 `complete` 状态返回 | String |
 
 :::info
-`percent` 默认保留两位小数返回。业务层，请根据实际需要自行格式化。
+`percent` 默认保留两位小数返回。业务层，请根据实际需要自行格式化。  
+`extract` 回调有的话，下载完成后会自动开始解压，并返回解压状态`status`
 :::
