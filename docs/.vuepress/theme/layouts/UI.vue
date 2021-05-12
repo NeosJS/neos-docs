@@ -38,6 +38,9 @@
             <RouterLink class="list-group-item list-group-item-action" to="toast">
               <strong>Toast</strong> — <span>Toast。</span>
             </RouterLink>
+            <RouterLink class="list-group-item list-group-item-action" to="alert">
+              <strong>Alert</strong> — <span>Alert。</span>
+            </RouterLink>
             <RouterLink class="list-group-item list-group-item-action" to="progress">
               <strong>Progress</strong> — <span>Progress。</span>
             </RouterLink>

@@ -8,7 +8,7 @@ pageClass: components
 
 ## 主色
 
-<ne-container>
+<ne-container fluid>
   <ne-row>
   <ne-col :cols="24" :md="8">
   <div class="demo-color-box" :style="{ background: primary } ">Brand Color
@@ -24,9 +24,9 @@ pageClass: components
 ## 辅助色
 辅助色是具有代表性的颜色，常用于信息提示，比如成功、警告和失败。
 
-<ne-container>
+<ne-container fluid>
   <ne-row>
-  <ne-col :cols="24" :md="4">
+  <ne-col :cols="4" :md="4">
   <div class="demo-color-box" :style="{ background: warning } ">Warning Color
     <div class="value">{{warning}}</div>
     <div class="bg-color-sub" :style="{ background: tintColor(warning, 0.9) }">
@@ -34,7 +34,7 @@ pageClass: components
     </div>
   </div>
   </ne-col>
-  <ne-col :cols="24" :md="4">
+  <ne-col :cols="4" :md="4">
   <div class="demo-color-box" :style="{ background: success } ">Success Color
     <div class="value">{{success}}</div>
     <div class="bg-color-sub" :style="{ background: tintColor(success, 0.9) }">
@@ -42,7 +42,7 @@ pageClass: components
     </div>
   </div>
   </ne-col>
-  <ne-col :cols="24" :md="4">
+  <ne-col :cols="4" :md="4">
   <div class="demo-color-box" :style="{ background: danger } ">Danger Color
     <div class="value">{{danger}}</div>
     <div class="bg-color-sub" :style="{ background: tintColor(danger, 0.9) }">
@@ -50,7 +50,7 @@ pageClass: components
     </div>
   </div>
   </ne-col>
-  <ne-col :cols="24" :md="4">
+  <ne-col :cols="4" :md="4">
   <div class="demo-color-box" :style="{ background: dark } ">Dark Color
     <div class="value">{{dark}}</div>
     <div class="bg-color-sub" :style="{ background: tintColor(dark, 0.9) }">
@@ -58,7 +58,7 @@ pageClass: components
     </div>
   </div>
   </ne-col>
-  <ne-col :cols="24" :md="4">
+  <ne-col :cols="4" :md="4">
   <div class="demo-color-box" :style="{ background: blue } ">Blue Color
     <div class="value">{{blue}}</div>
     <div class="bg-color-sub" :style="{ background: tintColor(blue, 0.9) }">
@@ -72,29 +72,29 @@ pageClass: components
 ## 中性色
 中性色常用于文本、背景、边框、阴影等，可以体现出页面的层次结构。
 
-<ne-container>
+<ne-container fluid>
   <ne-row>
-  <ne-col :cols="24" :md="4">
+  <ne-col :cols="4" :md="4">
   <div class="demo-color-box" :style="{ background: textRegular } ">主要文本颜色
     <div class="value">{{textRegular}}</div>
   </div>
   </ne-col>
-  <ne-col :cols="24" :md="4">
+  <ne-col :cols="4" :md="4">
   <div class="demo-color-box" :style="{ background: textSecondary } ">次要文本颜色
     <div class="value">{{textSecondary}}</div>
   </div>
   </ne-col>
-  <ne-col :cols="24" :md="4">
+  <ne-col :cols="4" :md="4">
   <div class="demo-color-box" :style="{ background: textTertiary,color:textRegular } ">辅助文本颜色
     <div class="value">{{textTertiary}}</div>
   </div>
   </ne-col>
-  <ne-col :cols="24" :md="4">
+  <ne-col :cols="4" :md="4">
   <div class="demo-color-box" :style="{ background: borderColor,color:textRegular } ">边框颜色
     <div class="value">{{borderColor}}</div>
   </div>
   </ne-col>
-  <ne-col :cols="24" :md="4">
+  <ne-col :cols="4" :md="4">
   <div class="demo-color-box" :style="{ background: markBg,color:textRegular } ">遮罩颜色
     <div class="value">{{markBg}}</div>
   </div>
@@ -105,30 +105,30 @@ pageClass: components
 ## 渐变色
 渐变色通常用于多彩按钮背景。
 
-<ne-container>
+<ne-container fluid>
   <ne-row>
-  <ne-col :cols="24" :md="7">
+  <ne-col :cols="8" :md="8">
   <div class="demo-color-box" :style="{ background: gradientPrimary } ">品牌渐变
     <div class="value">{{gradientPrimary}}</div>
   </div>
   </ne-col>
-  <ne-col :cols="24" :md="7">
+  <ne-col :cols="8" :md="8">
   <div class="demo-color-box" :style="{ background: gradientOrange } ">橙色渐变
   <div class="value">{{gradientOrange}}</div>
   </div>
   </div>
   </ne-col>
-  <ne-col :cols="24" :md="7">
+  <ne-col :cols="8" :md="8">
   <div class="demo-color-box" :style="{ background: gradientSuccess } ">绿色渐变
     <div class="value">{{gradientSuccess}}</div>
   </div>
   </ne-col>
-  <ne-col :cols="24" :md="7">
+  <ne-col :cols="8" :md="8">
   <div class="demo-color-box" :style="{ background: gradientDanger } ">红色渐变
     <div class="value">{{gradientDanger}}</div>
   </div>
   </ne-col>
-  <ne-col :cols="24" :md="7">
+  <ne-col :cols="8" :md="8">
   <div class="demo-color-box" :style="{ background: gradientBlue } ">蓝色渐变
     <div class="value">{{gradientBlue}}</div>
   </div>
@@ -185,7 +185,7 @@ pageClass: components
 </script>
 
 <style lang="scss">
-.ne-container{
+.ne-container-fluid{
   padding-left:0;
   padding-top:1rem;
   padding-bottom:1rem

@@ -28,6 +28,7 @@ exports.getNativeSiderBar = (groupTitle)=>{
         "get/getMediaAccessStatus",
         "get/getMediaAccess",
         "get/getDeviceInfo",
+        "open/openPreferences",
         "jumpPage",
         "relaunchApp",
         "exitApp",
@@ -374,7 +375,7 @@ exports.getComponentsSiderBar = (groupTitle)=>{
           title: "反馈",
           collapsable: false,
           sidebarDepth: 0,
-          children:['toast','progress','loader','clockCountdown','pieCountdown']
+          children:['toast','alert','progress','loader','clockCountdown','pieCountdown']
         },
         {
           title: "其它",

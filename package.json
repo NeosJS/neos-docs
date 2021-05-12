@@ -22,11 +22,6 @@
   "author": "听着情歌流泪 <develop@lingtal.com> (https://docs.neosjs.com)",
   "homepage": "https://docs.neosjs.com",
   "license": "MIT",
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
   "lint-staged": {
     "*.{js,jsx,vue}": [
       "yarn lint --fix",

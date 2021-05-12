@@ -13,10 +13,10 @@ pageClass: components
 <template>
   <div class="demo-base">
     <div class="block">
-      <ne-pie-countdown :options="{countDownTime:60}"/>
+      <ne-pie-countdown :options="{countDownTime:60000}"/>
     </div>
     <div class="block">
-      <ne-pie-countdown :options="{countDownTime:50,size:100}"/>
+      <ne-pie-countdown :options="{countDownTime:50000,size:100}"/>
     </div>
   </div>
 </template>
@@ -118,7 +118,7 @@ export default{
     return {
       options1:{
         size:150,
-        countDownTime:20,
+        countDownTime:20000,
         borderColor: '#0194EF', // 边框颜色
         outerColor: '#0194EF', // 最外层底圆颜色
         scheduleColor: '#fff', // 进度条动画颜色
@@ -130,7 +130,7 @@ export default{
       },
       options:{
         size:150,
-        countDownTime:30,
+        countDownTime:30000,
         outerColor: '#8E44AD', // 最外层底圆颜色
         innerColor:'#ab7ef6',
         borderColor:'#8e5cd4',
@@ -142,7 +142,7 @@ export default{
       },
       options2:{
         size:150,
-        countDownTime:60,
+        countDownTime:60000,
         outerColor: '#FFD518', // 最外层底圆颜色
         scheduleColor: '#E6ECF1', // 进度条动画颜色
         ringColor: '#FFD518', 
