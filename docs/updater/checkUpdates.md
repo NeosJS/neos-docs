@@ -1,4 +1,4 @@
-# 检查更新(Deprecated) <BadgeTip text="异步" type="green"></BadgeTip> <BadgeTip text="弃用" type="danger"></BadgeTip>
+# 检查更新 <BadgeTip text="异步" type="green"></BadgeTip>
 
 检查应用是否有更新。
 
@@ -7,7 +7,7 @@
 :::
 
 ## API
-### `updaterApi.checkUpdates(callback: <Function>)`
+### `updaterApi.checkUpdates(updateUrl: <String>, callback: <Function>)`
 ### 
 
 
@@ -21,7 +21,7 @@ const res = await updaterApi.checkUpdates()
 ```js
 import { updaterApi } from '@neosjs/electron-ipc'
 
-updaterApi.checkUpdates(res => {
+updaterApi.checkUpdates('https://update.xxxx.com', res => {
   console.log(res)
 })
 ```
@@ -38,4 +38,5 @@ updaterApi.checkUpdates(res => {
 
 | 参数 | 说明    | 类型   | 可选值 | 默认值 |必选 |
 | ---- | ------- | ------ | ------ | ------ | ------ |
+| updateUrl | 远程更新地址 | String | —      | —      | 否      |
 | callback | 检查更新的回调函数 | Function | —      | —      | 否      |

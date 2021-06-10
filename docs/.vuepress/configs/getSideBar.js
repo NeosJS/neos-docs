@@ -217,10 +217,10 @@ exports.getUpdaterSiderBar = (groupTitle)=>{
       sidebarDepth: 0,
       children: [
         "",
-        "autoCheckUpdates",
+        "autoUpdates",
         "checkUpdates",
         "downloadUpdates",
-        "checkUpdatesMain",
+        // "checkUpdatesMain",
         "download",
         "installUpdates"
       ]

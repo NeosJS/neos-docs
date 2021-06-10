@@ -1,9 +1,9 @@
-# 下载更新(Deprecated) <BadgeTip text="异步" type="green"></BadgeTip> <BadgeTip text="弃用" type="danger"></BadgeTip>
+# 下载更新<BadgeTip text="异步" type="green"></BadgeTip>
 
 当检查到有新版的时候，可调用该接口下载更新。
 
 :::danger
-此接口已经迁移成内部接口。已不再对外提供下载服务。
+调用此接口之前，请确保已经调用了 **`updaterApi.checkUpdates`** 接口！！
 :::
 
 ## API
@@ -49,6 +49,7 @@ updaterApi.downloadUpdates(res => {
 
 | 参数 | 说明    | 类型   | 可选值 | 默认值 |必选 |
 | ---- | ------- | ------ | ------ | ------ | ------ |
-| callback | 检查更新的回调函数 | Function | —      | —      | 否      |
 | autoInstall | 现在完更新后，是否自动安装 | Boolean| —      | false     | 否      |
+| callback | 检查更新的回调函数 | Function | —      | —      | 否      |
+
 
