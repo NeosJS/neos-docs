@@ -10,7 +10,29 @@ module.exports = {
   dest: "./dist",
   head:[
     ["link", { rel: "icon", href: "/favicon.ico" }],
-    ["link", { rel: "manifest", href: "/manifest.json" }]
+    ["link", { rel: "manifest", href: "/manifest.json" }],
+    ['meta', { name: 'theme-color', content: '#0070f3' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
+    [
+      'meta',
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }
+    ],
+    [
+      'link',
+      {
+        rel: 'apple-touch-icon',
+        href: '/imgs/icons/apple-icon-256x256.png'
+      }
+    ],
+    [
+      'meta',
+      {
+        name: 'msapplication-TileImage',
+        content: '/imgs/icons/ms-icon-128x128.png'
+      }
+    ],
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
   ],
   themeConfig: {
     nav: [
@@ -39,6 +61,24 @@ module.exports = {
     "@vuepress/back-to-top",
     [
       "@vuepress/last-updated",
+      // {
+      //   transformer(timestamp) {
+      //     const date = new Date(timestamp)
+      //     const digits = [
+      //       date.getUTCFullYear(),
+      //       date.getUTCMonth() + 1,
+      //       date.getUTCDate(),
+      //       date.getUTCHours(),
+      //       date.getUTCMinutes(),
+      //       date.getUTCSeconds()
+      //     ].map(num => String(num).padStart(2, '0'))
+
+      //     return '{0}-{1}-{2}, {3}:{4}:{5} UTC'.replace(
+      //       /{(\d)}/g,
+      //       (_, num) => digits[num]
+      //     )
+      //   }
+      // }
       {
         transformer: timestamp => {
           const moment = require("moment");

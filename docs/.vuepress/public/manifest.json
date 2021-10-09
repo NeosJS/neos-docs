@@ -1,8 +1,36 @@
 {
   "name": "NeosJSDocs",
   "short_name": "NeosJSDocs",
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#fff",
-  "theme_color": "#3eaf7c"
+  "theme_color": "#0070f3",
+  "description": "NeosJS 开发文档",
+  "icons": [
+    {
+    "src": "imgs/icons/48x48.png",
+    "sizes": "48x48",
+    "type": "image/png"
+    },
+    {
+    "src": "imgs/icons/64x64.png",
+    "sizes": "64x64",
+    "type": "image/png"
+    },
+    {
+    "src": "imgs/icons/128x128.png",
+    "sizes": "64x64",
+    "type": "image/png"
+    },
+    {
+    "src": "imgs/icons/apple-icon-256x256.png",
+    "sizes": "256x256",
+    "type": "image/png"
+    },
+    {
+    "src": "imgs/icons/512x512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+    }
+  ]
 }
