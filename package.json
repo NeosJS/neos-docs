@@ -40,13 +40,13 @@
     "@vuepress/plugin-pwa": "^1.5.4",
     "@vuepress/plugin-register-components": "^1.5.4",
     "cheerio": "0.18.0",
-    "markdown-it": "^11.0.1",
+    "markdown-it": "^13.0.0",
     "markdown-it-container": "^3.0.0",
-    "node-sass": "^4.14.1",
     "rimraf": "^3.0.2",
-    "sass-loader": "^10.0.2",
+    "sass": "^1.51.0",
+    "sass-loader": "8.0.2",
     "transliteration": "^2.1.11",
-    "vuepress": "^1.8.2"
+    "vuepress": "^1.9.7"
   },
   "dependencies": {
     "@neosjs/h5-camera": "^1.0.8",
