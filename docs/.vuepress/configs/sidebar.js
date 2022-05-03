@@ -12,6 +12,6 @@ module.exports = {
   "/downloader/": getSidebar.getDownloaderSiderBar("DownloaderApi"),
   "/net/": getSidebar.getNetSiderBar("NetApi"),
   "/like/": getSidebar.getLikeSiderBar("LikeApi"),
-  "/components/": getSidebar.getComponentsSiderBar("Components"),
+ // "/components/": getSidebar.getComponentsSiderBar("Components"),
   "/utils/": getSidebar.getUtilsSiderBar("UtilsApi")
 }

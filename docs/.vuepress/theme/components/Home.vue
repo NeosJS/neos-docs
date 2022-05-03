@@ -216,6 +216,9 @@ export default {
       margin 0rem auto 1.5rem
     h1
       font-size 3rem
+      background  linear-gradient(271.72deg, #a2facf 7.09%, #64acff 96.61%)
+      -webkit-background-clip text
+      -webkit-text-fill-color transparent
     h1, .description, .action
       margin 1.8rem auto
     .description
@@ -224,6 +227,9 @@ export default {
       font-size 1.6rem
       line-height 1.3
       color lighten($--color-black, 30%)
+      background  linear-gradient(271.72deg, #a2facf 7.09%, #64acff 96.61%)
+      -webkit-background-clip text
+      -webkit-text-fill-color transparent
     .action
       margin-top:5rem
     .action-button
@@ -272,13 +278,13 @@ export default {
       font-size 1.4rem
       font-weight 500
       border-bottom none
-      padding-bottom 0
       color rgba(0,0,0,.85)
       margin 0
       text-align center
       background rgba(0,0,0,.01)
       margin -0.5rem -0.5rem 0 -0.5rem;
-      padding:.5rem
+      padding .5rem
+      font-weight bold
     p
       height:4.5rem;
       color rgba(0,0,0,.5)
